@@ -1,0 +1,8 @@
+{
+  "name": "Remix Nagar Drishti",
+  "description": "AI-Powered Urban Intelligence and Municipal Command Platform for civic defect detection, fleet monitoring, ticket routing, and cross-agency governance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "dataset_name": "Nagar Drishti Multitask Indian Road Scenarios",
+  "modalities": [
+    "RoadDefects_Potholes_Cracks",
+    "Vehicle_Classification_HMV_LMV",
+    "Pedestrian_Safety_Hazards",
+    "SpeedBump_UnsurfacedRoad"
+  ],
+  "total_images": 8394,
+  "total_boxes": 29941,
+  "total_videos": 364,
+  "classes": [
+    "HMV",
+    "LMV",
+    "Pedestrian",
+    "RoadDamages",
+    "SpeedBump",
+    "UnsurfacedRoad"
+  ],
+  "class_counts": {
+    "RoadDamages": 6463,
+    "HMV": 4431,
+    "LMV": 14392,
+    "Pedestrian": 3563,
+    "UnsurfacedRoad": 593,
+    "SpeedBump": 499
+  },
+  "split_stats": {
+    "train": {
+      "image_count": 5843,
+      "label_count": 5843,
+      "total_annotated_boxes": 20878,
+      "class_distribution": {
+        "RoadDamages": 4529,
+        "HMV": 3112,
+        "LMV": 10033,
+        "Pedestrian": 2453,
+        "UnsurfacedRoad": 405,
+        "SpeedBump": 346
+      }
+    },
+    "valid": {
+      "image_count": 1288,
+      "label_count": 1288,
+      "total_annotated_boxes": 4559,
+      "class_distribution": {
+        "HMV": 672,
+        "RoadDamages": 964,
+        "Pedestrian": 549,
+        "LMV": 2201,
+        "SpeedBump": 83,
+        "UnsurfacedRoad": 90
+      }
+    },
+    "test": {
+      "image_count": 1263,
+      "label_count": 1263,
+      "total_annotated_boxes": 4504,
+      "class_distribution": {
+        "RoadDamages": 970,
+        "LMV": 2158,
+        "Pedestrian": 561,
+        "HMV": 647,
+        "SpeedBump": 70,
+        "UnsurfacedRoad": 98
+      }
+    }
+  }
+}

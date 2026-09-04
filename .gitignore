@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+datasets/
+runs/
+ai_engine/datasets/
+ai_engine/runs/
+.venv/
+venv/
+*.mp4
+*.avi

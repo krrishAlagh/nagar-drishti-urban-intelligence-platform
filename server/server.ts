@@ -1,5 +1,6 @@
 import http from 'http';
 import path from 'path';
+import fs from 'fs';
 import express, { Express, Request, Response } from 'express';
 import cors from 'cors';
 import { ENV } from './config/env';
@@ -23,11 +24,6 @@ app.use(requestLogger);
 // Serve CCTV footage and dataset archives directly to the frontend
 app.use('/datasets', express.static(path.join(process.cwd(), 'datasets')));
 
-// Root greeting & redirect to docs
-app.get('/', (req: Request, res: Response) => {
-  res.redirect('/api/docs');
-});
-
 // Master API Routes
 app.use('/api', masterRouter);
 
@@ -42,23 +38,39 @@ app.use('/api/*', (req: Request, res: Response) => {
   });
 });
 
+// Production Static Serving: Serve built Vite frontend from dist if present
+const distPath = path.join(process.cwd(), 'dist');
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+
+  // SPA Fallback for client-side navigation
+  app.get('*', (req: Request, res: Response) => {
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+} else {
+  // Development fallback: redirect root to API documentation
+  app.get('/', (req: Request, res: Response) => {
+    res.redirect('/api/docs');
+  });
+}
+
 // Global Error Handler
 app.use(errorHandler);
 
 // Initialize WebSocket Engine
 wsService.init(server);
 
-// Start Server
-server.listen(ENV.PORT, () => {
+// Start Server - Bind explicitly to 0.0.0.0 for Render, Docker, and Cloud compatibility
+server.listen(ENV.PORT, '0.0.0.0', () => {
   console.log(`
 ╔════════════════════════════════════════════════════════════════════════╗
 ║                                                                        ║
 ║   🏛️   NAGAR DRISHTI - URBAN INTELLIGENCE & COMMAND BACKEND CORE       ║
 ║                                                                        ║
-║   ⚡ REST API Server:      http://localhost:${ENV.PORT}/api/health              ║
-║   📖 API Documentation:    http://localhost:${ENV.PORT}/api/docs                ║
-║   📡 WebSocket Telemetry:  ws://localhost:${ENV.PORT}/ws                        ║
-║   🖥️ Frontend Dev URL:     ${ENV.APP_URL}                             ║
+║   ⚡ REST API Server:      http://0.0.0.0:${ENV.PORT}/api/health               ║
+║   📖 API Documentation:    http://0.0.0.0:${ENV.PORT}/api/docs                 ║
+║   📡 WebSocket Telemetry:  ws://0.0.0.0:${ENV.PORT}/ws                         ║
+║   🖥️ Production Frontend:  http://0.0.0.0:${ENV.PORT}/                          ║
 ║                                                                        ║
 ╚════════════════════════════════════════════════════════════════════════╝
 `);

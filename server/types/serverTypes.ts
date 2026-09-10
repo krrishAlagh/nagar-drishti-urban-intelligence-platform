@@ -43,6 +43,9 @@ export interface CommentItem {
   role: string;
   time: string;
   text: string;
+  attachmentUrl?: string;
+  attachmentType?: 'image' | 'video' | 'document';
+  attachmentLabel?: string;
 }
 
 export interface TimelineItem {
@@ -70,8 +73,16 @@ export interface DefectItem {
   timestamp: string;
   timeAgo: string;
   imageUrl: string;
+  secondaryImageUrl?: string;
+  videoUrl?: string;
   hasOverlay?: boolean;
   busId?: string;
+  detectedBy?: string;
+  estimatedDimensions?: {
+    widthCm: number;
+    depthCm: number;
+    volumeM3: number;
+  };
   assignedTo?: {
     name: string;
     avatar?: string;

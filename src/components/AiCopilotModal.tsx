@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Language, ActiveView } from '../types';
+import { Language, ActiveView, UserRole } from '../types';
 
 interface AiCopilotModalProps {
   isOpen: boolean;
@@ -10,6 +10,7 @@ interface AiCopilotModalProps {
   activeTicketId?: string;
   onNavigate: (view: ActiveView, filterParam?: string) => void;
   onOpenNewTicket?: () => void;
+  userRole?: UserRole;
 }
 
 interface ChatMessage {
@@ -17,11 +18,12 @@ interface ChatMessage {
   sender: 'user' | 'ai';
   text: string;
   timestamp: string;
+  badges?: Array<{ text: string; color: string }>;
   suggestedActions?: Array<{ label: string; action: string; targetView?: string; icon?: string }>;
   groundedStats?: Record<string, any>;
 }
 
-type CopilotMode = 'ALL' | 'CRITICAL' | 'FLEET' | 'BLACKSPOTS' | 'DISPATCH';
+type CopilotMode = 'ALL' | 'CRITICAL' | 'FLEET' | 'BLACKSPOTS' | 'DISPATCH' | 'TRANSIT' | 'SAFETY' | 'HELPLINES' | 'ADVISORIES';
 
 export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({
   isOpen,
@@ -31,24 +33,47 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({
   activeView = 'dashboard',
   activeTicketId,
   onNavigate,
-  onOpenNewTicket
+  onOpenNewTicket,
+  userRole = 'Municipal Admin'
 }) => {
+  const isCommuter = userRole === 'Public Commuter';
   const [copilotMode, setCopilotMode] = useState<CopilotMode>('ALL');
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: 'welcome-1',
       sender: 'ai',
-      text:
-        language === 'hi'
-          ? '🏛️ **नमस्ते! मैं नगर दृष्टि AI कॉपायलट हूँ।**\n\nमैं **48 डीटीसी बसों** के 10Hz लाइव एज-कैमरा फीड, सड़क गड्ढों, ब्लैकस्पॉट और आपातकालीन कार्य आदेशों का वास्तविक समय में समन्वय करता हूँ।'
-          : '**Welcome to Nagar Drishti AI Copilot.**\n\nI synthesize telemetry across **48 connected DTC Transit AI nodes**, automate PWD/MCD/DJB work orders, and detect high-risk accident blackspots in real-time across Delhi NCR.',
+      text: isCommuter
+        ? (language === 'hi'
+            ? '🚌 **नमस्ते! मैं नगर नागरिक AI सहायता केंद्र हूँ।**\n\nमैं दिल्ली में डीटीसी बसों के लाइव आगमन समय, बस केबिन सुरक्षा/ड्राइवर दुर्व्यवहार शिकायत दर्ज करने और आपातकालीन नागरिक हेल्पलाइन (डीजेबी 1916, बीएसईएस 19123, एमसीडी 155304) में आपकी सहायता कर सकता हूँ।'
+            : '🚌 **Welcome to Nagar Citizen AI Assistant.**\n\nI am trained on DTC Transit live fleet schedules, Cabin Safety grievance protocols, and Delhi 24x7 sovereign municipal directories (DJB, BSES, MCD, Traffic Police).\n\nAsk me about bus arrival times, how to report driver safety violations, or emergency helpline contacts!')
+        : (language === 'hi'
+            ? '🏛️ **नमस्ते! मैं नगर दृष्टि AI कॉपायलट हूँ।**\n\nमैं **48 डीटीसी बसों** के 10Hz लाइव एज-कैमरा फीड, सड़क गड्ढों (IRC:82 मानक), ब्लैकस्पॉट और आपातकालीन कार्य आदेशों का वास्तविक समय में समन्वय करता हूँ।'
+            : '**Welcome to Nagar Drishti AI Copilot.**\n\nI synthesize telemetry across **48 connected DTC Transit AI nodes**, automate PWD/MCD/DJB work orders with IRC:82 & CPHEEO engineering SOPs, and monitor high-risk accident blackspots in real-time across Delhi NCR.'),
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      suggestedActions: [
-        { label: language === 'hi' ? '🚨 Critical SLA Breaches' : '🚨 Critical SLA Breaches', action: 'navigate', targetView: 'tickets', icon: 'warning' },
-        { label: language === 'hi' ? '🚌 Fleet Dashcams' : '🚌 Fleet Dashcams', action: 'navigate', targetView: 'fleet', icon: 'directions_bus' },
-        { label: language === 'hi' ? '⚠️ Blackspot Heatmap' : '⚠️ Blackspot Heatmap', action: 'navigate', targetView: 'accident-analytics', icon: 'crisis_alert' },
-        { label: language === 'hi' ? '🗺️ Live GIS Radar' : '🗺️ Live GIS Radar', action: 'navigate', targetView: 'live-map', icon: 'explore' },
-      ]
+      badges: isCommuter
+        ? [
+            { text: 'CITIZEN MODE', color: '#0071E3' },
+            { text: 'DTC TRANSIT MATRIX', color: '#34C759' },
+            { text: 'CIVIC HELPLINES', color: '#FF9F0A' }
+          ]
+        : [
+            { text: 'COMMAND RBAC', color: '#0071E3' },
+            { text: '48 DTC BUS AI NODES', color: '#34C759' },
+            { text: 'IRC:82 SPEC READY', color: '#5856D6' }
+          ],
+      suggestedActions: isCommuter
+        ? [
+            { label: language === 'hi' ? '🚌 लाइव बस ट्रैकर' : '🚌 Live Bus Tracker', action: 'navigate', targetView: 'public-transit', icon: 'directions_bus' },
+            { label: language === 'hi' ? '🛡️ केबिन सुरक्षा शिकायत' : '🛡️ Cabin Safety SOS', action: 'navigate', targetView: 'safety-complaints', icon: 'videocam' },
+            { label: language === 'hi' ? '🏛️ आपातकालीन हेल्पलाइन' : '🏛️ Emergency Helplines', action: 'navigate', targetView: 'services-directory', icon: 'account_tree' },
+            { label: language === 'hi' ? '🔔 पारगमन अलर्ट' : '🔔 Transit Alerts', action: 'navigate', targetView: 'notifications', icon: 'notifications' }
+          ]
+        : [
+            { label: language === 'hi' ? '🚨 Critical SLA Breaches' : '🚨 Critical SLA Breaches', action: 'navigate', targetView: 'tickets', icon: 'warning' },
+            { label: language === 'hi' ? '🚌 Fleet Dashcams' : '🚌 Fleet Dashcams', action: 'navigate', targetView: 'fleet', icon: 'directions_bus' },
+            { label: language === 'hi' ? '⚠️ Blackspot Heatmap' : '⚠️ Blackspot Heatmap', action: 'navigate', targetView: 'accident-analytics', icon: 'crisis_alert' },
+            { label: language === 'hi' ? '🗺️ Live GIS Radar' : '🗺️ Live GIS Radar', action: 'navigate', targetView: 'live-map', icon: 'explore' },
+          ]
     }
   ]);
 
@@ -89,7 +114,14 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({
       const res = await fetch('/api/ai/copilot-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query, language, mode: copilotMode, activeView, activeTicketId })
+        body: JSON.stringify({
+          query,
+          language,
+          mode: copilotMode,
+          activeView,
+          activeTicketId,
+          userRole: userRole || 'Municipal Admin'
+        })
       });
       const json = await res.json();
       if (json.success && json.data) {
@@ -98,9 +130,16 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({
           sender: 'ai',
           text: json.data.reply,
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          badges: json.data.badges || [],
           suggestedActions: json.data.suggestedActions?.map((a: any) => ({
             ...a,
-            icon: a.targetView === 'tickets' ? 'assignment' : a.targetView === 'fleet' ? 'local_shipping' : a.targetView === 'live-map' ? 'explore' : 'arrow_forward'
+            icon: a.targetView === 'tickets' ? 'assignment' :
+                  a.targetView === 'fleet' ? 'local_shipping' :
+                  a.targetView === 'live-map' ? 'explore' :
+                  a.targetView === 'public-transit' ? 'directions_bus' :
+                  a.targetView === 'safety-complaints' ? 'videocam' :
+                  a.targetView === 'services-directory' ? 'account_tree' :
+                  a.targetView === 'notifications' ? 'notifications' : 'arrow_forward'
           })),
           groundedStats: json.data.groundedStats
         };
@@ -112,10 +151,15 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({
         {
           id: `ai-${Date.now()}`,
           sender: 'ai',
-          text: language === 'hi'
-            ? '🟢 **नगर दृष्टि AI कोर सक्रिय है।** सभी 48 बस नोड्स लाइव टेलीमेट्री भेज रहे हैं।'
-            : '🟢 **Nagar Drishti AI Core is Active.** All 48 transit AI dashcams are streaming live detections.',
-          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          text: isCommuter
+            ? (language === 'hi'
+                ? '🟢 **नगर नागरिक AI सक्रिय है।** डीटीसी बस ट्रैकिंग और आपातकालीन हेल्पलाइन सेवाएँ उपलब्ध हैं।'
+                : '🟢 **Nagar Citizen AI is Online.** Live DTC transit tracking and emergency helplines are connected.')
+            : (language === 'hi'
+                ? '🟢 **नगर दृष्टि AI कोर सक्रिय है।** सभी 48 बस नोड्स लाइव टेलीमेट्री भेज रहे हैं।'
+                : '🟢 **Nagar Drishti AI Core is Active.** All 48 transit AI dashcams are streaming live detections.'),
+          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          badges: [{ text: 'EDGE OFFLINE CACHE', color: '#34C759' }]
         }
       ]);
     } finally {
@@ -175,14 +219,25 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({
     rec.start();
   };
 
-  const quickPrompts = [
+  const quickPrompts = isCommuter ? [
+    { icon: 'directions_bus', label: language === 'hi' ? '🚌 बस 522 स्टॉप' : '🚌 Route 522 ETA', prompt: language === 'hi' ? 'डीटीसी बस 522 का रूट और स्टॉप क्या हैं?' : 'Where is DTC bus route 522 right now and what are its key stops?' },
+    { icon: 'videocam', label: language === 'hi' ? '🛡️ फोन उपयोग रिपोर्ट' : '🛡️ Report Driver Phone', prompt: language === 'hi' ? 'बस में ड्राइवर के फोन उपयोग की शिकायत कैसे दर्ज करें?' : 'How do I report a bus driver talking on the mobile phone while driving?' },
+    { icon: 'water_drop', label: language === 'hi' ? '💧 जल बोर्ड 1916' : '💧 DJB Water 1916', prompt: language === 'hi' ? 'दिल्ली जल बोर्ड (DJB) की 24x7 आपातकालीन हेल्पलाइन क्या है?' : 'What is the Delhi Jal Board 24x7 emergency helpline for water supply and leaks?' },
+    { icon: 'electric_bolt', label: language === 'hi' ? '⚡ BSES 19123' : '⚡ BSES Power 19123', prompt: language === 'hi' ? 'दक्षिण दिल्ली में बिजली कटौती के लिए BSES हेल्पलाइन क्या है?' : 'What is the BSES power outage helpline for South Delhi?' },
+  ] : [
     { icon: 'warning', label: language === 'hi' ? '🚨 1-घंटे SLA' : '🚨 1-Hour SLA', prompt: language === 'hi' ? '1-घंटे के SLA उल्लंघन में कौन से दोष हैं?' : 'Which road defects are in Critical 1-Hour SLA breach?' },
     { icon: 'directions_bus', label: language === 'hi' ? '🚌 बस AI स्थिति' : '🚌 Bus AI Status', prompt: language === 'hi' ? '48 बसों की AI कैमरा स्थिति दिखाएं' : 'Show live AI camera status across all 48 transit buses' },
     { icon: 'crisis_alert', label: language === 'hi' ? '⚠️ ब्लैकस्पॉट' : '⚠️ Blackspots', prompt: language === 'hi' ? 'सबसे खतरनाक ब्लैकस्पॉट कौन से हैं?' : 'List the most dangerous accident blackspots in Delhi NCR' },
-    { icon: 'send', label: language === 'hi' ? '⚡ कार्य आदेश' : '⚡ Work Order', prompt: language === 'hi' ? 'रिंग रोड के गड्ढे के लिए PWD को कार्य आदेश जारी करें' : 'Draft an automated PWD work order for Ring Road Moolchand pothole' },
+    { icon: 'build', label: language === 'hi' ? '🛠️ IRC:82 गड्ढा SOP' : '🛠️ IRC:82 Pothole SOP', prompt: language === 'hi' ? 'रिंग रोड के गड्ढे के लिए IRC:82 मरम्मत मानक और आवश्यक सामग्री क्या हैं?' : 'What are the IRC:82 repair guidelines and required materials for Ring Road pothole?' },
   ];
 
-  const modeTabs: Array<{ id: CopilotMode; label: string; color: string }> = [
+  const modeTabs: Array<{ id: CopilotMode; label: string; color: string }> = isCommuter ? [
+    { id: 'ALL', label: '🌐 All', color: '#0071E3' },
+    { id: 'TRANSIT', label: '🚌 Transit', color: '#34C759' },
+    { id: 'SAFETY', label: '🛡️ Safety', color: '#FF3B30' },
+    { id: 'HELPLINES', label: '🏛️ Helplines', color: '#FF9F0A' },
+    { id: 'ADVISORIES', label: '🔔 Alerts', color: '#5856D6' },
+  ] : [
     { id: 'ALL', label: '🌐 All', color: '#0071E3' },
     { id: 'CRITICAL', label: '🚨 Critical', color: '#FF3B30' },
     { id: 'FLEET', label: '🚌 Fleet', color: '#34C759' },
@@ -328,21 +383,23 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({
                   margin: 0, fontSize: 17, fontWeight: 700, letterSpacing: -0.5,
                   color: isDark ? '#f8fafc' : '#1f2937'
                 }}>
-                  Nagar Drishti AI Copilot
+                  {isCommuter ? (language === 'hi' ? 'नगर नागरिक AI सहायता' : 'Nagar Citizen AI Assistant') : 'Nagar Drishti AI Copilot'}
                 </h2>
                 <span style={{
                   fontSize: 10, fontWeight: 700, padding: '2px 8px',
-                  borderRadius: 999, background: 'rgba(0,113,227,0.08)',
-                  color: '#0a5edb', border: '1px solid rgba(0,113,227,0.18)',
+                  borderRadius: 999, background: isCommuter ? 'rgba(52,199,89,0.1)' : 'rgba(0,113,227,0.08)',
+                  color: isCommuter ? '#15803d' : '#0a5edb', border: `1px solid ${isCommuter ? 'rgba(52,199,89,0.25)' : 'rgba(0,113,227,0.18)'}`,
                   fontFamily: 'monospace', letterSpacing: 0.3,
                   display: 'flex', alignItems: 'center', gap: 5
                 }}>
-                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#0071E3', boxShadow: '0 0 6px rgba(0,113,227,1)', display: 'inline-block', animation: 'ping 1.5s cubic-bezier(0,0,0.2,1) infinite' }} />
-                  Gemini 2.5 Core
+                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: isCommuter ? '#34C759' : '#0071E3', boxShadow: `0 0 6px ${isCommuter ? 'rgba(52,199,89,1)' : 'rgba(0,113,227,1)'}`, display: 'inline-block', animation: 'ping 1.5s cubic-bezier(0,0,0.2,1) infinite' }} />
+                  {isCommuter ? 'Citizen Model' : 'Gemini 2.5 Core'}
                 </span>
               </div>
               <p style={{ margin: '2px 0 0', fontSize: 11.5, color: isDark ? '#cbd5e1' : '#64748b', lineHeight: 1.4 }}>
-                Real-time urban intelligence · 48 DTC Transit Nodes · Delhi NCR
+                {isCommuter
+                  ? (language === 'hi' ? 'डीटीसी बस लाइव ट्रैकिंग · केबिन सुरक्षा · 24x7 नागरिक हेल्पलाइन' : 'DTC Transit Matrix · Passenger Safety Grievance · 24x7 Sovereign Helplines')
+                  : 'Real-time urban intelligence · 48 DTC Transit Nodes · Delhi NCR'}
               </p>
             </div>
           </div>
@@ -441,10 +498,10 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({
               {/* Sender label */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 5, padding: '0 4px' }}>
                 {msg.sender === 'ai' && (
-                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#0071E3', boxShadow: '0 0 6px rgba(0,113,227,0.8)', flexShrink: 0 }} />
+                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: isCommuter ? '#34C759' : '#0071E3', boxShadow: `0 0 6px ${isCommuter ? 'rgba(52,199,89,0.8)' : 'rgba(0,113,227,0.8)'}`, flexShrink: 0 }} />
                 )}
                 <span style={{ fontSize: 11, fontWeight: 600, color: '#475569' }}>
-                  {msg.sender === 'user' ? 'Command Officer' : 'Nagar AI Core'}
+                  {msg.sender === 'user' ? (isCommuter ? 'Public Commuter' : 'Command Officer') : (isCommuter ? 'Nagar Citizen AI' : 'Nagar AI Core')}
                 </span>
                 <span style={{ fontSize: 10, color: '#94a3b8', fontFamily: 'monospace' }}>
                   · {msg.timestamp}
@@ -475,6 +532,30 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({
                     height: '50%', borderRadius: '19px 19px 0 0', pointerEvents: 'none',
                     background: 'linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 100%)'
                   }} />
+                )}
+
+                {/* Grounded Domain Badges */}
+                {msg.badges && msg.badges.length > 0 && (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 8 }}>
+                    {msg.badges.map((b, bIdx) => (
+                      <span
+                        key={bIdx}
+                        style={{
+                          fontSize: 9.5,
+                          fontWeight: 700,
+                          padding: '2px 8px',
+                          borderRadius: 6,
+                          background: `${b.color}1c`,
+                          color: b.color,
+                          border: `1px solid ${b.color}44`,
+                          letterSpacing: 0.3,
+                          fontFamily: 'monospace'
+                        }}
+                      >
+                        {b.text}
+                      </span>
+                    ))}
+                  </div>
                 )}
 
                 {renderMessageText(msg.text, msg.sender === 'user')}
@@ -680,7 +761,11 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({
               value={inputQuery}
               onChange={(e) => setInputQuery(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && handleSend()}
-              placeholder={language === 'hi' ? 'नगर दृष्टि AI से पूछें...' : 'Ask about Potholes, Fleet GPS, SLA Breaches, Blackspots…'}
+              placeholder={
+                isCommuter
+                  ? (language === 'hi' ? 'डीटीसी बस रूट, केबिन सुरक्षा, या 1916/19123 हेल्पलाइन पूछें...' : 'Ask about DTC bus routes, cabin safety, or DJB/BSES civic helplines…')
+                  : (language === 'hi' ? 'गड्ढों, बेड़े के जीपीएस, एसएलए उल्लंघन, या ब्लैकस्पॉट के बारे में पूछें...' : 'Ask about Potholes, Fleet GPS, SLA Breaches, IRC:82 Specs, Blackspots…')
+              }
               style={{
                 width: '100%', padding: '12px 44px 12px 18px',
                 borderRadius: 24, fontSize: 13, lineHeight: 1.4,

@@ -9,6 +9,7 @@ export interface CctvFootageItem {
   channel: 'FRONT' | 'REAR' | 'LEFT_SIDE' | 'CABIN_INTERIOR';
   timestamp: string;
   videoUrl: string;
+  posterUrl?: string;
   confidence: number;
   speedKmh: number;
   severity: 'CRITICAL' | 'HIGH' | 'MEDIUM';
@@ -17,51 +18,55 @@ export interface CctvFootageItem {
 export const DATASET_CCTV_VIDEOS: CctvFootageItem[] = [
   {
     id: 'cctv-101',
-    title: 'Pothole & Structural Asphalt Failure',
+    title: 'Severe Asphalt Pothole & Road Failure',
     busId: 'DTC-BUS-402',
-    location: 'Outer Ring Road, Moolchand Corridor',
+    location: 'MG Road / Outer Ring Road, near Metro Pillar 42',
     channel: 'FRONT',
-    timestamp: '10th July 2023 11:24:12 AM',
-    videoUrl: '/datasets/archive/videos_without_audio/10th%20July-20231125T045234Z-001/10th%20July/111_10-07-2023.mp4',
-    confidence: 96.4,
+    timestamp: '24th Oct 2023 10:42:15 AM',
+    videoUrl: '/assets/videos/pothole_dashcam_clip.mp4',
+    posterUrl: '/assets/defects/severe_pothole_dashcam.jpg',
+    confidence: 98.4,
     speedKmh: 34,
     severity: 'CRITICAL'
   },
   {
     id: 'cctv-102',
-    title: 'Bus Dedicated Lane Encroachment',
-    busId: 'DTC-BUS-112',
-    location: 'Shivaji Stadium, Connaught Place Outer Circle',
-    channel: 'REAR',
-    timestamp: '10th July 2023 11:28:45 AM',
-    videoUrl: '/datasets/archive/videos_without_audio/10th%20July-20231125T045234Z-001/10th%20July/112_10-07-2023.mp4',
-    confidence: 92.8,
+    title: 'Dangling Streetlight Fixture & Live Wire Outage',
+    busId: 'DTC-BUS-118',
+    location: 'Sector 14 Main Avenue, Pole ID LGT-401',
+    channel: 'FRONT',
+    timestamp: '24th Oct 2023 20:18:42 PM',
+    videoUrl: '/assets/videos/streetlight_dashcam_clip.mp4',
+    posterUrl: '/assets/defects/dangling_streetlight_dashcam.jpg',
+    confidence: 92.0,
     speedKmh: 28,
     severity: 'HIGH'
   },
   {
     id: 'cctv-103',
-    title: 'High-Speed Signal Violation & Obstruction',
-    busId: 'DTC-BUS-729',
-    location: 'ITO Red Light Corridor',
+    title: 'Water Main Burst & Road Flooding',
+    busId: 'DTC-BUS-204',
+    location: 'Civil Lines, opposite District Court Gate 1',
     channel: 'LEFT_SIDE',
-    timestamp: '10th July 2023 11:35:10 AM',
-    videoUrl: '/datasets/archive/videos_without_audio/10th%20July-20231125T045234Z-001/10th%20July/114_10-07-2023.mp4',
-    confidence: 94.1,
-    speedKmh: 41,
-    severity: 'HIGH'
+    timestamp: '24th Oct 2023 10:28:11 AM',
+    videoUrl: '/assets/videos/pipe_burst_dashcam_clip.mp4',
+    posterUrl: '/assets/defects/pipe_burst_dashcam.jpg',
+    confidence: 96.5,
+    speedKmh: 18,
+    severity: 'CRITICAL'
   },
   {
     id: 'cctv-104',
-    title: 'Passenger Safety Alert & Panic Switch Trigger',
-    busId: 'DTC-BUS-890',
-    location: 'Tilak Nagar Transit Terminal',
-    channel: 'CABIN_INTERIOR',
-    timestamp: '10th July 2023 11:42:00 AM',
-    videoUrl: '/datasets/archive/videos_without_audio/10th%20July-20231125T045234Z-001/10th%20July/116_10-07-2023.mp4',
-    confidence: 98.2,
-    speedKmh: 22,
-    severity: 'CRITICAL'
+    title: 'Sewer Line Overflow — Manhole Incident',
+    busId: 'DTC-BUS-309',
+    location: 'Nehru Park Outer Ring Road, Gate 3',
+    channel: 'REAR',
+    timestamp: '24th Oct 2023 12:35:48 PM',
+    videoUrl: '/assets/videos/sewer_overflow_clip.mp4',
+    posterUrl: '/assets/defects/sewer_overflow_dashcam.jpg',
+    confidence: 89.0,
+    speedKmh: 24,
+    severity: 'HIGH'
   }
 ];
 
@@ -82,6 +87,12 @@ export const CctvFootageModal: React.FC<CctvFootageModalProps> = ({
   const [selectedChannel, setSelectedChannel] = useState<'FRONT' | 'REAR' | 'LEFT_SIDE' | 'CABIN_INTERIOR'>(activeItem.channel);
   const [showAiOverlay, setShowAiOverlay] = useState(true);
   const [playbackRate, setPlaybackRate] = useState(1.0);
+
+  React.useEffect(() => {
+    if (activeItem?.channel) {
+      setSelectedChannel(activeItem.channel);
+    }
+  }, [activeItem]);
 
   if (!isOpen) return null;
 
@@ -127,41 +138,59 @@ export const CctvFootageModal: React.FC<CctvFootageModalProps> = ({
           <div className="lg:col-span-8 flex flex-col gap-4">
             <div className="relative rounded-2xl overflow-hidden bg-black border border-white/10 aspect-video group shadow-2xl">
               
-              {/* HTML5 Video Player playing actual MP4 dataset clip */}
-              <video
-                key={activeItem.videoUrl}
-                src={activeItem.videoUrl}
-                controls
-                autoPlay
-                loop
-                className="w-full h-full object-cover"
-                onLoadedMetadata={(e) => {
-                  (e.target as HTMLVideoElement).playbackRate = playbackRate;
-                }}
-              />
+              {/* Media Content: HTML5 Video if available, else authentic Dashcam Evidence capture */}
+              {activeItem.videoUrl ? (
+                <video
+                  key={activeItem.videoUrl}
+                  src={activeItem.videoUrl}
+                  poster={activeItem.posterUrl}
+                  controls
+                  autoPlay
+                  loop
+                  className="w-full h-full object-cover"
+                  onLoadedMetadata={(e) => {
+                    (e.target as HTMLVideoElement).playbackRate = playbackRate;
+                  }}
+                />
+              ) : (
+                <div className="relative w-full h-full flex items-center justify-center bg-black">
+                  <img
+                    src={activeItem.posterUrl || '/assets/defects/dangling_streetlight_dashcam.jpg'}
+                    alt={activeItem.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none"></div>
+                  
+                  {/* Status Banner */}
+                  <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-2xl border border-white/15 flex items-center justify-between shadow-xl">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                        <span className="material-symbols-outlined text-[18px] animate-pulse">photo_camera</span>
+                      </div>
+                      <div>
+                        <strong className="text-white block font-mono text-xs">{activeItem.title}</strong>
+                        <span className="text-slate-400 text-[10.5px]">
+                          High-Resolution Front Dashcam Capture ({activeItem.busId}) • Context video ready for generation
+                        </span>
+                      </div>
+                    </div>
+                    <span className="bg-[#0071E3]/20 text-[#0071E3] font-mono font-bold text-[11px] px-3 py-1 rounded-full border border-[#0071E3]/30 whitespace-nowrap">
+                      AI CONF: {activeItem.confidence}%
+                    </span>
+                  </div>
+                </div>
+              )}
 
               {/* CCTV HUD Top Bar Overlay */}
               <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none z-10 text-[11px] font-mono font-semibold text-white/90 drop-shadow">
                 <div className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span>CAM: {selectedChannel}</span>
+                  <span>CAM: {selectedChannel} • {activeItem.busId}</span>
                 </div>
                 <div className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
                   SPEED: {activeItem.speedKmh} km/h | 29.8 FPS
                 </div>
               </div>
-
-              {/* Bounding Box AI Detection Overlay */}
-              {showAiOverlay && (
-                <div className="absolute inset-0 pointer-events-none z-10 flex items-center justify-center p-8">
-                  <div className="border-2 border-red-500 bg-red-500/10 rounded-lg w-1/2 h-1/2 relative animate-pulse shadow-[0_0_20px_rgba(239,68,68,0.4)]">
-                    <span className="absolute -top-7 left-0 bg-red-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow flex items-center gap-1">
-                      <span>{activeItem.title}</span>
-                      <span className="bg-white/20 px-1 rounded">{activeItem.confidence}% CONF</span>
-                    </span>
-                  </div>
-                </div>
-              )}
             </div>
 
             {/* Video Controls & Camera Channel Selector */}

@@ -26,7 +26,7 @@ export const LiveMapView: React.FC<LiveMapViewProps> = ({
   const [activeDefectId, setActiveDefectId] = useState<string | null>(null);
 
   return (
-    <div className="flex-1 flex flex-col h-full bg-[#F5F5F7] dark:bg-black relative overflow-hidden">
+    <div className="flex-1 flex flex-col w-full h-[calc(100vh-130px)] min-h-[580px] bg-[#F5F5F7] dark:bg-black relative overflow-hidden">
       {/* Top Header Floating Apple Glass Pill */}
       <div className="absolute top-4 left-4 right-4 sm:left-6 sm:right-auto z-30 pointer-events-none flex flex-col sm:flex-row items-start gap-3">
         <div className="pointer-events-auto glass-panel px-4 py-2 rounded-full shadow-xl flex items-center gap-3">
@@ -64,7 +64,7 @@ export const LiveMapView: React.FC<LiveMapViewProps> = ({
       </div>
 
       {/* Main Full-Height OpenStreetMap Canvas */}
-      <div className="flex-1 w-full h-full relative">
+      <div className="flex-1 w-full h-full min-h-[500px] relative">
         <OpenStreetMapViewer
           language={language}
           tickets={tickets}

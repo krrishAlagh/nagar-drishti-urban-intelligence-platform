@@ -1,5 +1,5 @@
-import React from 'react';
-import { ActiveView, Language } from '../types';
+import React, { useMemo } from 'react';
+import { ActiveView, Language, UserRole, ROLE_ALLOWED_VIEWS } from '../types';
 import { ASSETS, TRANSLATIONS } from '../data/mockData';
 
 interface SidebarProps {
@@ -10,6 +10,7 @@ interface SidebarProps {
   unreadAlertsCount?: number;
   isOpenOnMobile?: boolean;
   onCloseMobile?: () => void;
+  userRole?: UserRole;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -19,7 +20,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onLogout,
   unreadAlertsCount = 3,
   isOpenOnMobile = false,
-  onCloseMobile
+  onCloseMobile,
+  userRole = 'Municipal Admin'
 }) => {
   const t = TRANSLATIONS[language];
 
@@ -35,7 +37,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     items: NavItem[];
   }
 
-  const navGroups: NavGroup[] = [
+  const rawNavGroups: NavGroup[] = [
     {
       title: language === 'hi' ? 'कमान एवं अवलोकन' : 'Command & Portals',
       items: [
@@ -85,6 +87,63 @@ export const Sidebar: React.FC<SidebarProps> = ({
     }
   ];
 
+  const allowedViews = ROLE_ALLOWED_VIEWS[userRole] || ROLE_ALLOWED_VIEWS['Municipal Admin'];
+
+  const navGroups = useMemo(() => {
+    return rawNavGroups
+      .map((group) => ({
+        ...group,
+        items: group.items.filter((item) => allowedViews.includes(item.id))
+      }))
+      .filter((group) => group.items.length > 0);
+  }, [rawNavGroups, allowedViews]);
+
+  const roleProfile = useMemo(() => {
+    switch (userRole) {
+      case 'Public Commuter':
+        return {
+          name: language === 'hi' ? 'आम नागरिक यात्री' : 'Verified Commuter',
+          roleTitle: language === 'hi' ? 'नागरिक पोर्टल • DEL-8921' : 'Citizen Portal • DEL-8921',
+          avatar: ASSETS.adminAvatar,
+          badgeBorder: 'border-emerald-400',
+          textColor: 'text-emerald-400'
+        };
+      case 'Repair Crew Lead':
+        return {
+          name: 'Vikram Singh',
+          roleTitle: language === 'hi' ? 'फील्ड टीम प्रमुख (पीडब्ल्यूडी वार्ड 14)' : 'Field Ops Lead (PWD Ward 14)',
+          avatar: ASSETS.adminAvatar,
+          badgeBorder: 'border-amber-400',
+          textColor: 'text-amber-400'
+        };
+      case 'Transport Authority':
+        return {
+          name: 'Anita Deshmukh',
+          roleTitle: language === 'hi' ? 'डीटीसी बेड़ा संचालन प्रमुख' : 'DTC Fleet Operations Chief',
+          avatar: ASSETS.adminAvatar,
+          badgeBorder: 'border-cyan-400',
+          textColor: 'text-cyan-400'
+        };
+      case 'Zonal Officer':
+        return {
+          name: 'S. K. Verma',
+          roleTitle: language === 'hi' ? 'क्षेत्रीय नगर अधिकारी (जोन 4)' : 'Zonal Municipal Officer (Zone 4)',
+          avatar: ASSETS.adminAvatar,
+          badgeBorder: 'border-purple-400',
+          textColor: 'text-purple-400'
+        };
+      case 'Municipal Admin':
+      default:
+        return {
+          name: 'Rajesh Kumar, IAS',
+          roleTitle: language === 'hi' ? 'नगर आयुक्त' : 'Municipal Commissioner',
+          avatar: ASSETS.adminAvatar,
+          badgeBorder: 'border-[#FF9F0A]',
+          textColor: 'text-[#FF9F0A]'
+        };
+    }
+  }, [userRole, language]);
+
   const handleNavClick = (id: ActiveView) => {
     setActiveView(id);
     if (onCloseMobile) {
@@ -125,7 +184,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 </span>
               </h1>
               <p className="text-[10px] text-[#86868b] font-normal">
-                {language === 'hi' ? 'शहरी कमान केंद्र' : 'Urban Intelligence'}
+                {userRole === 'Public Commuter' 
+                  ? (language === 'hi' ? 'नागरिक पोर्टल' : 'Citizen Portal')
+                  : (language === 'hi' ? 'शहरी कमान केंद्र' : 'Urban Intelligence')}
               </p>
             </div>
           </div>
@@ -141,18 +202,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </button>
         </div>
 
-        {/* Officer Profile Card */}
+        {/* Dynamic Role Profile Card */}
         <div className="px-4 py-3 border-b border-white/10 bg-white/[0.03] flex items-center justify-between gap-3">
           <div className="flex items-center gap-2.5 min-w-0">
             <img
-              src={ASSETS.adminAvatar}
-              alt="Municipal Officer"
-              className="w-8 h-8 rounded-full object-cover border border-[#FF9F0A] ring-1 ring-white/20 shrink-0"
+              src={roleProfile.avatar}
+              alt={roleProfile.name}
+              className={`w-8 h-8 rounded-full object-cover border ${roleProfile.badgeBorder} ring-1 ring-white/20 shrink-0`}
             />
             <div className="min-w-0">
-              <p className="text-xs text-white font-semibold truncate">Rajesh Kumar, IAS</p>
-              <p className="text-[10px] text-[#FF9F0A] font-medium truncate">
-                Municipal Commissioner
+              <p className="text-xs text-white font-semibold truncate">{roleProfile.name}</p>
+              <p className={`text-[10px] font-medium truncate ${roleProfile.textColor}`}>
+                {roleProfile.roleTitle}
               </p>
             </div>
           </div>

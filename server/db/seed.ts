@@ -19,12 +19,20 @@ export const ASSETS = {
   adminAvatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB8QDgUqO8B7Osb3Sk65E0tpcJ49CzH-ISb56yMsko4vUwFwSUeLMNrTsmsdpDZlcmmhu1ciUMwea6EGqWeNBqZ13UC6JUbfxnXK2DZGwpbTV3e-oDPHIgNmILfLiLo9-lmEvokYbTM_PRFlO143iLgEbBkZ9ey8B1rkTKWqgyDCpnvVyppvqF77JUKPQtYXkwpmSNfuG_rmJw0p779T7aDVDFfR2MfofZC9GqGNdpv-ZSg2BgHUijZ',
   sharmaAvatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae',
   teamBAvatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBW6PU2pck6jHASoRlh3b38smlCH43VpMTSzw-X3SdHXTG5_7x2mr398Tm8r5KCQoqug9J5aLyGMVUiPtPBMtYkqV9vWeQAmEihyic_vlaoSvDzVuNLz6J5gjWwoUG6kAWFm-xwGYSq5G3vXe28M9awXnVETmQnFbQ7JtIfD5UZ8EpdxQ4IkP4vT4nMPwHFDr71rQwUplCCA-agcCBTO2dmFrnR6Tp7oegEbd9Tp2Q3fN1dEDyRIBUF',
-  potholeClose: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw',
-  streetlightBroken: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDuAZ6B5bkvORRmhBGNUH_ELFai8Sc-Z6b_5ZtlQBQQmkunTv4o0_cEWln90zQWu8BfO3qNATMnuyI4LJWIh1asH2dtFi2IeINAjm1Hze7srjKOGUUD3-_afXclanQS1OhqhYG2s5Zx8cXoCEa99Dd78hW1RQrTVOmFLZYh6lbPkl2XDqaKV0oOs2bCtBdDr5-OMss06cyPzncoJ27meyYJaCJ4Q8G981OqCL0pSLNKoQi-U4F1lPaY',
-  pipeBurst: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD1HoCkuQbf1vj5IttVrTSe_dRT2Cgwby5Y68drDjtsoTLhfQUO_Mq3DZizQXiZHTyZzteRePL6Ldh8gyq6_53kXVRmj-hlC9Dle4Hxjh1wSJ-WeLz3JAXz08eIYdd8ydZdXbictd5LexO5kueALq0FXI0_qNM4LGIfjMbKTaQqxaQzixRR4EC7pq3UQlCZgzeN0r9lX4WBCbp3pd2bRP_JcPZnZcr4_pSJPoNp8NA5J2agoZSlnsTT',
-  potholeSevereThumb: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F',
-  overflowingBinThumb: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx',
-  brokenStreetlightThumb: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I',
+  potholeDashcam: '/assets/defects/severe_pothole_dashcam.jpg',
+  potholeClose: '/assets/defects/severe_pothole_thumb.jpg',
+  potholeVideo: '/assets/videos/pothole_dashcam_clip.mp4',
+  streetlightVideo: '/assets/videos/streetlight_dashcam_clip.mp4',
+  streetlightBroken: '/assets/defects/dangling_streetlight_dashcam.jpg',
+  pipeBurst: '/assets/defects/pipe_burst_dashcam.jpg',
+  pipeBurstThumb: '/assets/defects/pipe_burst_thumb.jpg',
+  pipeBurstVideo: '/assets/videos/pipe_burst_dashcam_clip.mp4',
+  sewerOverflow: '/assets/defects/sewer_overflow_dashcam.jpg',
+  sewerOverflowThumb: '/assets/defects/sewer_overflow_thumb.jpg',
+  sewerOverflowVideo: '/assets/videos/sewer_overflow_clip.mp4',
+  potholeSevereThumb: '/assets/defects/severe_pothole_thumb.jpg',
+  overflowingBinThumb: '/assets/defects/sewer_overflow_thumb.jpg',
+  brokenStreetlightThumb: '/assets/defects/dangling_streetlight_thumb.jpg',
   blueprintLogin: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBm6Sd9Xm1cjJF_Qo-Zs8ueUfM7Gh9Z94tndwbPnlfIomcvs719zr5PEOu2-F44O1SeugcHGwZBGDbvHCzUnZI46iKrGvER-lfhB9b151Z6jjKyQ2iR9ItktLjuHVbbrNnudMi6yxdXuQpUZbgt9Pi2FqYA4xLG9EuEykzz8G1c-r2mI-uP8JGR3XlezW_MthyzuhectXX1DfQym5W2ffXlacXgJDf86h99h8p58y-rYBKQ3n1iojsb'
 };
 
@@ -218,68 +226,118 @@ export const INITIAL_DEFECTS: DefectItem[] = [
     assignedTo: {
       name: 'R. Sharma',
       avatar: ASSETS.sharmaAvatar,
-      team: 'Electrical Maintenance Div 2'
+      team: 'Electrical Section'
     },
     department: 'Electrical & Lighting',
-    slaRemaining: '04h 10m',
+    slaRemaining: '04h 00m',
     isOverdue: false,
-    description: 'High-mast luminaire non-functional. Causes low visibility on pedestrian crossing.',
+    description: 'Nighttime urban street scene. A single metal streetlight pole leans at a 45° angle after storm wind damage. The luminaire head is dangling, held only by exposed electrical wires (~30cm visible). Surrounding area is poorly lit giving a dark, high-contrast scene with only the bus headlights and distant traffic illuminating the scene. Captured by front dashcam on DTC-BUS-118 with 92% confidence. High electrocution hazard.',
     status: 'ASSIGNED',
     comments: [
       {
-        id: 'c3',
+        id: 'c3-1',
+        author: 'DTC-BUS-118 Edge AI',
+        role: 'Computer Vision Core (Night Patrol)',
+        time: '08:18 PM',
+        text: 'Automated defect detection triggered via DTC-BUS-118 front night dashcam. Deflection: 45° | Exposed wiring: ~30cm | Confidence: 92.0%. High electrocution hazard.',
+        attachmentUrl: '/assets/defects/dangling_streetlight_dashcam.jpg',
+        attachmentType: 'image',
+        attachmentLabel: 'DTC-BUS-118 Front Dashcam POV (Sector 14 Main Ave)'
+      },
+      {
+        id: 'c3-2',
         author: 'R. Sharma',
         avatar: ASSETS.sharmaAvatar,
-        role: 'Field Officer',
-        time: '08:45 AM',
-        text: 'Replacement LED driver dispatched with maintenance van 12.'
+        role: 'Lead Technician (Electrical)',
+        time: '08:25 PM',
+        text: 'Work order accepted. Line de-energization requested from BSES Substation 4. Aerial bucket truck dispatched to Pole LGT-401 for luminaire head replacement and cable re-splicing.',
+        attachmentUrl: '/assets/defects/dangling_streetlight_thumb.jpg',
+        attachmentType: 'image',
+        attachmentLabel: 'Field Macro Inspection: Dangling Luminaire Head & Live 30cm Cable'
+      },
+      {
+        id: 'c3-3',
+        author: 'Rajesh K.',
+        avatar: ASSETS.adminAvatar,
+        role: 'Electrical Zonal Officer',
+        time: '08:30 PM',
+        text: 'Safety perimeter established around Pole LGT-401. Traffic police notified for partial lane closure. Estimated repair turnaround: 2.5 hours under 4-hour SLA.'
       }
     ],
     timeline: [
-      { title: 'Detected by AI', subtitle: 'Night Scan Routine', time: '08:30 AM', completed: true },
-      { title: 'Verified', subtitle: 'Auto-Rule R-042', time: '08:32 AM', completed: true },
-      { title: 'Ticket Created', subtitle: 'System', time: '08:35 AM', completed: true },
-      { title: 'Assigned', subtitle: 'R. Sharma (Div 2)', time: '08:40 AM', completed: true, active: true },
-      { title: 'In Progress', subtitle: 'Crew on site', time: 'Pending', completed: false },
-      { title: 'Resolved', subtitle: 'Luminaire tested', time: 'Pending', completed: false }
+      { title: 'Detected by AI', subtitle: 'Front dashcam (DTC-BUS-118)', time: '08:18 PM', completed: true },
+      { title: 'Verified', subtitle: 'Auto-Rule R-042', time: '08:20 PM', completed: true },
+      { title: 'Ticket Created', subtitle: 'Auto-Routed (Electrical)', time: '08:21 PM', completed: true },
+      { title: 'Assigned', subtitle: 'R. Sharma', time: '08:25 PM', completed: true, active: true },
+      { title: 'In Progress', subtitle: 'Bucket Truck Dispatched', time: 'Pending', completed: false },
+      { title: 'Resolved', subtitle: 'Fixture Re-attached', time: 'Pending', completed: false }
     ]
   },
   {
     id: '3',
     ticketNumber: 'TK-8855',
-    title: 'Water Pipe Burst & Flooding',
+    title: 'Water Main Burst & Road Flooding',
     category: 'Water Logging',
     severity: 'CRITICAL',
-    confidence: 96.8,
-    locationName: 'Civil Lines, North Ward near Raj Niwas Marg',
+    confidence: 96.5,
+    locationName: 'Civil Lines, opposite District Court Gate 1',
     coordinates: {
       lat: 28.6700,
       lng: 77.2250,
       formatted: '28.6700° N, 77.2250° E'
     },
     ward: 'Ward A - North',
-    timestamp: '24 Oct 2023, 06:15 AM',
-    timeAgo: '06:15:00 AM',
+    timestamp: '24 Oct 2023, 10:28 AM',
+    timeAgo: '10:28:11 AM',
     imageUrl: ASSETS.pipeBurst,
-    busId: 'BUS-204',
+    secondaryImageUrl: ASSETS.pipeBurstThumb,
+    videoUrl: '/assets/videos/pipe_burst_dashcam_clip.mp4',
+    busId: 'DTC-BUS-204',
+    detectedBy: 'Left-side camera, DTC-BUS-204',
+    estimatedDimensions: {
+      widthCm: 180,
+      depthCm: 60,
+      volumeM3: 0.80
+    },
     assignedTo: {
-      name: 'Team B',
+      name: 'Team B Emergency',
       avatar: ASSETS.teamBAvatar,
       team: 'Rapid Emergency Hydrology'
     },
     department: 'Water Supply & Sanitation',
-    slaRemaining: '-0h 15m',
-    isOverdue: true,
-    description: 'High-pressure 600mm feeder line ruptured. Flooding adjacent dual-lane carriageway.',
+    slaRemaining: '02h 00m',
+    isOverdue: false,
+    description: 'Daytime. Left-side side-camera view from DTC-BUS-204 looking out at a flooded road opposite District Court Gate 1. A 600mm high-pressure water main has ruptured at a flange joint, violently gushing muddy water 2m high from cracked asphalt and flooding 1.8m of the dual carriageway (~800L/min). Approaching vehicles and e-rickshaws detouring with extreme slowdown. Critical sinkhole and road washout hazard.',
     status: 'IN_PROGRESS',
     comments: [
       {
         id: 'c4',
+        author: 'DTC-BUS-204 Edge AI',
+        role: 'Side-Cam Vision Core',
+        time: '10:28 AM',
+        text: 'Automated hydraulic anomaly detection triggered via DTC-BUS-204 left-side camera. Classification: PIPE BURST / FLOODING (96.5%). Estimated flow: ~800L/min across 1.8m carriageway.',
+        attachmentUrl: ASSETS.pipeBurst,
+        attachmentType: 'image',
+        attachmentLabel: 'DTC-BUS-204 Left-Side Camera Capture (Civil Lines, 18 km/h)'
+      },
+      {
+        id: 'c5',
         author: 'Team B Lead',
         avatar: ASSETS.teamBAvatar,
-        role: 'Supervisor',
-        time: '07:20 AM',
-        text: 'Main isolation valves 4 & 5 closed. Excavator on site to expose fractured pipe collar.'
+        role: 'Supervisor (Hydrology)',
+        time: '10:32 AM',
+        text: 'Emergency crew mobilized. Upstream 600mm line isolation order issued to Civil Lines Pumping Station. Submersible dewatering pump en route.',
+        attachmentUrl: ASSETS.pipeBurstThumb,
+        attachmentType: 'image',
+        attachmentLabel: 'Macro Defect Inspection: Ruptured Flange Crater & High-Pressure Hydraulic Plume'
+      },
+      {
+        id: 'c6',
+        author: 'Rajesh K.',
+        avatar: ASSETS.adminAvatar,
+        role: 'Admin / Triage Officer',
+        time: '10:35 AM',
+        text: 'Traffic Police North Zone alerted for contraflow diversion outside District Court Gate 1. Priority 1 repair protocol active.'
       }
     ],
     timeline: [
@@ -294,22 +352,74 @@ export const INITIAL_DEFECTS: DefectItem[] = [
   {
     id: '4',
     ticketNumber: 'TK-8799',
-    title: 'Sewer Line Overflow',
+    title: 'Sewer Line Overflow — Manhole Incident',
     category: 'Sanitation',
     severity: 'HIGH',
     confidence: 89.0,
-    locationName: 'Nehru Park Outer Ring, Gate 3',
+    locationName: 'Nehru Park Outer Ring Road, Gate 3',
     coordinates: { lat: 28.5900, lng: 77.1950, formatted: '28.5900° N, 77.1950° E' },
     ward: 'Ward D - Central',
-    timestamp: '23 Oct 2023, 04:00 PM',
-    timeAgo: 'Yesterday',
-    imageUrl: ASSETS.overflowingBinThumb,
-    assignedTo: { name: 'S. Kumar', team: 'Sanitation Squad 4' },
+    timestamp: '24 Oct 2023, 12:35 PM',
+    timeAgo: '12:35:48 PM',
+    imageUrl: ASSETS.sewerOverflow,
+    secondaryImageUrl: ASSETS.sewerOverflowThumb,
+    videoUrl: '/assets/videos/sewer_overflow_clip.mp4',
+    busId: 'DTC-BUS-309',
+    detectedBy: 'Rear camera, DTC-BUS-309',
+    estimatedDimensions: {
+      widthCm: 300,
+      depthCm: 45,
+      volumeM3: 0.90
+    },
+    assignedTo: {
+      name: 'S. Kumar',
+      avatar: ASSETS.sharmaAvatar,
+      team: 'Sanitation Squad 4'
+    },
     department: 'Sanitation & Waste',
-    slaRemaining: 'Resolved',
+    slaRemaining: '04h 15m',
     isOverdue: false,
-    description: 'Manhole blockage resolved with suction jetting machine.',
-    status: 'RESOLVED'
+    description: 'Rear camera view from departing DTC-BUS-309 at Nehru Park Outer Ring Road, Gate 3. A municipal manhole (ID: NEH-14G) on a footpath/road junction overflows with dark sewage effluent. A thick dark liquid spreads in a ~3m radius around the open manhole, covering the footpath. Pedestrians visibly detour around it. The area has a biohazard look — dark staining, foul texture.',
+    status: 'IN_PROGRESS',
+    comments: [
+      {
+        id: 'c7',
+        author: 'DTC-BUS-309 Edge AI',
+        role: 'Rear-Cam Vision Core',
+        time: '12:35 PM',
+        text: 'Automated biohazard sewer overflow detected via DTC-BUS-309 rear camera. Classification: SEWER OVERFLOW (89.0%). Overflow radius: ~3m | Manhole ID: NEH-14G.',
+        attachmentUrl: ASSETS.sewerOverflow,
+        attachmentType: 'image',
+        attachmentLabel: 'DTC-BUS-309 Rear Dashcam Capture (Nehru Park Outer Ring Road, 24 km/h)'
+      },
+      {
+        id: 'c8',
+        author: 'S. Kumar',
+        avatar: ASSETS.sharmaAvatar,
+        role: 'Sanitation Supervisor',
+        time: '12:40 PM',
+        text: 'Sanitation Squad 4 dispatched with 14m³ super suction tanker and biocide wash crew. Footpath perimeter barricaded.',
+        attachmentUrl: ASSETS.sewerOverflowThumb,
+        attachmentType: 'image',
+        attachmentLabel: 'Macro Defect Inspection: Displaced Manhole Lid NEH-14G & Effluent Stain Profile'
+      },
+      {
+        id: 'c9',
+        author: 'Rajesh K.',
+        avatar: ASSETS.adminAvatar,
+        role: 'Admin / Triage Officer',
+        time: '12:42 PM',
+        text: 'Priority HIGH ticket confirmed. Biohazard protocol activated for Nehru Park pedestrian corridor.'
+      }
+    ],
+    timeline: [
+      { title: 'Detected by AI', subtitle: 'Rear camera (DTC-BUS-309)', time: '12:35 PM', completed: true },
+      { title: 'Verified', subtitle: 'Admin_Rajesh (89.0% Conf)', time: '12:38 PM', completed: true },
+      { title: 'Ticket Created', subtitle: 'Auto-Routed (Sanitation & Waste)', time: '12:39 PM', completed: true },
+      { title: 'Assigned', subtitle: 'Sanitation Squad 4', time: '12:40 PM', completed: true, active: true },
+      { title: 'In Progress', subtitle: 'Suction Jetting Active', time: '12:45 PM', completed: false },
+      { title: 'Resolved', subtitle: 'Disinfected & Manhole Secured', time: 'Pending', completed: false }
+    ]
   },
   {
     id: '5',

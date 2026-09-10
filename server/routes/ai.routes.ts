@@ -30,10 +30,10 @@ router.post('/analyze-defect', async (req: Request, res: Response, next) => {
   }
 });
 
-// POST /api/ai/copilot-chat - Interactive AI Assistant for Municipal Officers
+// POST /api/ai/copilot-chat - Interactive AI Assistant for Municipal Officers & Citizens
 router.post('/copilot-chat', async (req: Request, res: Response, next) => {
   try {
-    const { query, language = 'en', activeView, activeTicketId } = req.body;
+    const { query, language = 'en', activeView, activeTicketId, userRole } = req.body;
 
     if (!query) {
       return res.status(400).json({
@@ -42,7 +42,7 @@ router.post('/copilot-chat', async (req: Request, res: Response, next) => {
       });
     }
 
-    const result = await GeminiService.queryNagarAssistant(query, language, activeView, activeTicketId);
+    const result = await GeminiService.queryNagarAssistant(query, language, activeView, activeTicketId, userRole);
     res.json({ success: true, data: result });
   } catch (err) {
     next(err);

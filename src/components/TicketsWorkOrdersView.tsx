@@ -16,6 +16,22 @@ interface TicketsWorkOrdersViewProps {
 type ViewMode = 'kanban' | 'table';
 type StatusFilter = 'ALL' | 'NEW' | 'ASSIGNED' | 'IN_PROGRESS' | 'RESOLVED';
 
+const getDefectFallbackImage = (category?: string) => {
+  switch (category) {
+    case 'Streetlights':
+    case 'Electrical':
+      return '/assets/defects/dangling_streetlight_thumb.jpg';
+    case 'Water Logging':
+    case 'Drainage':
+      return '/assets/defects/pipe_burst_thumb.jpg';
+    case 'Sanitation':
+      return '/assets/defects/sewer_overflow_thumb.jpg';
+    case 'Potholes':
+    default:
+      return '/assets/defects/severe_pothole_thumb.jpg';
+  }
+};
+
 export const TicketsWorkOrdersView: React.FC<TicketsWorkOrdersViewProps> = ({
   language,
   tickets,
@@ -464,14 +480,15 @@ export const TicketsWorkOrdersView: React.FC<TicketsWorkOrdersViewProps> = ({
                       </div>
 
                       <div className="flex gap-2.5">
-                        {ticket.imageUrl && (
-                          <img
-                            src={ticket.imageUrl}
-                            alt={ticket.title}
-                            className="w-14 h-14 object-cover rounded-lg border border-slate-200 dark:border-white/10 cursor-pointer shrink-0"
-                            onClick={() => onSelectTicket(ticket.ticketNumber)}
-                          />
-                        )}
+                        <img
+                          src={ticket.imageUrl || getDefectFallbackImage(ticket.category)}
+                          alt={ticket.title}
+                          className="w-14 h-14 object-cover rounded-lg border border-slate-200 dark:border-white/10 cursor-pointer shrink-0"
+                          onClick={() => onSelectTicket(ticket.ticketNumber)}
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = getDefectFallbackImage(ticket.category);
+                          }}
+                        />
                         <div className="flex-1 min-w-0">
                           <h4
                             onClick={() => onSelectTicket(ticket.ticketNumber)}
@@ -547,14 +564,15 @@ export const TicketsWorkOrdersView: React.FC<TicketsWorkOrdersViewProps> = ({
                       </div>
 
                       <div className="flex gap-2.5">
-                        {ticket.imageUrl && (
-                          <img
-                            src={ticket.imageUrl}
-                            alt={ticket.title}
-                            className="w-14 h-14 object-cover rounded-lg border border-slate-200 dark:border-white/10 cursor-pointer shrink-0"
-                            onClick={() => onSelectTicket(ticket.ticketNumber)}
-                          />
-                        )}
+                        <img
+                          src={ticket.imageUrl || getDefectFallbackImage(ticket.category)}
+                          alt={ticket.title}
+                          className="w-14 h-14 object-cover rounded-lg border border-slate-200 dark:border-white/10 cursor-pointer shrink-0"
+                          onClick={() => onSelectTicket(ticket.ticketNumber)}
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = getDefectFallbackImage(ticket.category);
+                          }}
+                        />
                         <div className="flex-1 min-w-0">
                           <h4
                             onClick={() => onSelectTicket(ticket.ticketNumber)}
@@ -634,14 +652,15 @@ export const TicketsWorkOrdersView: React.FC<TicketsWorkOrdersViewProps> = ({
                       </div>
 
                       <div className="flex gap-2.5">
-                        {ticket.imageUrl && (
-                          <img
-                            src={ticket.imageUrl}
-                            alt={ticket.title}
-                            className="w-14 h-14 object-cover rounded-lg border border-slate-200 dark:border-white/10 cursor-pointer shrink-0"
-                            onClick={() => onSelectTicket(ticket.ticketNumber)}
-                          />
-                        )}
+                        <img
+                          src={ticket.imageUrl || getDefectFallbackImage(ticket.category)}
+                          alt={ticket.title}
+                          className="w-14 h-14 object-cover rounded-lg border border-slate-200 dark:border-white/10 cursor-pointer shrink-0"
+                          onClick={() => onSelectTicket(ticket.ticketNumber)}
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = getDefectFallbackImage(ticket.category);
+                          }}
+                        />
                         <div className="flex-1 min-w-0">
                           <h4
                             onClick={() => onSelectTicket(ticket.ticketNumber)}
@@ -714,13 +733,32 @@ export const TicketsWorkOrdersView: React.FC<TicketsWorkOrdersViewProps> = ({
                         </span>
                       </div>
 
-                      <h4
-                        onClick={() => onSelectTicket(ticket.ticketNumber)}
-                        className="text-xs font-semibold text-[#071E27] dark:text-white cursor-pointer hover:underline truncate"
-                      >
-                        {ticket.title}
-                      </h4>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">{ticket.locationName}</p>
+                      <div className="flex gap-2.5">
+                        <img
+                          src={ticket.imageUrl || getDefectFallbackImage(ticket.category)}
+                          alt={ticket.title}
+                          className="w-14 h-14 object-cover rounded-lg border border-emerald-300 dark:border-emerald-800/40 cursor-pointer shrink-0"
+                          onClick={() => onSelectTicket(ticket.ticketNumber)}
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = getDefectFallbackImage(ticket.category);
+                          }}
+                        />
+                        <div className="flex-1 min-w-0">
+                          <h4
+                            onClick={() => onSelectTicket(ticket.ticketNumber)}
+                            className="text-xs font-semibold text-[#071E27] dark:text-white cursor-pointer hover:underline truncate"
+                          >
+                            {ticket.title}
+                          </h4>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">{ticket.locationName}</p>
+                          <div className="flex items-center gap-1.5 mt-1">
+                            <span className="text-[10px] bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 px-1.5 py-0.2 rounded border border-emerald-200 dark:border-emerald-800 font-mono">
+                              Verified
+                            </span>
+                            <span className="text-[10px] text-slate-400 dark:text-slate-500 font-mono">{ticket.ward}</span>
+                          </div>
+                        </div>
+                      </div>
 
                       <div className="pt-2 border-t border-slate-100 dark:border-white/10 flex items-center justify-between text-[10px] text-slate-400 dark:text-slate-500 font-mono">
                         <span>{ticket.department}</span>
@@ -752,6 +790,7 @@ export const TicketsWorkOrdersView: React.FC<TicketsWorkOrdersViewProps> = ({
                     />
                   </th>
                   <th className="py-3 px-3.5 font-mono text-[11px]">Ticket ID</th>
+                  <th className="py-3 px-2 text-center">Photo</th>
                   <th className="py-3 px-3">Severity</th>
                   <th className="py-3 px-3">Title & Location</th>
                   <th className="py-3 px-3">Category / Ward</th>
@@ -785,6 +824,16 @@ export const TicketsWorkOrdersView: React.FC<TicketsWorkOrdersViewProps> = ({
                       </td>
                       <td className="py-2.5 px-3.5 font-mono font-bold text-[#005FAF] dark:text-[#40A9FF]">
                         {ticket.ticketNumber}
+                      </td>
+                      <td className="py-2 px-2 text-center" onClick={() => onSelectTicket(ticket.ticketNumber)}>
+                        <img
+                          src={ticket.imageUrl || getDefectFallbackImage(ticket.category)}
+                          alt={ticket.title}
+                          className="w-10 h-10 object-cover rounded-lg border border-slate-200 dark:border-white/10 shrink-0 mx-auto"
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = getDefectFallbackImage(ticket.category);
+                          }}
+                        />
                       </td>
                       <td className="py-2.5 px-3">
                         <span

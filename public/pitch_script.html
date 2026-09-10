@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SIH 2026 Pitch Script - Nagar Drishti</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+    @page {
+      size: A4;
+      margin: 14mm 14mm 14mm 14mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.5;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .header-banner {
+      background: linear-gradient(135deg, #0A192F 0%, #172A46 100%);
+      color: #ffffff;
+      padding: 16px 20px;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 6px solid #0071E3;
+    }
+
+    .title-group h1 {
+      font-size: 18pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #FFFFFF;
+      margin-bottom: 3px;
+    }
+
+    .title-group p {
+      font-size: 10pt;
+      color: #94A3B8;
+      font-weight: 500;
+    }
+
+    .meta-badge {
+      background: rgba(0, 113, 227, 0.25);
+      border: 1px solid rgba(0, 113, 227, 0.5);
+      padding: 6px 12px;
+      border-radius: 8px;
+      text-align: right;
+    }
+
+    .meta-badge .hackathon {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #38BDF8;
+      display: block;
+    }
+
+    .meta-badge .timing {
+      font-size: 8.5pt;
+      font-family: 'JetBrains Mono', monospace;
+      color: #CBD5E1;
+    }
+
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 14px;
+      font-size: 9pt;
+      background: #F8FAFC;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #E2E8F0;
+    }
+
+    .matrix-table th {
+      background: #0F172A;
+      color: #FFFFFF;
+      text-align: left;
+      padding: 7px 12px;
+      font-weight: 600;
+      font-size: 8.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .matrix-table td {
+      padding: 7px 12px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .speaker-card {
+      border: 1px solid #CBD5E1;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      background: #FFFFFF;
+      page-break-inside: avoid;
+    }
+
+    .speaker-card.sp1 { border-left: 5px solid #0071E3; }
+    .speaker-card.sp2 { border-left: 5px solid #10B981; }
+    .speaker-card.sp3 { border-left: 5px solid #F59E0B; }
+    .speaker-card.sp4 { border-left: 5px solid #EF4444; }
+
+    .speaker-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px dashed #E2E8F0;
+    }
+
+    .speaker-tag {
+      font-size: 11pt;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sp1 .speaker-tag { color: #0071E3; }
+    .sp2 .speaker-tag { color: #059669; }
+    .sp3 .speaker-tag { color: #D97706; }
+    .sp4 .speaker-tag { color: #DC2626; }
+
+    .speaker-role {
+      font-size: 8.5pt;
+      font-family: 'JetBrains Mono', monospace;
+      color: #64748B;
+      font-weight: 600;
+      background: #F1F5F9;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .stage-direction {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #64748B;
+      background: #F8FAFC;
+      border-left: 3px solid #94A3B8;
+      padding: 4px 8px;
+      margin-bottom: 8px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .speech-content {
+      font-size: 9.8pt;
+      line-height: 1.45;
+      color: #1E293B;
+    }
+
+    .speech-content p {
+      margin-bottom: 6px;
+    }
+
+    .speech-content strong {
+      color: #0F172A;
+      font-weight: 600;
+    }
+
+    .handoff-box {
+      margin-top: 6px;
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 8.5pt;
+      color: #1E40AF;
+      font-weight: 500;
+    }
+
+    .highlight-quote {
+      background: #FEF2F2;
+      border: 1.5px solid #F87171;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 8px;
+      font-size: 10pt;
+      font-weight: 600;
+      color: #991B1B;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .qa-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 10px;
+      page-break-inside: avoid;
+    }
+
+    .qa-box h3 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .qa-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      font-size: 8.5pt;
+    }
+
+    .qa-item {
+      background: #FFFFFF;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #CBD5E1;
+    }
+
+    .qa-q { font-weight: 700; color: #0F172A; margin-bottom: 2px; }
+    .qa-a { color: #475569; }
+
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Banner -->
+  <div class="header-banner">
+    <div class="title-group">
+      <h1>NAGAR DRISHTI (नगर दृष्टि)</h1>
+      <p>Autonomous Edge-AI Urban Intelligence & Municipal Infrastructure Platform</p>
+    </div>
+    <div class="meta-badge">
+      <span class="hackathon">SIH 2026 PITCH SCRIPT</span>
+      <span class="timing">⏱️ 4 Speakers • 6–7 Min Total</span>
+    </div>
+  </div>
+
+  <!-- Role Matrix -->
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Speaker</th>
+        <th>Core Focus Area</th>
+        <th>Key Message &amp; Narrative Goal</th>
+        <th>Est. Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Speaker 1</strong></td>
+        <td>Problem &amp; Solution</td>
+        <td>The paradox of modern India; reactive complaints vs. transit-mounted fleet scanning.</td>
+        <td>90s</td>
+      </tr>
+      <tr>
+        <td><strong>Speaker 2</strong></td>
+        <td>Technical Approach</td>
+        <td>Edge perception (YOLO-v8, 30 FPS, &lt;25ms), 3D volumetric math, spatial deduplication.</td>
+        <td>90s</td>
+      </tr>
+      <tr>
+        <td><strong>Speaker 3</strong></td>
+        <td>Feasibility &amp; Viability</td>
+        <td>Zero-Capex transit synergy, open civic APIs (CP-GRAMS/ICCC), 30–40% budget savings.</td>
+        <td>90s</td>
+      </tr>
+      <tr>
+        <td><strong>Speaker 4</strong></td>
+        <td>Impact &amp; Grand Finale</td>
+        <td>Saving 3,500+ lives, Viksit Bharat 2047 vision, memorable patriotic punchline.</td>
+        <td>90s</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SPEAKER 1 -->
+  <div class="speaker-card sp1">
+    <div class="speaker-header">
+      <span class="speaker-tag">🎙️ SPEAKER 1 — The Problem &amp; The Paradigm Shift</span>
+      <span class="speaker-role">TIME: 00:00 – 01:30 (90s)</span>
+    </div>
+    <div class="stage-direction">
+      <strong>Stage Presence:</strong> Step firmly to center stage. Confident, empathetic eye contact with judges. Set an urgent, relatable tone.
+    </div>
+    <div class="speech-content">
+      <p>"Respected jury members — consider the paradox of modern India. We are sending rovers to the Moon, yet every day millions navigate roads with dangerous 15-centimeter potholes, dark avenues under dangling live wires, flooded corridors from burst water pipes, and overflowing sewer lines.</p>
+      <p>Why? Because municipal governance today is <strong>painfully reactive</strong>. Cities rely on citizen grievance apps where complaints take 2 to 3 weeks to be verified, or on sporadic manual surveys that cost crores and are outdated before ink dries.</p>
+      <p>We asked: <strong>What if our cities could inspect themselves automatically every hour, without adding a single extra patrol vehicle?</strong></p>
+      <p>Meet <strong>Nagar Drishti (नगर दृष्टि)</strong>. We transform existing public transit fleets — buses that already travel every arterial road daily — into an active, intelligent mobile scanner network. With custom Edge AI cameras scanning roads, streetlights, water mains, and sanitation, defects are verified and converted into engineering work orders in seconds."</p>
+    </div>
+    <div class="handoff-box">
+      <strong>Handoff Cue:</strong> "To explain the deep-tech engineering powering this platform, I hand over to <strong>[Speaker 2's Name]</strong>."
+    </div>
+  </div>
+
+  <!-- SPEAKER 2 -->
+  <div class="speaker-card sp2">
+    <div class="speaker-header">
+      <span class="speaker-tag">💻 SPEAKER 2 — Technical Approach &amp; Architecture</span>
+      <span class="speaker-role">TIME: 01:30 – 03:00 (90s)</span>
+    </div>
+    <div class="stage-direction">
+      <strong>Stage Presence:</strong> Step forward briskly. Point toward the architecture slide or laptop screen. Crisp, authoritative engineering voice.
+    </div>
+    <div class="speech-content">
+      <p>"Thank you, [Speaker 1]. Behind Nagar Drishti is an <strong>Edge-First, Three-Tier Architecture</strong>:</p>
+      <p><strong>1. Multi-Modal Edge Perception:</strong> Each bus carries an industrial-grade Edge AI processor linked to Front, Rear, and Side cameras. Running optimized, quantized <strong>YOLO-v8 models at &gt;30 FPS with sub-25ms inference</strong>, we don’t just detect defects — our dual-frame geometry calculates <strong>precise 3D dimensions</strong>: pothole crater volume in m³, streetlight pole deflection angles, water burst flow rates (~800L/min), and sewer overflow spread radius.</p>
+      <p><strong>2. Privacy-by-Design &amp; Zero Bandwidth Waste:</strong> No continuous video is streamed. Face and license-plate blurring happen on-chip. Only verified 10-second incident packages with GPS telemetry sync to the cloud.</p>
+      <p><strong>3. Automated Engineering Work Orders:</strong> Our cloud core performs <strong>spatial deduplication</strong> — 5 buses seeing the same pothole generate only 1 ticket. It then synthesizes exact materials bills (bitumen hot-mix, dewatering pumps) and auto-routes tickets to PWD, Electrical, or Water departments under strict SLA timers."</p>
+    </div>
+    <div class="handoff-box">
+      <strong>Handoff Cue:</strong> "Now, how practical and economically viable is this for Indian municipalities? For that, here is <strong>[Speaker 3's Name]</strong>."
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SPEAKER 3 -->
+  <div class="speaker-card sp3">
+    <div class="speaker-header">
+      <span class="speaker-tag">📊 SPEAKER 3 — Feasibility, Scalability &amp; Viability</span>
+      <span class="speaker-role">TIME: 03:00 – 04:30 (90s)</span>
+    </div>
+    <div class="stage-direction">
+      <strong>Stage Presence:</strong> Pragmatic, commercial-mindset. Use deliberate hand gestures when discussing cost comparisons and percentages.
+    </div>
+    <div class="speech-content">
+      <p>"Thank you, [Speaker 2]. Whenever AI is proposed to government bodies, the question is: <em>'Who pays for it, and will it work on the ground?'</em> Nagar Drishti is designed for <strong>frugal, high-yield Indian municipal economics</strong>:</p>
+      <p><strong>1. Zero Infrastructure Capex:</strong> Static smart-poles cost lakhs each and have 50-meter blind spots. Meanwhile, Delhi alone runs 7,000 transit buses; Bengaluru runs 6,500. By equipping vehicles already burning fuel and covering routes, edge camera retrofits cost under <strong>₹15,000 per bus</strong>, delivering <strong>98% arterial road coverage every 24 hours</strong>.</p>
+      <p><strong>2. Seamless Institutional Synergy:</strong> Nagar Drishti integrates smoothly with existing command centers (ICCC) and grievance backends (CP-GRAMS) via RESTful APIs. When repairs finish, the very next bus passing that GPS point automatically re-scans the surface to close the SLA loop without human bias.</p>
+      <p><strong>3. Massive ROI:</strong> Catching a 15cm pothole before it destroys the road base, or a leaking pipe before it creates a sinkhole, shifts cities from costly reconstruction to affordable preventative maintenance — saving cities an estimated <strong>30% to 40% in annual maintenance budgets</strong>."</p>
+    </div>
+    <div class="handoff-box">
+      <strong>Handoff Cue:</strong> "To summarize our human impact and long-term vision, I invite <strong>[Speaker 4's Name]</strong>."
+    </div>
+  </div>
+
+  <!-- SPEAKER 4 -->
+  <div class="speaker-card sp4">
+    <div class="speaker-header">
+      <span class="speaker-tag">🌟 SPEAKER 4 — Impacts, Benefits &amp; The SIH 2026 Finale</span>
+      <span class="speaker-role">TIME: 04:30 – 06:00 (90s)</span>
+    </div>
+    <div class="stage-direction">
+      <strong>Stage Presence:</strong> Step forward with heartfelt conviction. All 4 teammates stand shoulder-to-shoulder in a confident, unified posture.
+    </div>
+    <div class="speech-content">
+      <p>"Thank you, [Speaker 3]. At Nagar Drishti, our ultimate metric isn’t code or compute — it is <strong>human lives and public safety</strong>:</p>
+      <p>• <strong>Zero-Death Vision:</strong> Over 3,500 Indians lose their lives to road defects annually. By slashing detection time from <strong>21 days to under 15 minutes</strong>, we eliminate road hazards before they claim lives.<br>
+      • <strong>Contractor Accountability:</strong> Cryptographically timestamped before-and-after video audits eliminate ghost repairs and substandard patches.<br>
+      • <strong>Viksit Bharat 2047:</strong> As India builds world-class infrastructure, smart cities cannot run on 20th-century paper complaints. A true smart city must have eyes that observe, a mind that understands, and hands that repair."</p>
+      
+      <div class="stage-direction" style="margin-top: 6px;">
+        <strong>[Pause for 2 seconds. Look directly into the eyes of the judges. Tone becomes calm, steady, and inspiring.]</strong>
+      </div>
+
+      <div class="highlight-quote">
+        "Honorable judges — with every wheel that turns on our city streets, <strong>Nagar Drishti</strong> transforms our buses into tireless guardians of our public infrastructure.<br><br>
+        <strong>Together, let us build an India where our roads are safe, our cities are responsive, and no citizen's voice is needed to fix what our technology should have seen first.</strong><br><br>
+        Thank you, and Jai Hind! 🇮🇳"
+      </div>
+    </div>
+  </div>
+
+  <!-- JURY DEFENSE CHEAT SHEET -->
+  <div class="qa-box">
+    <h3>🎯 Quick Jury Q&amp;A Defense Cheat Sheet</h3>
+    <div class="qa-grid">
+      <div class="qa-item">
+        <div class="qa-q">Q: Poor night lighting or monsoon rains?</div>
+        <div class="qa-a"><strong>Speaker 2:</strong> "Models trained on dusk, headlights & wet reflections with CLAHE adaptive contrast. Live tests confirm &gt;92% confidence."</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">Q: What if cellular connectivity drops?</div>
+        <div class="qa-a"><strong>Speaker 2:</strong> "Full Edge autonomy. Inference runs offline on NVMe storage; incident packages sync automatically upon reaching depot Wi-Fi/5G."</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">Q: Who maintains the bus cameras?</div>
+        <div class="qa-a"><strong>Speaker 3:</strong> "Transit fleets undergo nightly depot washing and maintenance. Nodes have auto-health diagnostics powered by bus battery step-down."</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">Q: How do contractors adopt this?</div>
+        <div class="qa-a"><strong>Speaker 3:</strong> "They get turn-by-turn navigation, video evidence, and required materials sheets. The next passing bus autonomously verifies completion."</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

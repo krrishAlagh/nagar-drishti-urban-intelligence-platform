@@ -30,7 +30,86 @@ interface VideoDataset {
   date: string;
   description: string;
   videoUrls?: string[];
+  mediaItems?: Array<{
+    title: string;
+    type: 'video' | 'image';
+    url: string;
+    tag?: string;
+    subtitle?: string;
+  }>;
 }
+
+const getCategoryRepairDefaults = (category: string, defect: DefectItem) => {
+  if (category === 'Streetlights' || category === 'Electrical' || defect.ticketNumber === 'TK-8890') {
+    return {
+      actionPlan: 'De-energize Sector 14 lighting feeder circuit (OSHA Lockout/Tagout protocol). Deploy 14m aerial hydraulic bucket truck to stabilize tilted 8m pole (Deflection: 45°). Strip and splice severed ~30cm electrical wiring using dual-wall adhesive heat-shrink sleeves. Mount and secure replacement 250W IP66 LED luminaire fixture (torque to 65 N·m). Inspect foundation bolts, re-align pole perpendicularity with spirit level, and conduct insulation resistance test (>50 MΩ) prior to re-energizing.',
+      materials: [
+        '250W LED IP66 Luminaire Head & Driver Kit',
+        '14m Aerial Hydraulic Bucket Truck',
+        '10kV Insulated Lineman Toolset & High-Voltage Detector',
+        'Dual-wall Adhesive Heat-shrink Splice Sleeves (3-core)',
+        'Heavy-duty Galvanized Base Anchor Bolts (M24)',
+        'Retroreflective Hazard Cones & Safety Barricades'
+      ],
+      hazards: [
+        '230V live exposed wire electrocution hazard to pedestrians & road users',
+        'Severe road corridor blackout causing nighttime vehicular collision risk',
+        'Risk of structural collapse from 45° pole tilt under gusty wind conditions'
+      ]
+    };
+  }
+  if (category === 'Sanitation') {
+    return {
+      actionPlan: 'Deploy 14m³ high-power super suction jetting machine to clear sewer line blockage at manhole NEH-14G. Cordon off 3m overflow radius on footpath with biohazard tape. Extract effluent sludge from catch basin, high-pressure wash walkway tiles with 10% quaternary ammonium biocide disinfectant, and re-seat and lock cast-iron manhole cover.',
+      materials: [
+        '14m³ High-Velocity Super Suction Jetting Tanker',
+        'Heavy-Duty Cast Iron Manhole Cover & Locking Ring (NEH-14G)',
+        'Quaternary Ammonium Antimicrobial Sanitizer (60L)',
+        'Biohazard Perimeter Barricade & Warning Cones',
+        'Hazardous Effluent PPE, Respirators & Chemical Gloves'
+      ],
+      hazards: [
+        'Pathogenic biohazard effluent exposure & waterborne infection risk',
+        'Pedestrian slipping hazard on slippery walkway tiles',
+        'Pedestrian spillover into active traffic lane on Outer Ring Road'
+      ]
+    };
+  }
+  if (category === 'Water Logging' || category === 'Drainage') {
+    return {
+      actionPlan: 'Emergency isolate 600mm municipal feeder main via upstream gate valves at Civil Lines pumping station (mitigating ~800L/min high-pressure flow). Deploy two 15HP submersible dewatering pumps to evacuate 1.8m flooded carriageway. Install trench shoring safety shield around fracture crater. Replace ruptured 600mm ductile iron mechanical flange coupling (Class K9, torqued to 180 N·m). Backfill with compacted crushed stone aggregate (4 tons) and execute 8-bar hydrostatic pressure test prior to bituminous road resurfacing.',
+      materials: [
+        '600mm Ductile Iron Mechanical Flange Coupling (Class K9)',
+        '15HP High-Flow Diesel Dewatering Pumps & Discharge Hoses (2 Units)',
+        'Trench Shoring Box & Steel Safety Shielding Plates',
+        'Fast-Setting Hydrophobic Hydraulic Mortar & Gaskets',
+        'Crushed Stone Sub-base Aggregate (4 Tons)',
+        'High-Intensity Flood Hazard Cones & LED Flashers'
+      ],
+      hazards: [
+        'Carriageway sub-base washaway causing sudden sinkhole collapse under vehicular load',
+        'Vehicular engine hydrostatic lock and corridor obstruction outside District Court Gate 1',
+        'Sub-surface 11kV electrical cable short-circuit & contamination hazard'
+      ]
+    };
+  }
+  // Default: Roads & Bridges / Potholes
+  return {
+    actionPlan: 'Establish traffic taper using retroreflective cones (MUTCD standard). Saw-cut damaged asphalt perimeter to a rectangular profile and excavate loose debris to solid subgrade (depth ~15cm). Thoroughly apply hot cationic bitumen emulsion (SS-1h) tack coat. Place Type-II Hot Mix Asphalt in 50mm compacted lifts at 150°C and compact with 1.5-ton vibratory roller to 95% target density.',
+    materials: [
+      'Type-II Hot Mix Asphalt (250kg)',
+      'Bitumen Emulsion Tack Coat Primer',
+      '1.5-ton Vibratory Roller Compactor',
+      'Asphalt Rake, Level Lute & Hand Tamper',
+      'Retroreflective Hazard Cones & LED Warning Flashers'
+    ],
+    hazards: [
+      'High-speed vehicular tire blowouts and rim damage',
+      'Severe two-wheeler loss of control and skidding accident hazard',
+      'Subgrade water infiltration causing progressive structural road collapse'
+    ]
+  };
+};
 
 export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
   language,
@@ -41,6 +120,7 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
 }) => {
   const t = TRANSLATIONS[language];
   const [newComment, setNewComment] = useState('');
+  const [localComments, setLocalComments] = useState(ticket.comments || []);
   const [selectedCrew, setSelectedCrew] = useState<CrewTeam | null>(null);
   const [crewList, setCrewList] = useState<CrewTeam[]>([]);
   const [videoDatasets, setVideoDatasets] = useState<VideoDataset[]>([]);
@@ -54,6 +134,34 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
   } | null>(null);
   const [isLoadingAi, setIsLoadingAi] = useState(false);
   const [isCctvOpen, setIsCctvOpen] = useState(false);
+  const [activePhotoTab, setActivePhotoTab] = useState<'video' | 'dashcam' | 'closeup'>(ticket.videoUrl ? 'video' : 'dashcam');
+
+  useEffect(() => {
+    setActivePhotoTab(ticket.videoUrl ? 'video' : 'dashcam');
+  }, [ticket.id, ticket.videoUrl]);
+
+  useEffect(() => {
+    setLocalComments(ticket.comments || []);
+  }, [ticket.id, ticket.comments]);
+
+  const repairDefaults = getCategoryRepairDefaults(ticket.category, ticket);
+  const effectiveActionPlan = aiAnalysis?.actionPlan || repairDefaults.actionPlan;
+  const effectiveMaterials = (aiAnalysis?.materialsEstimated && aiAnalysis.materialsEstimated.length > 0)
+    ? aiAnalysis.materialsEstimated
+    : repairDefaults.materials;
+  const effectiveHazards = (aiAnalysis?.detectedHazards && aiAnalysis.detectedHazards.length > 0)
+    ? aiAnalysis.detectedHazards
+    : repairDefaults.hazards;
+
+  const activeCctvItem = (ticket.category === 'Sanitation' || ticket.ticketNumber === 'TK-8799')
+    ? DATASET_CCTV_VIDEOS.find((c) => c.id === 'cctv-104') || DATASET_CCTV_VIDEOS[3]
+    : (ticket.category === 'Water Logging' || ticket.ticketNumber === 'TK-8855')
+    ? DATASET_CCTV_VIDEOS.find((c) => c.id === 'cctv-103') || DATASET_CCTV_VIDEOS[2]
+    : (ticket.category === 'Streetlights' || ticket.ticketNumber === 'TK-8890')
+    ? DATASET_CCTV_VIDEOS.find((c) => c.id === 'cctv-102') || DATASET_CCTV_VIDEOS[1]
+    : (ticket.category === 'Potholes' || ticket.ticketNumber === 'TK-8921')
+    ? DATASET_CCTV_VIDEOS.find((c) => c.id === 'cctv-101') || DATASET_CCTV_VIDEOS[0]
+    : DATASET_CCTV_VIDEOS.find((c) => c.busId === ticket.busId) || DATASET_CCTV_VIDEOS[0];
 
   // Load crew list on mount
   useEffect(() => {
@@ -126,33 +234,206 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
         const res = await fetch(`/api/defects/${ticket.id}/datasets`);
         if (res.ok) {
           const json = await res.json();
-          setVideoDatasets(json.data || []);
+          if (json.data && json.data.length > 0) {
+            setVideoDatasets(json.data);
+            setIsLoadingDatasets(false);
+            return;
+          }
         }
       } catch (err) {
         console.warn('Error loading datasets:', err);
-        // Set default datasets if API fails
-        setVideoDatasets([
-          {
-            id: 'dataset-1',
-            name: '10th July - Dataset 001',
-            folder: '10th July-20231125T045234Z-001',
-            videos: 12,
-            totalSize: '2.4GB',
-            date: '2023-07-10',
-            description: 'Urban defect detection and traffic analysis'
-          }
-        ]);
       } finally {
         setIsLoadingDatasets(false);
       }
+
+      // Context-aware datasets tailored to defect category and telemetry
+      if (ticket.category === 'Sanitation' || ticket.ticketNumber === 'TK-8799') {
+        setVideoDatasets([
+          {
+            id: 'dataset-sani-309',
+            name: 'DTC-BUS-309 Rear Camera & Sanitation AI Stream',
+            folder: 'DTC-BUS-309/nehrupark-gate3',
+            videos: 3,
+            totalSize: '210MB',
+            date: '2023-10-24',
+            description: '12-second continuous rear dashcam clip capturing overflowing manhole NEH-14G, ~3m effluent spread on walkway, pedestrian detour, and Edge AI yellow bounding box.',
+            videoUrls: ['/assets/videos/sewer_overflow_clip.mp4'],
+            mediaItems: [
+              {
+                title: 'Continuous Rear Dashcam MP4 Recording (12s)',
+                type: 'video',
+                url: '/assets/videos/sewer_overflow_clip.mp4',
+                tag: 'VIDEO CLIP',
+                subtitle: 'Rear bus POV at 24 km/h, receding perspective, effluent spill & ticket banner'
+              },
+              {
+                title: 'DTC-BUS-309 Rear Dashcam Detection Frame',
+                type: 'image',
+                url: ASSETS.sewerOverflow,
+                tag: 'DASHCAM STILL',
+                subtitle: 'Rear view: Nehru Park Gate 3, 3m overflow radius, Yellow AI box (89.0% Conf)'
+              },
+              {
+                title: 'Macro Defect Inspection Photo (Displaced Manhole NEH-14G)',
+                type: 'image',
+                url: ASSETS.sewerOverflowThumb,
+                tag: 'MACRO CARD',
+                subtitle: 'Close-up evidence card: Dislodged circular cover, sludge stain & walkway pooling'
+              }
+            ]
+          }
+        ]);
+      } else if (ticket.category === 'Water Logging' || ticket.ticketNumber === 'TK-8855') {
+        setVideoDatasets([
+          {
+            id: 'dataset-hyd-204',
+            name: 'DTC-BUS-204 Left-Side Camera & Hydraulic Telemetry Stream',
+            folder: 'DTC-BUS-204/civil-lines-distcourt',
+            videos: 3,
+            totalSize: '235MB',
+            date: '2023-10-24',
+            description: '12-second side dashcam recording capturing 600mm ruptured feeder flange, 2m muddy water geyser cascade (~800L/min), 1.8m road flood, detouring vehicles, and Edge AI bounding box.',
+            videoUrls: ['/assets/videos/pipe_burst_dashcam_clip.mp4'],
+            mediaItems: [
+              {
+                title: 'Continuous Side Dashcam MP4 Recording (12s)',
+                type: 'video',
+                url: '/assets/videos/pipe_burst_dashcam_clip.mp4',
+                tag: 'VIDEO CLIP',
+                subtitle: 'Left-side bus POV at 18 km/h, 2m geyser spray, flood detour & auto-ticket alert'
+              },
+              {
+                title: 'DTC-BUS-204 Left-Side Camera Detection Frame',
+                type: 'image',
+                url: ASSETS.pipeBurst,
+                tag: 'DASHCAM STILL',
+                subtitle: 'Side view: District Court Gate 1, 1.8m flood extent, Edge AI box (96.5% Conf)'
+              },
+              {
+                title: 'Macro Defect Inspection Photo (Ruptured Flange Crater)',
+                type: 'image',
+                url: ASSETS.pipeBurstThumb,
+                tag: 'MACRO CARD',
+                subtitle: 'Close-up evidence card: 600mm fractured collar, hydraulic plume & danger barricade'
+              }
+            ]
+          }
+        ]);
+      } else if (ticket.category === 'Streetlights' || ticket.ticketNumber === 'TK-8890') {
+        setVideoDatasets([
+          {
+            id: 'dataset-lgt-401',
+            name: 'DTC-BUS-118 Night Dashcam & Telemetry Stream',
+            folder: 'DTC-BUS-118/sec14-lgt401',
+            videos: 3,
+            totalSize: '215MB',
+            date: '2023-10-24',
+            description: '12-second continuous night dashcam clip capturing tilted pole, dangling swaying luminaire, electrical micro-arcing, and automated safety slowdown.',
+            videoUrls: ['/assets/videos/streetlight_dashcam_clip.mp4'],
+            mediaItems: [
+              {
+                title: 'Continuous Dashcam MP4 Recording (12s)',
+                type: 'video',
+                url: '/assets/videos/streetlight_dashcam_clip.mp4',
+                tag: 'VIDEO CLIP',
+                subtitle: 'Night approach, swaying luminaire head, AI hazard alert & safety crawl'
+              },
+              {
+                title: 'DTC-BUS-118 Front Dashcam POV (Sector 14 Main Ave)',
+                type: 'image',
+                url: ASSETS.streetlightBroken,
+                tag: 'DASHCAM STILL',
+                subtitle: 'High-resolution night dashcam capture showing 45° pole tilt'
+              },
+              {
+                title: 'Macro Defect Inspection Photo (Pole LGT-401)',
+                type: 'image',
+                url: ASSETS.brokenStreetlightThumb,
+                tag: 'MACRO CARD',
+                subtitle: 'Close-up evidence card: 30cm live wire & luminaire drop'
+              }
+            ]
+          }
+        ]);
+      } else if (ticket.category === 'Potholes' || ticket.ticketNumber === 'TK-8921') {
+        setVideoDatasets([
+          {
+            id: 'dataset-pth-402',
+            name: 'DTC-BUS-402 YOLO-v8 Forward Dashcam Clip',
+            folder: 'DTC-BUS-402/mgroad-pillar42',
+            videos: 3,
+            totalSize: '240MB',
+            date: '2023-10-24',
+            description: '15-second continuous forward dashcam clip at 34 km/h capturing crater defect with YOLO-v8 bounding box and HUD telemetry.',
+            videoUrls: [ASSETS.potholeVideo],
+            mediaItems: [
+              {
+                title: 'Continuous Dashcam MP4 Recording (15s)',
+                type: 'video',
+                url: ASSETS.potholeVideo,
+                tag: 'VIDEO CLIP',
+                subtitle: 'Bus approach at 34 km/h with active YOLO-v8 detection'
+              },
+              {
+                title: 'High-Resolution Dashcam Detection Frame',
+                type: 'image',
+                url: ASSETS.potholeDashcam,
+                tag: 'DASHCAM STILL',
+                subtitle: 'Defect crater at Metro Pillar 42 with HUD telemetry'
+              },
+              {
+                title: 'Macro Road Surface Inspection Capture',
+                type: 'image',
+                url: ASSETS.potholeClose,
+                tag: 'MACRO CARD',
+                subtitle: 'Crater profile: 45cm width, 15cm depth, subgrade exposed'
+              }
+            ]
+          }
+        ]);
+      } else {
+        setVideoDatasets([
+          {
+            id: 'dataset-gen-1',
+            name: `Edge Telemetry Dataset (${ticket.busId || 'DTC-BUS'})`,
+            folder: `recordings/${ticket.ward.replace(/\s+/g, '-').toLowerCase()}`,
+            videos: 1,
+            totalSize: '120MB',
+            date: '2023-10-24',
+            description: `Edge surveillance and telemetry dataset captured near ${ticket.locationName}.`,
+            videoUrls: [],
+            mediaItems: [
+              {
+                title: 'Primary Incident Detection Frame',
+                type: 'image',
+                url: ticket.imageUrl,
+                tag: 'PRIMARY CAPTURE',
+                subtitle: ticket.locationName
+              }
+            ]
+          }
+        ]);
+      }
     };
     loadDatasets();
-  }, [ticket.id]);
+  }, [ticket.id, ticket.category, ticket.ticketNumber, ticket.busId, ticket.ward, ticket.locationName, ticket.imageUrl]);
 
   const handlePostComment = (e: React.FormEvent) => {
     e.preventDefault();
     if (!newComment.trim()) return;
-    onAddComment(ticket.id, newComment.trim());
+    const commentText = newComment.trim();
+    onAddComment(ticket.id, commentText);
+
+    // Optimistic addition to local state
+    const optimisticComment = {
+      id: `c-local-${Date.now()}`,
+      author: 'Rajesh K. (Field Officer)',
+      avatar: ASSETS.adminAvatar,
+      role: 'Zonal Inspector',
+      time: 'Just now',
+      text: commentText
+    };
+    setLocalComments((prev) => [...prev, optimisticComment]);
     setNewComment('');
   };
 
@@ -411,40 +692,195 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
                   {t.detectionEvidence}
                 </h3>
               </div>
-              <span className="bg-[#34C759]/10 text-[#34C759] text-xs font-mono font-semibold px-2.5 py-0.5 rounded-full">
-                AI Match: {ticket.confidence}%
-              </span>
+              <div className="flex items-center gap-2">
+                <div className="flex bg-black/5 dark:bg-white/10 p-0.5 rounded-lg text-[11px] font-medium">
+                  {ticket.videoUrl && (
+                    <button
+                      type="button"
+                      onClick={() => setActivePhotoTab('video')}
+                      className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
+                        activePhotoTab === 'video'
+                          ? 'bg-[#FF3B30] text-white shadow-xs font-semibold'
+                          : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
+                      }`}
+                    >
+                      <span className="material-symbols-outlined text-[13px] animate-pulse">play_circle</span>
+                      <span>15s Video Clip</span>
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => setActivePhotoTab('dashcam')}
+                    className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
+                      activePhotoTab === 'dashcam'
+                        ? 'bg-[#0071E3] text-white shadow-xs font-semibold'
+                        : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    <span className="material-symbols-outlined text-[13px]">videocam</span>
+                    <span>Dashcam Still</span>
+                  </button>
+                  {ticket.secondaryImageUrl && (
+                    <button
+                      type="button"
+                      onClick={() => setActivePhotoTab('closeup')}
+                      className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
+                        activePhotoTab === 'closeup'
+                          ? 'bg-[#0071E3] text-white shadow-xs font-semibold'
+                          : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
+                      }`}
+                    >
+                      <span className="material-symbols-outlined text-[13px]">zoom_in</span>
+                      <span>Close-up</span>
+                    </button>
+                  )}
+                </div>
+                <span className="bg-[#34C759]/10 text-[#34C759] text-xs font-mono font-semibold px-2.5 py-1 rounded-full border border-[#34C759]/20">
+                  AI Match: {ticket.confidence}%
+                </span>
+              </div>
             </div>
 
-            {/* Photo with Bounding Box Overlay */}
+            {/* Media Viewport */}
             <div className="relative bg-black min-h-[320px] flex items-center justify-center overflow-hidden group">
-              <img
-                src={ticket.imageUrl || ASSETS.potholeClose}
-                alt="Defect Evidence"
-                className="w-full h-auto max-h-[440px] object-cover"
-              />
-
-              {/* Simulated AI Bounding Box */}
-              <div className="absolute top-[32%] left-[28%] w-[44%] h-[38%] border-2 border-[#FF3B30] bg-[#FF3B30]/15 rounded-md pointer-events-none flex flex-col justify-between p-1.5 animate-pulse">
-                <div className="bg-[#FF3B30] text-white font-mono text-[10px] font-bold px-2 py-0.5 rounded-full self-start shadow">
-                  Pothole: {ticket.confidence}%
+              {activePhotoTab === 'video' && ticket.videoUrl ? (
+                <div className="relative w-full aspect-video bg-black flex items-center justify-center overflow-hidden">
+                  <video
+                    key={ticket.videoUrl}
+                    src={ticket.videoUrl}
+                    poster={ticket.imageUrl}
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-3 left-3 bg-red-600/90 backdrop-blur-md text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-md pointer-events-none border border-white/20">
+                    <span className="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                    <span>{ticket.busId || 'DTC-BUS'} • {ticket.category === 'Sanitation' ? '12s REAR DASHCAM STREAM' : ticket.category === 'Water Logging' ? '12s SIDE-CAM HYDRAULIC FEED' : ticket.category === 'Streetlights' ? '12s NIGHT DASHCAM STREAM' : '15s YOLO-v8 DASHCAM CLIP'}</span>
+                  </div>
+                  <div className="absolute top-3 right-3 bg-black/75 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10px] font-mono border border-white/15 flex items-center gap-1.5 pointer-events-none">
+                    <span className="w-2 h-2 rounded-full bg-[#34C759] animate-pulse"></span>
+                    <span>30 FPS • H.264 HD</span>
+                  </div>
                 </div>
-                <div className="bg-black/75 text-white font-mono text-[9px] px-1.5 py-0.5 rounded-md self-end">
-                  Est. Depth: ~12cm
-                </div>
-              </div>
+              ) : (
+                <>
+                  <img
+                    src={
+                      activePhotoTab === 'closeup' && ticket.secondaryImageUrl
+                        ? ticket.secondaryImageUrl
+                        : ticket.imageUrl || ASSETS.potholeClose
+                    }
+                    alt={ticket.title}
+                    className="w-full h-auto max-h-[460px] object-cover"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = ASSETS.potholeClose;
+                    }}
+                  />
 
-              {/* Edge Telemetry Stamp */}
-              <div className="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md text-white p-2.5 rounded-2xl text-[10px] font-mono leading-relaxed border border-white/10">
-                <div>Source: Transit AI Dashcam (BUS-402)</div>
-                <div>Timestamp: {ticket.timestamp}</div>
-                <div>Vehicle Speed: 24 km/h | Heading: 142° SE</div>
-              </div>
+                  {/* Annotation Overlay for Close-Up inspection mode */}
+                  {activePhotoTab === 'closeup' && (
+                    <div className={`absolute rounded-md pointer-events-none flex flex-col justify-between p-2 animate-pulse ${
+                      ticket.category === 'Sanitation' || ticket.ticketNumber === 'TK-8799'
+                        ? 'top-[15%] left-[20%] w-[58%] h-[55%] border-2 border-[#FF9F0A] bg-[#FF9F0A]/15'
+                        : ticket.category === 'Water Logging' || ticket.ticketNumber === 'TK-8855'
+                        ? 'top-[22%] left-[24%] w-[52%] h-[50%] border-2 border-[#0071E3] bg-[#0071E3]/15'
+                        : ticket.category === 'Streetlights'
+                        ? 'top-[18%] left-[30%] w-[45%] h-[55%] border-2 border-[#FFCC00] bg-[#FFCC00]/15'
+                        : 'top-[28%] left-[26%] w-[48%] h-[45%] border-2 border-[#FF3B30] bg-[#FF3B30]/15'
+                    }`}>
+                      <div className={`font-mono text-[10px] font-bold px-2 py-0.5 rounded-full self-start shadow ${
+                        ticket.category === 'Sanitation' || ticket.ticketNumber === 'TK-8799'
+                          ? 'bg-[#FF9F0A] text-slate-950'
+                          : ticket.category === 'Water Logging' || ticket.ticketNumber === 'TK-8855'
+                          ? 'bg-[#0071E3] text-white'
+                          : ticket.category === 'Streetlights'
+                          ? 'bg-[#FFCC00] text-slate-950'
+                          : 'bg-[#FF3B30] text-white'
+                      }`}>
+                        {ticket.category === 'Sanitation' || ticket.ticketNumber === 'TK-8799'
+                          ? `SEWER OVERFLOW: ${ticket.confidence}%`
+                          : ticket.category === 'Water Logging' || ticket.ticketNumber === 'TK-8855'
+                          ? `PIPE BURST / FLOODING: ${ticket.confidence}%`
+                          : ticket.category === 'Streetlights'
+                          ? `STREETLIGHT OUTAGE: ${ticket.confidence}%`
+                          : `POTHOLE: ${ticket.confidence}%`}
+                      </div>
+                      <div className="bg-black/85 text-white font-mono text-[9.5px] px-2 py-0.5 rounded-md self-end flex items-center gap-1 border border-white/10">
+                        {ticket.category === 'Sanitation' || ticket.ticketNumber === 'TK-8799' ? (
+                          <span>Overflow: ~3m radius • Manhole: NEH-14G</span>
+                        ) : ticket.category === 'Water Logging' || ticket.ticketNumber === 'TK-8855' ? (
+                          <span>Pipe: 600mm • Flood: 1.8m • Flow: ~800L/min</span>
+                        ) : ticket.category === 'Streetlights' ? (
+                          <span>Pole: 8m • Defl: 45° • Cable: ~30cm</span>
+                        ) : (
+                          <>
+                            <span>Depth: ~15cm</span>
+                            <span>•</span>
+                            <span>Width: 45cm</span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Edge Telemetry Badge */}
+                  <div className="absolute top-3 right-3 bg-black/75 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10px] font-mono border border-white/15 flex items-center gap-1.5 pointer-events-none">
+                    <span className="w-2 h-2 rounded-full bg-[#34C759] animate-pulse"></span>
+                    <span>{ticket.detectedBy || 'YOLO-v8 Edge Vision'}</span>
+                  </div>
+                </>
+              )}
             </div>
 
-            <div className="p-4 bg-black/5 dark:bg-white/[0.02] border-t border-black/5 dark:border-white/10 text-xs text-slate-800 dark:text-slate-200 leading-relaxed">
-              <span className="font-semibold text-slate-900 dark:text-white">Incident Analysis: </span>
-              {ticket.description}
+            {/* Comprehensive Telemetry & Event Overview Grid */}
+            <div className="p-4 bg-slate-50 dark:bg-white/[0.02] border-t border-black/5 dark:border-white/10">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs mb-3">
+                <div className="p-2.5 rounded-xl bg-white dark:bg-white/[0.04] border border-black/5 dark:border-white/5">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#86868b] block">Severity</span>
+                  <span className={`font-bold font-mono flex items-center gap-1 mt-0.5 ${
+                    ticket.severity === 'CRITICAL' ? 'text-[#FF3B30]' : 'text-[#FF9500]'
+                  }`}>
+                    <span className={`w-1.5 h-1.5 rounded-full animate-ping ${
+                      ticket.severity === 'CRITICAL' ? 'bg-[#FF3B30]' : 'bg-[#FF9500]'
+                    }`}></span>
+                    {ticket.severity}
+                  </span>
+                </div>
+                <div className="p-2.5 rounded-xl bg-white dark:bg-white/[0.04] border border-black/5 dark:border-white/5">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#86868b] block">Detected By</span>
+                  <span className="font-semibold text-slate-900 dark:text-white truncate block mt-0.5">
+                    {ticket.detectedBy || 'Transit AI Dashcam'}
+                  </span>
+                </div>
+                <div className="p-2.5 rounded-xl bg-white dark:bg-white/[0.04] border border-black/5 dark:border-white/5">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#86868b] block">Dimensions</span>
+                  <span className="font-mono font-semibold text-slate-900 dark:text-white block mt-0.5">
+                    {ticket.category === 'Sanitation' || ticket.ticketNumber === 'TK-8799'
+                      ? 'Overflow: ~3m radius | Manhole: NEH-14G'
+                      : ticket.category === 'Water Logging' || ticket.ticketNumber === 'TK-8855'
+                      ? 'Pipe: 600mm | Flood: 1.8m | ~800L/min'
+                      : ticket.category === 'Streetlights'
+                      ? 'Pole: 8m | Defl: 45° | Cable: ~30cm'
+                      : ticket.estimatedDimensions 
+                      ? `W:${ticket.estimatedDimensions.widthCm}cm | D:${ticket.estimatedDimensions.depthCm}cm | ${ticket.estimatedDimensions.volumeM3}m³`
+                      : 'W: 45cm | D: 15cm | 0.38m³'}
+                  </span>
+                </div>
+                <div className="p-2.5 rounded-xl bg-white dark:bg-white/[0.04] border border-black/5 dark:border-white/5">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#86868b] block">Department & SLA</span>
+                  <span className="font-semibold text-slate-900 dark:text-white block mt-0.5">
+                    {ticket.department} ({ticket.slaRemaining || '4 hours'})
+                  </span>
+                </div>
+              </div>
+
+              <div className="text-xs text-slate-800 dark:text-slate-200 leading-relaxed pt-2 border-t border-black/5 dark:border-white/10">
+                <span className="font-bold text-slate-900 dark:text-white">Incident Analysis: </span>
+                {ticket.description}
+              </div>
             </div>
           </div>
 
@@ -467,6 +903,9 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
                 src={ASSETS.mapBase}
                 alt="Map Snapshot"
                 className="w-full h-full object-cover opacity-60"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = ASSETS.mapDelhi;
+                }}
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-8 h-8 rounded-full bg-[#FF3B30] text-white flex items-center justify-center shadow-xl border-2 border-white animate-bounce">
@@ -582,27 +1021,36 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
               </button>
             </div>
 
-            <div className="text-xs text-slate-800 dark:text-slate-200 leading-relaxed bg-black/5 dark:bg-white/5 p-3.5 rounded-2xl">
-              <strong className="text-slate-900 dark:text-white block mb-1">Recommended Procedure:</strong>
-              {aiAnalysis?.actionPlan || 'Excavate loose debris from defect crater, apply bitumen emulsion tack coat, fill with Type-II hot asphalt mix, and compact with vibratory roller.'}
+            <div className="text-xs text-slate-800 dark:text-slate-200 leading-relaxed bg-black/5 dark:bg-white/5 p-3.5 rounded-2xl border border-black/5 dark:border-white/10">
+              <strong className="text-slate-900 dark:text-white block mb-1 flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-[15px] text-[#0071E3]">build_circle</span>
+                Recommended Procedure:
+              </strong>
+              <p className="whitespace-pre-line">{effectiveActionPlan}</p>
             </div>
 
             <div>
-              <strong className="text-xs text-slate-900 dark:text-white block mb-2">Estimated Materials Bill:</strong>
+              <strong className="text-xs text-slate-900 dark:text-white block mb-2 flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-[15px] text-[#0071E3]">inventory_2</span>
+                Estimated Materials Bill:
+              </strong>
               <div className="flex flex-wrap gap-1.5">
-                {(aiAnalysis?.materialsEstimated || ['Bitumen cold mix (50kg)', 'Tack coat primer', 'Vibratory compactor', 'Retroreflective hazard cones']).map((mat, i) => (
-                  <span key={i} className="text-[11px] font-medium bg-black/5 dark:bg-white/10 px-2.5 py-1 rounded-full text-slate-700 dark:text-slate-300">
+                {effectiveMaterials.map((mat, i) => (
+                  <span key={i} className="text-[11px] font-medium bg-black/5 dark:bg-white/10 px-2.5 py-1 rounded-full text-slate-700 dark:text-slate-300 border border-black/5 dark:border-white/10">
                     • {mat}
                   </span>
                 ))}
               </div>
             </div>
 
-            {aiAnalysis?.detectedHazards && (
-              <div>
-                <strong className="text-xs text-[#FF3B30] block mb-1.5">Identified Road Safety Hazards:</strong>
-                <ul className="list-disc pl-4 text-[11px] text-[#86868b] flex flex-col gap-1">
-                  {aiAnalysis.detectedHazards.map((hz, i) => (
+            {effectiveHazards && effectiveHazards.length > 0 && (
+              <div className="bg-[#FF3B30]/5 dark:bg-[#FF3B30]/10 p-3.5 rounded-2xl border border-[#FF3B30]/20">
+                <strong className="text-xs text-[#FF3B30] block mb-1.5 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-[15px] text-[#FF3B30]">warning</span>
+                  Identified Engineering & Public Safety Hazards:
+                </strong>
+                <ul className="list-disc pl-4 text-[11px] text-slate-700 dark:text-slate-300 flex flex-col gap-1">
+                  {effectiveHazards.map((hz, i) => (
                     <li key={i}>{hz}</li>
                   ))}
                 </ul>
@@ -610,12 +1058,12 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
             )}
           </div>
 
-          {/* Video Datasets Card */}
+          {/* Video Datasets & Media Evidence Card */}
           <div className="glass-card p-6 flex flex-col gap-4">
             <div className="flex items-center justify-between pb-3 border-b border-black/5 dark:border-white/10">
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-[#0071E3]">movie</span>
-                <h3 className="font-bold text-sm text-slate-900 dark:text-white">Related Video Datasets</h3>
+                <h3 className="font-bold text-sm text-slate-900 dark:text-white">Related Video Datasets & Media Evidence</h3>
               </div>
               <span className="text-xs font-mono font-bold bg-[#0071E3]/10 text-[#0071E3] px-2.5 py-0.5 rounded-full">
                 {videoDatasets.length} datasets
@@ -628,28 +1076,88 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
                 Loading datasets...
               </div>
             ) : videoDatasets.length > 0 ? (
-              <div className="flex flex-col gap-2.5">
+              <div className="flex flex-col gap-3">
                 {videoDatasets.map((dataset) => (
                   <div
                     key={dataset.id}
-                    className="p-3.5 bg-black/5 dark:bg-white/[0.05] hover:bg-black/10 dark:hover:bg-white/10 rounded-lg border border-black/10 dark:border-white/10 cursor-pointer transition-all group"
+                    className="p-3.5 bg-black/5 dark:bg-white/[0.05] rounded-2xl border border-black/10 dark:border-white/10 flex flex-col gap-2.5 group"
                   >
-                    <div className="flex items-start justify-between mb-1.5">
+                    <div className="flex items-start justify-between">
                       <div className="flex-1 min-w-0">
                         <h4 className="font-bold text-xs text-slate-900 dark:text-white truncate group-hover:text-[#0071E3] transition-colors">
                           {dataset.name}
                         </h4>
                         <p className="text-[10px] text-[#86868b] font-mono mt-0.5">{dataset.date}</p>
                       </div>
-                      <span className="text-[10px] font-mono font-bold text-[#0071E3] bg-[#0071E3]/10 px-2 py-1 rounded-full whitespace-nowrap ml-2">
-                        {dataset.videos} videos
+                      <span className="text-[10px] font-mono font-bold text-[#0071E3] bg-[#0071E3]/10 px-2 py-0.5 rounded-full whitespace-nowrap ml-2">
+                        {dataset.videos} files
                       </span>
                     </div>
-                    <p className="text-[11px] text-slate-700 dark:text-slate-300 line-clamp-2 mb-1.5">
+
+                    <p className="text-[11px] text-slate-700 dark:text-slate-300 line-clamp-2">
                       {dataset.description}
                     </p>
-                    {dataset.videoUrls && dataset.videoUrls.length > 0 && (
-                      <div className="mb-2 overflow-hidden rounded-md border border-black/10 dark:border-white/10 bg-black">
+
+                    {/* Media Items (Videos and High-Res Images) */}
+                    {dataset.mediaItems && dataset.mediaItems.length > 0 ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-1">
+                        {dataset.mediaItems.map((media, mIdx) => (
+                          <div
+                            key={mIdx}
+                            className="overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-black flex flex-col group/media"
+                          >
+                            <div className="relative aspect-video w-full bg-black">
+                              {media.type === 'video' ? (
+                                <video
+                                  controls
+                                  preload="metadata"
+                                  playsInline
+                                  className="w-full h-full object-cover"
+                                  src={media.url}
+                                />
+                              ) : (
+                                <div
+                                  className="w-full h-full cursor-pointer relative"
+                                  onClick={() => {
+                                    if (media.url === ticket.secondaryImageUrl) {
+                                      setActivePhotoTab('closeup');
+                                    } else {
+                                      setActivePhotoTab('dashcam');
+                                    }
+                                  }}
+                                >
+                                  <img
+                                    src={media.url}
+                                    alt={media.title}
+                                    className="w-full h-full object-cover group-hover/media:scale-105 transition-transform duration-300"
+                                    onError={(e) => {
+                                      (e.currentTarget as HTMLImageElement).src = ASSETS.potholeClose;
+                                    }}
+                                  />
+                                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover/media:opacity-100 transition-opacity flex items-end p-2">
+                                    <span className="text-[10px] text-white font-medium bg-[#0071E3] px-2 py-0.5 rounded-md">
+                                      Inspect Photo ↗
+                                    </span>
+                                  </div>
+                                </div>
+                              )}
+                              {media.tag && (
+                                <span className="absolute top-2 left-2 bg-black/70 backdrop-blur-md text-white text-[9px] font-mono font-bold px-2 py-0.5 rounded-full border border-white/20">
+                                  {media.tag}
+                                </span>
+                              )}
+                            </div>
+                            <div className="p-2 bg-slate-900 text-white flex flex-col gap-0.5">
+                              <span className="text-[11px] font-semibold truncate text-white">{media.title}</span>
+                              {media.subtitle && (
+                                <span className="text-[9.5px] text-slate-400 line-clamp-1">{media.subtitle}</span>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : dataset.videoUrls && dataset.videoUrls.length > 0 ? (
+                      <div className="overflow-hidden rounded-md border border-black/10 dark:border-white/10 bg-black">
                         <video
                           controls
                           preload="metadata"
@@ -658,8 +1166,9 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
                           src={dataset.videoUrls[0]}
                         />
                       </div>
-                    )}
-                    <div className="flex items-center justify-between text-[10px] text-[#86868b]">
+                    ) : null}
+
+                    <div className="flex items-center justify-between text-[10px] text-[#86868b] pt-1 border-t border-black/5 dark:border-white/5">
                       <span>📁 {dataset.folder}</span>
                       <span className="font-mono">{dataset.totalSize}</span>
                     </div>
@@ -673,13 +1182,111 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
             )}
           </div>
 
-          {/* Comment Stream */}
+          {/* Comment Stream / Officer Notes & Field Updates */}
           <div className="glass-card p-6 flex flex-col gap-4">
-            <h3 className="font-bold text-sm text-slate-900 dark:text-white pb-3 border-b border-black/5 dark:border-white/10">
-              Officer Notes & Field Updates
-            </h3>
+            <div className="flex items-center justify-between pb-3 border-b border-black/5 dark:border-white/10">
+              <h3 className="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                <span className="material-symbols-outlined text-[17px] text-[#0071E3]">note_alt</span>
+                Officer Notes & Field Updates
+              </h3>
+              <span className="text-xs font-mono font-bold bg-[#0071E3]/10 text-[#0071E3] px-2 py-0.5 rounded-full">
+                {localComments.length} notes
+              </span>
+            </div>
 
-            <form onSubmit={handlePostComment} className="flex flex-col gap-2.5">
+            {/* Notes List with Image Evidence */}
+            <div className="flex flex-col gap-3.5 max-h-[480px] overflow-y-auto custom-scrollbar pr-1">
+              {localComments.length > 0 ? (
+                localComments.map((comment) => (
+                  <div
+                    key={comment.id}
+                    className="p-3.5 bg-black/5 dark:bg-white/[0.04] rounded-2xl border border-black/5 dark:border-white/10 flex flex-col gap-2"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        {comment.avatar ? (
+                          <img
+                            src={comment.avatar}
+                            alt={comment.author}
+                            className="w-7 h-7 rounded-full object-cover border border-black/10 dark:border-white/20"
+                          />
+                        ) : (
+                          <div className="w-7 h-7 rounded-full bg-[#0071E3]/15 text-[#0071E3] flex items-center justify-center font-bold text-xs">
+                            {comment.author.charAt(0)}
+                          </div>
+                        )}
+                        <div>
+                          <div className="flex items-center gap-1.5">
+                            <strong className="text-xs font-semibold text-slate-900 dark:text-white">
+                              {comment.author}
+                            </strong>
+                            <span className="text-[9.5px] font-medium bg-[#0071E3]/10 text-[#0071E3] px-2 py-0.5 rounded-full font-mono">
+                              {comment.role}
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-[#86868b] font-mono">{comment.time}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p className="text-xs text-slate-800 dark:text-slate-200 leading-relaxed pl-9">
+                      {comment.text}
+                    </p>
+
+                    {/* Attached Field Evidence Image */}
+                    {comment.attachmentUrl && (
+                      <div className="ml-9 mt-1 p-2 rounded-xl bg-black/10 dark:bg-black/40 border border-black/10 dark:border-white/10 flex flex-col gap-1.5 max-w-md group">
+                        <div
+                          className="relative overflow-hidden rounded-lg aspect-video bg-black cursor-pointer"
+                          onClick={() => {
+                            if (comment.attachmentUrl === ticket.secondaryImageUrl) {
+                              setActivePhotoTab('closeup');
+                            } else {
+                              setActivePhotoTab('dashcam');
+                            }
+                          }}
+                          title="Click to view full image in inspection panel"
+                        >
+                          <img
+                            src={comment.attachmentUrl}
+                            alt={comment.attachmentLabel || 'Attached field evidence'}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                          <div className="absolute top-2 left-2 bg-black/70 backdrop-blur-md text-white text-[9.5px] font-mono font-bold px-2 py-0.5 rounded-full border border-white/20 flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[12px] text-[#34C759]">verified</span>
+                            <span>FIELD EVIDENCE</span>
+                          </div>
+                        </div>
+                        {comment.attachmentLabel && (
+                          <div className="flex items-center justify-between text-[10.5px] text-slate-600 dark:text-slate-400 px-1 font-mono">
+                            <span className="truncate">{comment.attachmentLabel}</span>
+                            <span
+                              onClick={() => {
+                                if (comment.attachmentUrl === ticket.secondaryImageUrl) {
+                                  setActivePhotoTab('closeup');
+                                } else {
+                                  setActivePhotoTab('dashcam');
+                                }
+                              }}
+                              className="text-[#0071E3] text-[10px] font-sans font-semibold shrink-0 cursor-pointer hover:underline"
+                            >
+                              Inspect Photo ↗
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))
+              ) : (
+                <div className="text-xs text-[#86868b] py-2 text-center">
+                  No officer notes logged yet. Add first note below.
+                </div>
+              )}
+            </div>
+
+            {/* Note submission form */}
+            <form onSubmit={handlePostComment} className="flex flex-col gap-2.5 pt-2 border-t border-black/5 dark:border-white/10">
               <textarea
                 rows={2}
                 value={newComment}
@@ -702,6 +1309,7 @@ export const TicketDetailView: React.FC<TicketDetailViewProps> = ({
         isOpen={isCctvOpen}
         onClose={() => setIsCctvOpen(false)}
         language={language}
+        item={activeCctvItem}
       />
     </div>
   );

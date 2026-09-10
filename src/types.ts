@@ -25,6 +25,55 @@ export type UserRole =
   | 'Transport Authority'
   | 'Public Commuter';
 
+export const ROLE_ALLOWED_VIEWS: Record<UserRole, ActiveView[]> = {
+  'Public Commuter': [
+    'public-transit',
+    'safety-complaints',
+    'services-directory',
+    'notifications'
+  ],
+  'Repair Crew Lead': [
+    'tickets',
+    'ticket-detail',
+    'live-map',
+    'notifications',
+    'settings'
+  ],
+  'Transport Authority': [
+    'fleet',
+    'safety-complaints',
+    'accident-analytics',
+    'public-transit',
+    'notifications',
+    'settings'
+  ],
+  'Zonal Officer': [
+    'dashboard',
+    'tickets',
+    'ticket-detail',
+    'live-map',
+    'services-directory',
+    'accident-analytics',
+    'notifications',
+    'settings'
+  ],
+  'Municipal Admin': [
+    'dashboard',
+    'public-transit',
+    'services-directory',
+    'tickets',
+    'ticket-detail',
+    'live-map',
+    'safety-complaints',
+    'accident-analytics',
+    'fleet',
+    'analytics',
+    'multi-agency',
+    'notifications',
+    'settings'
+  ]
+};
+
 export type TicketPriority = 'CRITICAL' | 'HIGH' | 'MED' | 'LOW';
 
 export type TicketStatus = 'NEW' | 'ASSIGNED' | 'IN_PROGRESS' | 'RESOLVED' | 'VERIFIED_CLOSED';
@@ -56,8 +105,16 @@ export interface DefectItem {
   timestamp: string;
   timeAgo: string;
   imageUrl: string;
+  secondaryImageUrl?: string;
+  videoUrl?: string;
   hasOverlay?: boolean;
   busId?: string;
+  detectedBy?: string;
+  estimatedDimensions?: {
+    widthCm: number;
+    depthCm: number;
+    volumeM3: number;
+  };
   assignedTo?: {
     name: string;
     avatar?: string;
@@ -75,6 +132,9 @@ export interface DefectItem {
     role: string;
     time: string;
     text: string;
+    attachmentUrl?: string;
+    attachmentType?: 'image' | 'video';
+    attachmentLabel?: string;
   }>;
   timeline?: Array<{
     title: string;

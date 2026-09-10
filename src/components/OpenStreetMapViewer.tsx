@@ -268,20 +268,40 @@ export const OpenStreetMapViewer: React.FC<OpenStreetMapViewerProps> = ({
       blackspotsLayerGroupRef.current = L.layerGroup().addTo(map);
       violationsLayerGroupRef.current = L.layerGroup().addTo(map);
       busesLayerGroupRef.current = L.layerGroup().addTo(map);
-
       mapInstanceRef.current = map;
+
+      // Force size invalidation after render / DOM layout
+      setTimeout(() => {
+        try {
+          map.invalidateSize();
+        } catch (_) {}
+      }, 100);
+
+      setTimeout(() => {
+        try {
+          map.invalidateSize();
+        } catch (_) {}
+      }, 400);
+
+      const ro = new ResizeObserver(() => {
+        try {
+          map.invalidateSize();
+        } catch (_) {}
+      });
+      if (mapContainerRef.current) {
+        ro.observe(mapContainerRef.current);
+      }
+
+      return () => {
+        try {
+          ro.disconnect();
+          map.remove();
+        } catch (_) {}
+        mapInstanceRef.current = null;
+      };
     } catch (err) {
       console.warn('[OpenStreetMapViewer] Map initialization caught error:', err);
     }
-
-    return () => {
-      if (mapInstanceRef.current) {
-        try {
-          mapInstanceRef.current.remove();
-        } catch (_) {}
-        mapInstanceRef.current = null;
-      }
-    };
   }, []);
 
   // 2. Animate Real Bus Movements along GPS Trajectories
@@ -447,6 +467,14 @@ export const OpenStreetMapViewer: React.FC<OpenStreetMapViewerProps> = ({
               isCritical ? 'bg-rose-100 text-rose-800' : 'bg-amber-100 text-amber-800'
             }">${tk.severity}</span>
           </div>
+          ${tk.imageUrl ? `
+            <div class="relative w-full h-24 mb-2 rounded-lg overflow-hidden border border-slate-200 shadow-xs">
+              <img src="${tk.imageUrl}" class="w-full h-full object-cover" alt="${tk.title}" />
+              <div class="absolute bottom-1 right-1 bg-black/80 backdrop-blur-xs text-white font-mono text-[9px] px-1.5 py-0.5 rounded">
+                AI Match: ${tk.confidence}%
+              </div>
+            </div>
+          ` : ''}
           <h4 class="font-bold text-xs text-slate-900 mb-1 leading-tight">${tk.title}</h4>
           <p class="text-[11px] text-slate-600 mb-2">${tk.locationName}</p>
           <div class="flex items-center justify-between text-[10px] text-slate-500 border-t border-slate-100 pt-1.5">
@@ -602,9 +630,9 @@ export const OpenStreetMapViewer: React.FC<OpenStreetMapViewerProps> = ({
   };
 
   return (
-    <div className={`relative w-full overflow-hidden rounded-2xl ${className}`} style={{ height }}>
+    <div className={`relative w-full h-full min-h-[450px] overflow-hidden rounded-2xl ${className}`} style={{ height: height || '100%' }}>
       {/* 1. Leaflet OpenStreetMap Canvas */}
-      <div ref={mapContainerRef} className="w-full h-full z-10" />
+      <div ref={mapContainerRef} className="w-full h-full min-h-[450px] z-10" />
 
       {/* 2. Glassmorphism Floating Top Control Bar */}
       {/* 2. Apple Maps Floating Glass Control Dock */}

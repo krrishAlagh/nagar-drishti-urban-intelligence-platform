@@ -120,6 +120,11 @@ export const LiveDetectionFeed: React.FC<LiveDetectionFeedProps> = ({
                 {item.bbox && (
                   <div className="absolute inset-2 border border-[#FF3B30] bg-[#FF3B30]/15 rounded pointer-events-none"></div>
                 )}
+                {item.id === 'feed-1' && (
+                  <div className="absolute bottom-1 right-1 bg-black/80 text-red-400 rounded-full w-4 h-4 flex items-center justify-center pointer-events-none shadow">
+                    <span className="material-symbols-outlined text-[11px]">play_arrow</span>
+                  </div>
+                )}
               </div>
 
               {/* Details & Location */}

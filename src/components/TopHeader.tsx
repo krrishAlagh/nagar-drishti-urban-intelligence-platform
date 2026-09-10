@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { Language, ActiveView, DefectItem, Theme, FontSizeScale, UserRole } from '../types';
+import { Language, ActiveView, DefectItem, Theme, FontSizeScale, UserRole, ROLE_ALLOWED_VIEWS } from '../types';
 import { TRANSLATIONS, ASSETS, GOV_TICKER_BULLETINS } from '../data/mockData';
 
 interface TopHeaderProps {
@@ -54,7 +54,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
   onLogout,
   isConnected = true,
   latestEvent = null,
-  userRole
+  userRole = 'Municipal Admin'
 }) => {
 
   const t = TRANSLATIONS[language];
@@ -65,7 +65,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Rotating bulletins ticker
+  // Government Bulletin auto-cycle
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentBulletinIndex((prev) => (prev + 1) % GOV_TICKER_BULLETINS.length);
@@ -73,7 +73,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
     return () => clearInterval(timer);
   }, []);
 
-  // Close search dropdown on click outside
+  // Close search dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (searchContainerRef.current && !searchContainerRef.current.contains(e.target as Node)) {
@@ -84,10 +84,10 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Apple Horizontal Navigation Bar Items
+  // Apple Horizontal Navigation Bar Items - Strictly Bifurcated by Role
   const navItems = useMemo(
     () => {
-      const items = [
+      const allItems = [
         { id: 'dashboard' as ActiveView, label: language === 'hi' ? 'डैशबोर्ड' : 'Overview', icon: 'dashboard' },
         { id: 'public-transit' as ActiveView, label: language === 'hi' ? 'सार्वजनिक बस' : 'Bus Tracker', icon: 'directions_bus', badge: 'Public' },
         { id: 'services-directory' as ActiveView, label: language === 'hi' ? 'सेवा निर्देशिका' : 'Services', icon: 'account_tree', badge: '6' },
@@ -101,17 +101,53 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
         { id: 'notifications' as ActiveView, label: language === 'hi' ? 'सूचनाएं' : 'Notifications', icon: 'notifications' },
         { id: 'settings' as ActiveView, label: language === 'hi' ? 'सेटिंग्स' : 'Settings', icon: 'settings' }
       ];
-      if (userRole === 'Public Commuter') {
-        return items.filter(item => item.id === 'public-transit');
-      }
-      return items;
+
+      const allowed = ROLE_ALLOWED_VIEWS[userRole] || ROLE_ALLOWED_VIEWS['Municipal Admin'];
+      return allItems.filter(item => allowed.includes(item.id));
     },
     [language, userRole]
   );
 
-  // Quick system actions for command palette behavior
+  // Quick system actions for command palette behavior tailored per role
   const systemActions = useMemo(
     () => {
+      if (userRole === 'Public Commuter') {
+        return [
+          {
+            id: 'act-bus-tracker',
+            title: language === 'hi' ? 'सार्वजनिक बस ट्रैकर और लाइव आगमन' : 'Live DTC Bus Tracker & ETAs',
+            subtitle: 'Track nearby public buses and live stop schedules in Delhi',
+            icon: 'directions_bus',
+            badge: 'Transit',
+            action: () => setActiveView('public-transit')
+          },
+          {
+            id: 'act-safety-sos',
+            title: language === 'hi' ? 'बस केबिन सुरक्षा SOS और शिकायत निवारण' : 'Bus Cabin Safety SOS & Grievances',
+            subtitle: 'Report driver misconduct, harassment or onboard passenger safety',
+            icon: 'videocam',
+            badge: 'SOS',
+            action: () => setActiveView('safety-complaints')
+          },
+          {
+            id: 'act-services-commuter',
+            title: language === 'hi' ? 'आपातकालीन नागरिक निर्देशिका व हेल्पलाइन' : 'Emergency Civic Directory & Helplines',
+            subtitle: 'DJB 1916, BSES 19123, MCD 155304 direct official lines',
+            icon: 'account_tree',
+            badge: 'Helpline',
+            action: () => setActiveView('services-directory')
+          },
+          {
+            id: 'act-notif-commuter',
+            title: language === 'hi' ? 'मौसम एवं पारगमन सार्वजनिक अलर्ट' : 'Public Transit & Weather Alerts',
+            subtitle: 'Delhi traffic police, route diversion and monsoon alerts',
+            icon: 'notifications',
+            badge: 'Alerts',
+            action: () => setActiveView('notifications')
+          }
+        ];
+      }
+
       const actions = [
         {
           id: 'act-services',
@@ -170,10 +206,19 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
           action: () => setActiveView('fleet')
         }
       ];
-      if (userRole === 'Public Commuter') {
-        return [];
-      }
-      return actions;
+
+      const allowed = ROLE_ALLOWED_VIEWS[userRole] || [];
+      return actions.filter(act => {
+        if (act.id === 'act-new-ticket') return true;
+        const target = act.id.replace('act-', '');
+        if (target === 'services') return allowed.includes('services-directory');
+        if (target === 'map') return allowed.includes('live-map');
+        if (target === 'tickets') return allowed.includes('tickets');
+        if (target === 'safety') return allowed.includes('safety-complaints');
+        if (target === 'accident') return allowed.includes('accident-analytics');
+        if (target === 'fleet') return allowed.includes('fleet');
+        return true;
+      });
     },
     [language, setActiveView, onOpenNewTicket, userRole]
   );
@@ -226,7 +271,17 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
       <div className="px-4 sm:px-8 lg:px-10 py-3 max-w-[1800px] mx-auto w-full">
         <div className="flex items-center justify-between gap-3 sm:gap-4">
           <div
-            onClick={() => setActiveView('dashboard')}
+            onClick={() => {
+              if (userRole === 'Public Commuter') {
+                setActiveView('public-transit');
+              } else if (userRole === 'Repair Crew Lead') {
+                setActiveView('tickets');
+              } else if (userRole === 'Transport Authority') {
+                setActiveView('fleet');
+              } else {
+                setActiveView('dashboard');
+              }
+            }}
             className="flex items-center gap-3.5 cursor-pointer shrink-0 group py-1"
           >
             <img
@@ -246,6 +301,31 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* Authenticated Role Identity Badge (Static - Re-authentication required to switch role) */}
+            <div
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-semibold backdrop-blur-md shadow-2xs select-none ${
+                userRole === 'Public Commuter'
+                  ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-700 dark:text-emerald-300'
+                  : userRole === 'Municipal Admin'
+                  ? 'bg-blue-500/10 border-blue-500/30 text-blue-700 dark:text-blue-300'
+                  : userRole === 'Repair Crew Lead'
+                  ? 'bg-amber-500/10 border-amber-500/30 text-amber-700 dark:text-amber-300'
+                  : userRole === 'Transport Authority'
+                  ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-700 dark:text-cyan-300'
+                  : 'bg-purple-500/10 border-purple-500/30 text-purple-700 dark:text-purple-300'
+              }`}
+              title={`Logged in as: ${userRole}`}
+            >
+              <span className={`w-2 h-2 rounded-full ${
+                userRole === 'Public Commuter' ? 'bg-emerald-500' : 'bg-blue-500'
+              }`} />
+              <span className="max-w-[130px] sm:max-w-none truncate font-medium">
+                {userRole === 'Public Commuter' 
+                  ? (language === 'hi' ? 'नागरिक पोर्टल' : 'Citizen Portal')
+                  : userRole}
+              </span>
+            </div>
+
             <div
               className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/5 dark:bg-white/10 border border-black/5 dark:border-white/10 text-[11px] font-mono shadow-2xs"
               title={isConnected ? 'Real-time WebSocket Telemetry Connected (Port 5005)' : 'Connecting to Realtime Telemetry...'}
@@ -303,16 +383,28 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
               <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-[#FF3B30] rounded-full ring-2 ring-white dark:ring-[#161617]"></span>
             </button>
 
-            <button
-              type="button"
-              onClick={onOpenNewTicket}
-              className="btn-apple-primary px-5 py-2.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer whitespace-nowrap shadow-md"
-            >
-              <span className="material-symbols-outlined text-[17px]">add</span>
-              <span className="hidden sm:inline">
-                {language === 'hi' ? 'नया टिकट' : 'New Ticket'}
-              </span>
-            </button>
+            {userRole === 'Public Commuter' ? (
+              <button
+                type="button"
+                onClick={() => setActiveView('safety-complaints')}
+                className="px-3.5 sm:px-4 py-2 text-xs font-bold rounded-full bg-gradient-to-r from-red-600 to-rose-500 text-white shadow-md hover:brightness-110 active:scale-95 transition-all flex items-center gap-1.5 cursor-pointer"
+                title={language === 'hi' ? 'केबिन सुरक्षा SOS' : 'Passenger Cabin SOS'}
+              >
+                <span className="material-symbols-outlined text-[16px] animate-pulse">crisis_alert</span>
+                <span className="hidden sm:inline">{language === 'hi' ? 'नागरिक SOS' : 'Cabin SOS'}</span>
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={onOpenNewTicket}
+                className="btn-apple-primary px-4 sm:px-5 py-2.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer whitespace-nowrap shadow-md"
+              >
+                <span className="material-symbols-outlined text-[17px]">add</span>
+                <span className="hidden sm:inline">
+                  {language === 'hi' ? 'नया टिकट' : 'New Ticket'}
+                </span>
+              </button>
+            )}
 
             {onLogout && (
               <button
@@ -442,7 +534,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
                     </div>
                   )}
 
-                  {activeFilterTab !== 'ACTIONS' && (
+                  {activeFilterTab !== 'ACTIONS' && userRole !== 'Public Commuter' && (
                     <div>
                       <div className="px-2 py-1 text-[10px] font-semibold text-[#86868b] uppercase tracking-wider font-mono">
                         {language === 'hi' ? 'दोष टिकट एवं कार्य आदेश' : 'Defect Tickets'} ({filteredTickets.length})

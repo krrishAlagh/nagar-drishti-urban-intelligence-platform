@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ActiveView, Language, UserRole, DefectItem, AutoRoutingRule, Theme, FontSizeScale } from './types';
+import { ActiveView, Language, UserRole, DefectItem, AutoRoutingRule, Theme, FontSizeScale, ROLE_ALLOWED_VIEWS } from './types';
 import { INITIAL_DEFECTS, AUTO_ROUTING_RULES, BUS_CABIN_INCIDENTS, ACCIDENT_BLACKSPOTS } from './data/mockData';
-import { Sidebar } from './components/Sidebar';
 import { TopHeader } from './components/TopHeader';
 import { DashboardView } from './components/DashboardView';
 import { ServicesDirectoryView } from './components/ServicesDirectoryView';
@@ -113,6 +112,15 @@ export default function App() {
     document.documentElement.classList.add(`font-size-${fontSizeScale}`);
   }, [fontSizeScale]);
 
+  // Strict Role-based Access Control View Guard
+  useEffect(() => {
+    if (!isLoggedIn) return;
+    const allowed = ROLE_ALLOWED_VIEWS[userRole];
+    if (allowed && !allowed.includes(activeView)) {
+      setActiveView(allowed[0]);
+    }
+  }, [userRole, activeView, isLoggedIn]);
+
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === 'en' ? 'hi' : 'en'));
   };
@@ -126,6 +134,10 @@ export default function App() {
     setIsLoggedIn(true);
     if (role === 'Public Commuter') {
       setActiveView('public-transit');
+    } else if (role === 'Repair Crew Lead') {
+      setActiveView('tickets');
+    } else if (role === 'Transport Authority') {
+      setActiveView('fleet');
     } else {
       setActiveView('dashboard');
     }
@@ -243,9 +255,9 @@ export default function App() {
       />
 
       {/* Main Full-Width Content Canvas - Smooth Page Scroll Container */}
-      <div className="flex-1 overflow-y-auto custom-scrollbar w-full min-w-0 flex flex-col justify-between">
+      <div className={`flex-1 ${activeView === 'live-map' ? 'overflow-hidden flex flex-col' : 'overflow-y-auto custom-scrollbar flex flex-col justify-between'} w-full min-w-0`}>
         {/* View Switcher Container */}
-        <main className="w-full min-w-0 flex-1 relative pb-16 lg:pb-0">
+        <main className={`w-full min-w-0 flex-1 relative ${activeView === 'live-map' ? 'h-full flex flex-col' : 'pb-16 lg:pb-0'}`}>
           {/* 1. Main Dashboard */}
           {activeView === 'dashboard' && (
             <DashboardView
@@ -323,8 +335,16 @@ export default function App() {
             <AnalyticsView
               language={language}
               analyticsKpi={analyticsKpi}
+              tickets={tickets}
+              fleet={fleet}
+              liveFeed={liveFeed}
+              alerts={alerts}
+              latestEvent={latestEvent}
               onNavigateToHotspot={(loc) => {
                 setActiveView('live-map');
+              }}
+              onNavigateToTickets={(cat) => {
+                setActiveView('tickets');
               }}
             />
           )}
@@ -383,78 +403,146 @@ export default function App() {
         </main>
 
         {/* Bharat Electronics Limited (BEL) Sovereign Footer */}
-        <BelFooter
-          language={language}
-          onNavigate={(v) => setActiveView(v)}
-          onOpenAiCopilot={() => setIsAiCopilotOpen(true)}
-        />
+        {activeView !== 'live-map' && (
+          <BelFooter
+            language={language}
+            onNavigate={(v) => setActiveView(v)}
+            onOpenAiCopilot={() => setIsAiCopilotOpen(true)}
+          />
+        )}
 
         {/* Mobile Apple-Style Bottom Navigation Bar */}
-        {userRole !== 'Public Commuter' && (
+        {userRole === 'Public Commuter' ? (
           <nav
             className="lg:hidden fixed bottom-0 left-0 right-0 h-14 bg-[#161617]/90 backdrop-blur-2xl border-t border-white/10 z-40 px-2 flex items-center justify-around text-white shadow-2xl safe-area-pb"
-            aria-label="Mobile Navigation"
+            aria-label="Citizen Mobile Navigation"
           >
-          <button
-            type="button"
-            onClick={() => setActiveView('dashboard')}
-            className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
-              activeView === 'dashboard' ? 'text-[#0071E3]' : 'text-[#86868b] hover:text-white'
-            }`}
-          >
-            <span className={`material-symbols-outlined text-[19px] ${activeView === 'dashboard' ? 'icon-fill' : ''}`}>
-              dashboard
-            </span>
-            <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'डैशबोर्ड' : 'Overview'}</span>
-          </button>
+            <button
+              type="button"
+              onClick={() => setActiveView('public-transit')}
+              className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
+                activeView === 'public-transit' ? 'text-[#34C759]' : 'text-[#86868b] hover:text-white'
+              }`}
+            >
+              <span className={`material-symbols-outlined text-[19px] ${activeView === 'public-transit' ? 'icon-fill' : ''}`}>
+                directions_bus
+              </span>
+              <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'बस ट्रैकर' : 'Bus Tracker'}</span>
+            </button>
 
-          <button
-            type="button"
-            onClick={() => setActiveView('services-directory')}
-            className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
-              activeView === 'services-directory' ? 'text-[#0071E3]' : 'text-[#86868b] hover:text-white'
-            }`}
-          >
-            <span className={`material-symbols-outlined text-[19px] ${activeView === 'services-directory' ? 'icon-fill' : ''}`}>
-              account_tree
-            </span>
-            <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'श्रेणियां' : 'Services'}</span>
-          </button>
+            <button
+              type="button"
+              onClick={() => setActiveView('safety-complaints')}
+              className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
+                activeView === 'safety-complaints' ? 'text-[#FF3B30]' : 'text-[#86868b] hover:text-white'
+              }`}
+            >
+              <span className={`material-symbols-outlined text-[19px] ${activeView === 'safety-complaints' ? 'icon-fill' : ''}`}>
+                videocam
+              </span>
+              <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'केबिन SOS' : 'Cabin SOS'}</span>
+            </button>
 
-          {/* Integrated Center Action Button */}
-          <button
-            type="button"
-            onClick={() => setIsNewTicketModalOpen(true)}
-            className="flex flex-col items-center justify-center bg-[#0071E3] active:scale-95 text-white rounded-full px-3 py-1 shadow-md transition-all cursor-pointer font-bold"
-            title="Log New Defect"
-          >
-            <span className="material-symbols-outlined text-[17px] font-bold">add</span>
-            <span className="text-[8px] font-semibold uppercase leading-none">{language === 'hi' ? 'नया' : 'Report'}</span>
-          </button>
+            {/* Central Citizen Quick Grievance CTA */}
+            <button
+              type="button"
+              onClick={() => setActiveView('safety-complaints')}
+              className="flex flex-col items-center justify-center bg-gradient-to-tr from-red-600 to-rose-500 active:scale-95 text-white rounded-full px-3.5 py-1.5 shadow-md transition-all cursor-pointer font-bold"
+              title="Citizen Emergency Grievance"
+            >
+              <span className="material-symbols-outlined text-[17px] font-bold animate-pulse">crisis_alert</span>
+              <span className="text-[8px] font-semibold uppercase leading-none">{language === 'hi' ? 'SOS' : 'SOS'}</span>
+            </button>
 
-          <button
-            type="button"
-            onClick={() => setActiveView('tickets')}
-            className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
-              activeView === 'tickets' || activeView === 'ticket-detail' ? 'text-[#0071E3]' : 'text-[#86868b] hover:text-white'
-            }`}
-          >
-            <span className={`material-symbols-outlined text-[19px] ${activeView === 'tickets' || activeView === 'ticket-detail' ? 'icon-fill' : ''}`}>
-              assignment
-            </span>
-            <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'टिकट' : 'Tickets'}</span>
-          </button>
+            <button
+              type="button"
+              onClick={() => setActiveView('services-directory')}
+              className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
+                activeView === 'services-directory' ? 'text-[#0071E3]' : 'text-[#86868b] hover:text-white'
+              }`}
+            >
+              <span className={`material-symbols-outlined text-[19px] ${activeView === 'services-directory' ? 'icon-fill' : ''}`}>
+                account_tree
+              </span>
+              <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'हेल्पलाइन' : 'Directory'}</span>
+            </button>
 
-          <button
-            type="button"
-            onClick={() => setIsMobileSidebarOpen(true)}
-            className="flex flex-col items-center justify-center flex-1 py-1 text-[#86868b] hover:text-white transition-colors cursor-pointer"
+            <button
+              type="button"
+              onClick={() => setIsMobileSidebarOpen(true)}
+              className="flex flex-col items-center justify-center flex-1 py-1 text-[#86868b] hover:text-white transition-colors cursor-pointer"
+            >
+              <span className="material-symbols-outlined text-[19px]">
+                menu
+              </span>
+              <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'मेन्यू' : 'Menu'}</span>
+            </button>
+          </nav>
+        ) : (
+          <nav
+            className="lg:hidden fixed bottom-0 left-0 right-0 h-14 bg-[#161617]/90 backdrop-blur-2xl border-t border-white/10 z-40 px-2 flex items-center justify-around text-white shadow-2xl safe-area-pb"
+            aria-label="Officer Mobile Navigation"
           >
-            <span className="material-symbols-outlined text-[19px]">
-              menu
-            </span>
-            <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'मेन्यू' : 'Menu'}</span>
-          </button>
+            <button
+              type="button"
+              onClick={() => setActiveView('dashboard')}
+              className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
+                activeView === 'dashboard' ? 'text-[#0071E3]' : 'text-[#86868b] hover:text-white'
+              }`}
+            >
+              <span className={`material-symbols-outlined text-[19px] ${activeView === 'dashboard' ? 'icon-fill' : ''}`}>
+                dashboard
+              </span>
+              <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'डैशबोर्ड' : 'Overview'}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setActiveView('services-directory')}
+              className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
+                activeView === 'services-directory' ? 'text-[#0071E3]' : 'text-[#86868b] hover:text-white'
+              }`}
+            >
+              <span className={`material-symbols-outlined text-[19px] ${activeView === 'services-directory' ? 'icon-fill' : ''}`}>
+                account_tree
+              </span>
+              <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'श्रेणियां' : 'Services'}</span>
+            </button>
+
+            {/* Integrated Center Action Button */}
+            <button
+              type="button"
+              onClick={() => setIsNewTicketModalOpen(true)}
+              className="flex flex-col items-center justify-center bg-[#0071E3] active:scale-95 text-white rounded-full px-3 py-1 shadow-md transition-all cursor-pointer font-bold"
+              title="Log New Defect"
+            >
+              <span className="material-symbols-outlined text-[17px] font-bold">add</span>
+              <span className="text-[8px] font-semibold uppercase leading-none">{language === 'hi' ? 'नया' : 'Report'}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setActiveView('tickets')}
+              className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
+                activeView === 'tickets' || activeView === 'ticket-detail' ? 'text-[#0071E3]' : 'text-[#86868b] hover:text-white'
+              }`}
+            >
+              <span className={`material-symbols-outlined text-[19px] ${activeView === 'tickets' || activeView === 'ticket-detail' ? 'icon-fill' : ''}`}>
+                assignment
+              </span>
+              <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'टिकट' : 'Tickets'}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setIsMobileSidebarOpen(true)}
+              className="flex flex-col items-center justify-center flex-1 py-1 text-[#86868b] hover:text-white transition-colors cursor-pointer"
+            >
+              <span className="material-symbols-outlined text-[19px]">
+                menu
+              </span>
+              <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'मेन्यू' : 'Menu'}</span>
+            </button>
           </nav>
         )}
       </div>
@@ -498,6 +586,7 @@ export default function App() {
           setIsAiCopilotOpen(false);
           setIsNewTicketModalOpen(true);
         }}
+        userRole={userRole}
       />
 
       {/* Quick Help Modal */}

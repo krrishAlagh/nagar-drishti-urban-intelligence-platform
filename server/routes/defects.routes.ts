@@ -283,6 +283,24 @@ router.put('/:id/assign', (req: Request, res: Response) => {
   res.json({ success: true, data: updated });
 });
 
+interface DefectDataset {
+  id: string;
+  name: string;
+  folder: string;
+  videos: number;
+  totalSize: string;
+  date: string;
+  description: string;
+  videoUrls: string[];
+  mediaItems?: Array<{
+    title: string;
+    type: 'video' | 'image';
+    url: string;
+    tag?: string;
+    subtitle?: string;
+  }>;
+}
+
 // GET /api/defects/:id/datasets - Get video datasets related to location/incident
 router.get('/:id/datasets', (req: Request, res: Response) => {
   const { id } = req.params;
@@ -322,7 +340,7 @@ router.get('/:id/datasets', (req: Request, res: Response) => {
     ? fs.readdirSync(datasetBase, { withFileTypes: true }).filter((entry) => entry.isDirectory()).map((entry) => entry.name)
     : [];
 
-  const datasets = datasetFolders.map((folderName, idx) => {
+  const datasets: DefectDataset[] = datasetFolders.map((folderName, idx) => {
     const folderPath = path.join(datasetBase, folderName);
     const videoFiles = collectVideoFiles(folderPath)
       .sort()
@@ -367,6 +385,146 @@ router.get('/:id/datasets', (req: Request, res: Response) => {
       videoUrls: videoFiles.slice(0, 3)
     };
   });
+
+  if (datasets.length === 0) {
+    if (defect.category === 'Sanitation' || defect.ticketNumber === 'TK-8799') {
+      datasets.push({
+        id: 'dataset-sani-309',
+        name: 'DTC-BUS-309 Rear Camera & Sanitation AI Stream',
+        folder: 'DTC-BUS-309/nehrupark-gate3',
+        videos: 3,
+        totalSize: '210MB',
+        date: '2023-10-24',
+        description: '12-second continuous rear dashcam clip capturing overflowing manhole NEH-14G, ~3m effluent spread on walkway, pedestrian detour, and Edge AI yellow bounding box.',
+        videoUrls: ['/assets/videos/sewer_overflow_clip.mp4'],
+        mediaItems: [
+          {
+            title: 'Continuous Rear Dashcam MP4 Recording (12s)',
+            type: 'video',
+            url: '/assets/videos/sewer_overflow_clip.mp4',
+            tag: 'VIDEO CLIP',
+            subtitle: 'Rear bus POV at 24 km/h, receding perspective, effluent spill & ticket banner'
+          },
+          {
+            title: 'DTC-BUS-309 Rear Dashcam Detection Frame',
+            type: 'image',
+            url: '/assets/defects/sewer_overflow_dashcam.jpg',
+            tag: 'DASHCAM STILL',
+            subtitle: 'Rear view: Nehru Park Gate 3, 3m overflow radius, Yellow AI box (89.0% Conf)'
+          },
+          {
+            title: 'Macro Defect Inspection Photo (Displaced Manhole NEH-14G)',
+            type: 'image',
+            url: '/assets/defects/sewer_overflow_thumb.jpg',
+            tag: 'MACRO CARD',
+            subtitle: 'Close-up evidence card: Dislodged circular cover, sludge stain & walkway pooling'
+          }
+        ]
+      });
+    } else if (defect.category === 'Water Logging' || defect.ticketNumber === 'TK-8855') {
+      datasets.push({
+        id: 'dataset-hyd-204',
+        name: 'DTC-BUS-204 Left-Side Camera & Hydraulic Telemetry Stream',
+        folder: 'DTC-BUS-204/civil-lines-distcourt',
+        videos: 3,
+        totalSize: '235MB',
+        date: '2023-10-24',
+        description: '12-second side dashcam recording capturing 600mm ruptured feeder flange, 2m muddy water geyser cascade (~800L/min), 1.8m road flood, detouring vehicles, and Edge AI bounding box.',
+        videoUrls: ['/assets/videos/pipe_burst_dashcam_clip.mp4'],
+        mediaItems: [
+          {
+            title: 'Continuous Side Dashcam MP4 Recording (12s)',
+            type: 'video',
+            url: '/assets/videos/pipe_burst_dashcam_clip.mp4',
+            tag: 'VIDEO CLIP',
+            subtitle: 'Left-side bus POV at 18 km/h, 2m geyser spray, flood detour & auto-ticket alert'
+          },
+          {
+            title: 'DTC-BUS-204 Left-Side Camera Detection Frame',
+            type: 'image',
+            url: '/assets/defects/pipe_burst_dashcam.jpg',
+            tag: 'DASHCAM STILL',
+            subtitle: 'Side view: District Court Gate 1, 1.8m flood extent, Edge AI box (96.5% Conf)'
+          },
+          {
+            title: 'Macro Defect Inspection Photo (Ruptured Flange Crater)',
+            type: 'image',
+            url: '/assets/defects/pipe_burst_thumb.jpg',
+            tag: 'MACRO CARD',
+            subtitle: 'Close-up evidence card: 600mm fractured collar, hydraulic plume & danger barricade'
+          }
+        ]
+      });
+    } else if (defect.category === 'Streetlights' || defect.ticketNumber === 'TK-8890') {
+      datasets.push({
+        id: 'dataset-lgt-401',
+        name: 'DTC-BUS-118 Night Dashcam & Telemetry Stream',
+        folder: 'DTC-BUS-118/sec14-lgt401',
+        videos: 3,
+        totalSize: '215MB',
+        date: '2023-10-24',
+        description: '12-second continuous night dashcam clip capturing tilted pole, dangling swaying luminaire, electrical micro-arcing, and automated safety slowdown.',
+        videoUrls: ['/assets/videos/streetlight_dashcam_clip.mp4'],
+        mediaItems: [
+          {
+            title: 'Continuous Dashcam MP4 Recording (12s)',
+            type: 'video',
+            url: '/assets/videos/streetlight_dashcam_clip.mp4',
+            tag: 'VIDEO CLIP',
+            subtitle: 'Night approach, swaying luminaire head, AI hazard alert & safety crawl'
+          },
+          {
+            title: 'DTC-BUS-118 Front Dashcam POV (Sector 14 Main Ave)',
+            type: 'image',
+            url: '/assets/defects/dangling_streetlight_dashcam.jpg',
+            tag: 'DASHCAM STILL',
+            subtitle: 'High-resolution night dashcam capture showing 45° pole tilt'
+          },
+          {
+            title: 'Macro Defect Inspection Photo (Pole LGT-401)',
+            type: 'image',
+            url: '/assets/defects/dangling_streetlight_thumb.jpg',
+            tag: 'MACRO CARD',
+            subtitle: 'Close-up evidence card: 30cm live wire & luminaire drop'
+          }
+        ]
+      });
+    } else if (defect.category === 'Potholes' || defect.ticketNumber === 'TK-8921') {
+      datasets.push({
+        id: 'dataset-pth-402',
+        name: 'DTC-BUS-402 YOLO-v8 Forward Dashcam Clip',
+        folder: 'DTC-BUS-402/mgroad-pillar42',
+        videos: 3,
+        totalSize: '240MB',
+        date: '2023-10-24',
+        description: '15-second continuous forward dashcam clip at 34 km/h capturing crater defect with YOLO-v8 bounding box and HUD telemetry.',
+        videoUrls: ['/assets/videos/pothole_dashcam_clip.mp4'],
+        mediaItems: [
+          {
+            title: 'Continuous Dashcam MP4 Recording (15s)',
+            type: 'video',
+            url: '/assets/videos/pothole_dashcam_clip.mp4',
+            tag: 'VIDEO CLIP',
+            subtitle: 'Bus approach at 34 km/h with active YOLO-v8 detection'
+          },
+          {
+            title: 'High-Resolution Dashcam Detection Frame',
+            type: 'image',
+            url: '/assets/defects/severe_pothole_dashcam.jpg',
+            tag: 'DASHCAM STILL',
+            subtitle: 'Defect crater at Metro Pillar 42 with HUD telemetry'
+          },
+          {
+            title: 'Macro Road Surface Inspection Capture',
+            type: 'image',
+            url: '/assets/defects/severe_pothole_thumb.jpg',
+            tag: 'MACRO CARD',
+            subtitle: 'Crater profile: 45cm width, 15cm depth, subgrade exposed'
+          }
+        ]
+      });
+    }
+  }
 
   res.json({
     success: true,

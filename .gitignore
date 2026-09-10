@@ -14,3 +14,7 @@ ai_engine/runs/
 venv/
 *.mp4
 *.avi
+__pycache__/
+*.py[cod]
+*$py.class
+.cache/

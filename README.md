@@ -6,7 +6,7 @@ Replace all sample content with your actual project information.
 
 ## 1. Project Information
 Project Title: Nagar Drishti – Autonomous Urban Intelligence & Municipal Infrastructure Platform
-PS ID: SIH2026-NAGAR-001
+PS ID: SIH26124
 PS Title: AI-Powered Transit Edge Vision, Urban Infrastructure Defect Detection & Autonomous Municipal Governance Platform
 Category: Software
 Theme: Smart Cities / Smart Automation / Clean & Green Technology

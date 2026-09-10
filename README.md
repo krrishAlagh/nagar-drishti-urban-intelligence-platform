@@ -119,7 +119,6 @@ flowchart TD
 nagar-drishti-urban-intelligence-platform/
 ├── README.md                           # Project overview and documentation
 ├── presentation.md                     # Final SIH presentation Google Slides link
-├── Nagar_Drishti_Features_Specification.pdf # Complete 4-page platform features PDF
 ├── .env.example                        # Environment variables template
 ├── package.json                        # Node.js project manifest & scripts
 ├── render.yaml                         # Cloud deployment blueprint for Render

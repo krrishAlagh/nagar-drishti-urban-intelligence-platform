@@ -118,14 +118,20 @@ flowchart TD
 ```
 nagar-drishti-urban-intelligence-platform/
 ├── README.md                           # Project overview and documentation
+├── Nagar_Drishti_Features_Specification.pdf # Complete 4-page platform features PDF
 ├── .env.example                        # Environment variables template
 ├── package.json                        # Node.js project manifest & scripts
 ├── render.yaml                         # Cloud deployment blueprint for Render
 ├── vite.config.ts                      # Vite build configuration
 ├── index.html                          # Single Page Application entry point
+├── submission/
+│   ├── PRESENTATION.md                 # SIH presentation deck and pitch structure
+│   └── DEMO.md                         # Video demo links and demonstration storyboard
+├── assets/
+│   └── screenshots/
+│       └── README.md                   # UI screenshots and hardware asset guide
 ├── src/                                # Frontend React application
 │   ├── components/                     # UI components (Sidebar, Modals, Navbar, etc.)
-│   ├── views/                          # Application views (Dashboard, Live Map, Tickets, etc.)
 │   ├── types.ts                        # TypeScript interfaces and schemas
 │   └── App.tsx                         # Core application router and state
 ├── server/                             # Backend Node.js & Express service
@@ -147,33 +153,30 @@ nagar-drishti-urban-intelligence-platform/
 | :--- | :--- |
 | **Source code** | `src/`, `server/`, and `ai_engine/` |
 | **Architecture / technical documentation** | `README.md` and `ai_engine/README.md` |
-| **Project screenshots / hardware photos** | `ai_engine/evaluation_results/` and `public/` |
-| **Final PPT / presentation** | `public/pitch_script.html` and `Nagar_Drishti_Demo_Video_Script.pdf` |
-| **Demo video link** | `public/script_2min_features.html` and `public/demo_video_script.html` |
+| **Project screenshots / hardware photos** | `assets/screenshots/` and `ai_engine/evaluation_results/` |
+| **Final PPT / presentation** | `submission/` (see [submission/PRESENTATION.md](submission/PRESENTATION.md)) |
+| **Demo video link** | `submission/` (see [submission/DEMO.md](submission/DEMO.md)) |
 | **Project overview** | `README.md` |
 
 ---
 
 ## 8. Final Presentation
-- **Interactive Pitch Presentation Script:** View [public/pitch_script.html](public/pitch_script.html) for the complete 4-speaker timed pitch script with role matrix, municipal ROI analysis, and stage directions.
-- **Presentation Deck & Scripts:**
-  - [Nagar_Drishti_Demo_Video_Script.pdf](Nagar_Drishti_Demo_Video_Script.pdf)
-  - [Nagar_Drishti_2Min_Feature_Script.pdf](Nagar_Drishti_2Min_Feature_Script.pdf)
-- **Online Presentation Viewer:** [Accessible Slide Deck Link](https://drive.google.com/file/d/sih2026-nagar-drishti-deck/view?usp=sharing)
+Keep your final SIH presentation in the repository whenever the file size allows it.  
+See [submission/PRESENTATION.md](submission/PRESENTATION.md) for the required format.  
+If the PPT is too large for GitHub, use Google Drive/OneDrive and put the accessible viewer link in [submission/PRESENTATION.md](submission/PRESENTATION.md).
 
 ---
 
 ## 9. Demo Video
-- **YouTube Demo Video Link:** [Watch Nagar Drishti Full Demonstration](https://youtu.be/nagar-drishti-demo-2026)
-- **Google Drive Backup Video Link:** [Watch Demo Video on Google Drive](https://drive.google.com/file/d/nagar-drishti-video-backup/view?usp=sharing)
-- **2-Minute Feature Walkthrough Script:** [public/script_2min_features.html](public/script_2min_features.html)
-- **Complete Demonstration Script:** [public/demo_video_script.html](public/demo_video_script.html)
+A demo video is optional, but recommended.  
+Add the YouTube/Google Drive link in [submission/DEMO.md](submission/DEMO.md).
 
 ---
 
 ## 10. Screenshots / Prototype Photos
-- **Evaluated AI Detections:** See `ai_engine/evaluation_results/` for real-world test frames showing YOLOv8 defect bounding boxes, segmentation masks, and confidence scores.
-- **Application Views:** Interactive dashboards, GIS heatmap radar, Kanban ticket boards, and commuter safety portals are available under `src/views/` and rendered in the live web application.
+Add important screenshots or hardware/prototype photos to:  
+`assets/screenshots/`  
+See [assets/screenshots/README.md](assets/screenshots/README.md) for examples and naming conventions.
 
 ---
 

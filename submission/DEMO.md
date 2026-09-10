@@ -9,10 +9,7 @@
 ---
 
 ## 🎥 Video Demonstration Links
-- **YouTube Demo Video:** [Watch Full Nagar Drishti Demonstration on YouTube](https://youtu.be/nagar-drishti-demo-2026)
-- **Google Drive Video Backup:** [Watch Video Demonstration on Google Drive](https://drive.google.com/file/d/nagar-drishti-video-backup/view?usp=sharing)
-- **Interactive 2-Minute Walkthrough Script:** [View public/script_2min_features.html](../public/script_2min_features.html)
-- **Complete 3.5-Minute Video Storyboard:** [View public/demo_video_script.html](../public/demo_video_script.html)
+- **YouTube Demo Video:** [https://youtu.be/Gh6r_L-cUvk?si=z4GAwXQ9Yx6BABHK](https://youtu.be/Gh6r_L-cUvk?si=z4GAwXQ9Yx6BABHK)
 
 ---
 

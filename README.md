@@ -118,6 +118,7 @@ flowchart TD
 ```
 nagar-drishti-urban-intelligence-platform/
 ├── README.md                           # Project overview and documentation
+├── presentation.md                     # Final SIH presentation Google Slides link
 ├── Nagar_Drishti_Features_Specification.pdf # Complete 4-page platform features PDF
 ├── .env.example                        # Environment variables template
 ├── package.json                        # Node.js project manifest & scripts
@@ -154,22 +155,20 @@ nagar-drishti-urban-intelligence-platform/
 | **Source code** | `src/`, `server/`, and `ai_engine/` |
 | **Architecture / technical documentation** | `README.md` and `ai_engine/README.md` |
 | **Project screenshots / hardware photos** | `assets/screenshots/` and `ai_engine/evaluation_results/` |
-| **Final PPT / presentation** | `submission/` (see [submission/PRESENTATION.md](submission/PRESENTATION.md)) |
-| **Demo video link** | `submission/` (see [submission/DEMO.md](submission/DEMO.md)) |
+| **Final PPT / presentation** | [presentation.md](presentation.md) & [submission/PRESENTATION.md](submission/PRESENTATION.md) |
+| **Demo video link** | [submission/DEMO.md](submission/DEMO.md) |
 | **Project overview** | `README.md` |
 
 ---
 
 ## 8. Final Presentation
-Keep your final SIH presentation in the repository whenever the file size allows it.  
-See [submission/PRESENTATION.md](submission/PRESENTATION.md) for the required format.  
-If the PPT is too large for GitHub, use Google Drive/OneDrive and put the accessible viewer link in [submission/PRESENTATION.md](submission/PRESENTATION.md).
+- **Presentation File:** [presentation.md](presentation.md) (and [submission/PRESENTATION.md](submission/PRESENTATION.md))
+- **Google Slides Link:** [https://docs.google.com/presentation/d/1Y2kd3oGN6JHSCMghJLXWzA3o0VpP1Td-/edit?usp=drivesdk&ouid=103606797092623392934&rtpof=true&sd=true](https://docs.google.com/presentation/d/1Y2kd3oGN6JHSCMghJLXWzA3o0VpP1Td-/edit?usp=drivesdk&ouid=103606797092623392934&rtpof=true&sd=true)
 
 ---
 
 ## 9. Demo Video
-A demo video is optional, but recommended.  
-Add the YouTube/Google Drive link in [submission/DEMO.md](submission/DEMO.md).
+- **YouTube Demo Video:** [https://youtu.be/Gh6r_L-cUvk?si=z4GAwXQ9Yx6BABHK](https://youtu.be/Gh6r_L-cUvk?si=z4GAwXQ9Yx6BABHK)
 
 ---
 

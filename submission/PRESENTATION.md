@@ -9,10 +9,7 @@
 ---
 
 ## 🔗 Accessible Presentation Links
-- **Google Drive Presentation Viewer:** [Open Slide Deck on Google Drive](https://drive.google.com/file/d/sih2026-nagar-drishti-deck/view?usp=sharing)
-- **Interactive 4-Speaker Pitch Script:** [View public/pitch_script.html](../public/pitch_script.html)
-- **Presentation Deck Document (PDF):** [View Nagar_Drishti_Demo_Video_Script.pdf](../Nagar_Drishti_Demo_Video_Script.pdf)
-- **2-Minute Feature Summary (PDF):** [View Nagar_Drishti_2Min_Feature_Script.pdf](../Nagar_Drishti_2Min_Feature_Script.pdf)
+- **Google Slides Presentation:** [https://docs.google.com/presentation/d/1Y2kd3oGN6JHSCMghJLXWzA3o0VpP1Td-/edit?usp=drivesdk&ouid=103606797092623392934&rtpof=true&sd=true](https://docs.google.com/presentation/d/1Y2kd3oGN6JHSCMghJLXWzA3o0VpP1Td-/edit?usp=drivesdk&ouid=103606797092623392934&rtpof=true&sd=true)
 
 ---
 

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nagar Drishti - 3.5 Min Demo Video Script & Storyboard</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #0F172A;
+      background: #FFFFFF;
+      line-height: 1.45;
+      font-size: 9.5pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Top Brand Header */
+    .header-banner {
+      background: linear-gradient(135deg, #0B192C 0%, #1E3E62 100%);
+      color: #FFFFFF;
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 6px solid #0071E3;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .title-group h1 {
+      font-size: 17pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .title-group h1 span.accent {
+      color: #38BDF8;
+    }
+
+    .title-group p {
+      font-size: 9.5pt;
+      color: #94A3B8;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .meta-badge {
+      background: rgba(0, 113, 227, 0.25);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-align: right;
+    }
+
+    .meta-badge .hackathon {
+      font-size: 10.5pt;
+      font-weight: 800;
+      color: #38BDF8;
+      display: block;
+      letter-spacing: 0.5px;
+    }
+
+    .meta-badge .timing {
+      font-size: 8pt;
+      font-family: 'JetBrains Mono', monospace;
+      color: #E2E8F0;
+      margin-top: 2px;
+    }
+
+    /* Executive Specs Bar */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .spec-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      padding: 6px 10px;
+    }
+
+    .spec-label {
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #64748B;
+      letter-spacing: 0.5px;
+    }
+
+    .spec-value {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #0F172A;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Phase Storyboard Table */
+    .section-heading {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #0F172A;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: 4px;
+    }
+
+    .phase-card {
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      margin-bottom: 9px;
+      background: #FFFFFF;
+      overflow: hidden;
+      page-break-inside: avoid;
+    }
+
+    .phase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 12px;
+      background: #F1F5F9;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .phase-title {
+      font-weight: 700;
+      font-size: 9.5pt;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .phase-time {
+      font-size: 8pt;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #0071E3;
+      color: #FFFFFF;
+    }
+
+    .phase-body {
+      display: grid;
+      grid-template-columns: 38% 62%;
+    }
+
+    .visual-col {
+      padding: 8px 10px;
+      background: #F8FAFC;
+      border-right: 1px solid #E2E8F0;
+      font-size: 8.5pt;
+    }
+
+    .visual-col .col-label {
+      font-size: 7pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #64748B;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .visual-col ul {
+      margin-left: 14px;
+      color: #334155;
+    }
+
+    .visual-col li {
+      margin-bottom: 3px;
+    }
+
+    .visual-col strong {
+      color: #0F172A;
+    }
+
+    .script-col {
+      padding: 8px 12px;
+      font-size: 9.2pt;
+      line-height: 1.45;
+      color: #1E293B;
+    }
+
+    .script-col .col-label {
+      font-size: 7pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #0071E3;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .script-col p {
+      font-style: italic;
+    }
+
+    .script-col p strong {
+      font-style: normal;
+      color: #0071E3;
+      font-weight: 700;
+    }
+
+    /* Teleprompter Box */
+    .teleprompter-box {
+      background: #0F172A;
+      color: #F8FAFC;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 10px;
+      page-break-inside: avoid;
+    }
+
+    .teleprompter-title {
+      color: #38BDF8;
+      font-size: 10pt;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .teleprompter-content {
+      font-size: 9pt;
+      line-height: 1.55;
+      color: #E2E8F0;
+    }
+
+    .teleprompter-content p {
+      margin-bottom: 8px;
+    }
+
+    /* Pro Tips Box */
+    .tips-box {
+      margin-top: 10px;
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-radius: 8px;
+      padding: 10px 14px;
+      page-break-inside: avoid;
+    }
+
+    .tips-title {
+      font-size: 9pt;
+      font-weight: 800;
+      color: #92400E;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      font-size: 8.2pt;
+      color: #78350F;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Banner -->
+  <div class="header-banner">
+    <div class="title-group">
+      <h1>🏛️ NAGAR DRISHTI <span class="accent">(नगर दृष्टि)</span></h1>
+      <p>Autonomous Transit Edge-AI Urban Intelligence & Municipal Governance Platform</p>
+    </div>
+    <div class="meta-badge">
+      <span class="hackathon">OFFICIAL DEMO VIDEO SCRIPT</span>
+      <span class="timing">⏱️ Target: 3m 15s – 3m 30s • ~470 Words</span>
+    </div>
+  </div>
+
+  <!-- Specs Bar -->
+  <div class="specs-grid">
+    <div class="spec-card">
+      <div class="spec-label">Target Duration</div>
+      <div class="spec-value">3:15 – 3:30 Mins</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-label">Narration Pace</div>
+      <div class="spec-value">135–140 WPM</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-label">Recording Mode</div>
+      <div class="spec-value">1080p / 4K (F11 Fullscreen)</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-label">Visual Theme</div>
+      <div class="spec-value">Apple Glassmorphism</div>
+    </div>
+  </div>
+
+  <!-- Storyboard & Narrative Breakdown -->
+  <div class="section-heading">🎬 Phase-by-Phase Storyboard &amp; Voiceover Narrative</div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card">
+    <div class="phase-header">
+      <span class="phase-title">Phase 1: The Civic Problem &amp; The Core Innovation (The Hook)</span>
+      <span class="phase-time">00:00 – 00:30 (30s)</span>
+    </div>
+    <div class="phase-body">
+      <div class="visual-col">
+        <div class="col-label">🖥️ What to Show on Screen</div>
+        <ul>
+          <li>Open on <strong>Dashboard Overview</strong> (<code>DashboardView.tsx</code>).</li>
+          <li>Hover over hero pill: <em>"48 DTC AI Transit Nodes Active"</em>.</li>
+          <li>Showcase real-time <strong>KPI Cards</strong> (Active Fleet, Ingested Detections, Latency 38ms).</li>
+          <li>Point to <strong>Live Detection Ticker</strong> updating via WebSocket.</li>
+        </ul>
+      </div>
+      <div class="script-col">
+        <div class="col-label">🎙️ Spoken Voiceover Script</div>
+        <p>"Every year, hazardous road defects claim thousands of innocent lives across Indian cities. Traditional municipal inspections rely on slow paper surveys or delayed citizen complaint apps that take weeks to resolve.</p>
+        <p>Welcome to <strong>Nagar Drishti</strong>—an autonomous urban intelligence and municipal governance platform. Instead of deploying expensive dedicated survey vehicles, we transform public transit buses that already navigate every city corridor daily into a live, intelligent road scanning network."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card">
+    <div class="phase-header">
+      <span class="phase-title">Phase 2: Edge-AI Vision &amp; Live GIS Command Radar</span>
+      <span class="phase-time">00:30 – 01:05 (35s)</span>
+    </div>
+    <div class="phase-body">
+      <div class="visual-col">
+        <div class="col-label">🖥️ What to Show on Screen</div>
+        <ul>
+          <li>Click <strong>Live Map</strong> in top nav (<code>LiveMapView.tsx</code>).</li>
+          <li>Show <strong>moving DTC bus markers</strong> along Route 522 &amp; Route 620.</li>
+          <li>Toggle <strong>Heatmap layers</strong> (Potholes, Water Logging, Streetlights).</li>
+          <li>Click a defect marker: show <strong>10Hz bounding box</strong>, 96% confidence, crater volume (0.28m³).</li>
+        </ul>
+      </div>
+      <div class="script-col">
+        <div class="col-label">🎙️ Spoken Voiceover Script</div>
+        <p>"Mounted on 48 DTC buses, our custom edge AI vision runs optimized <strong>YOLO-v8 models at 30 frames per second with sub-25ms latency</strong>. As buses drive, onboard cameras automatically detect severe potholes, broken streetlights, water pipeline ruptures, and open manholes.</p>
+        <p>Telemetry streams in real time over WebSockets to our live GIS radar. <strong>Spatial deduplication</strong> ensures that five buses encountering the same defect generate only one verified municipal incident."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card">
+    <div class="phase-header">
+      <span class="phase-title">Phase 3: Smart Work Orders &amp; IRC:82 Engineering Standards</span>
+      <span class="phase-time">01:05 – 01:45 (40s)</span>
+    </div>
+    <div class="phase-body">
+      <div class="visual-col">
+        <div class="col-label">🖥️ What to Show on Screen</div>
+        <ul>
+          <li>Open <strong>Tickets &amp; Work Orders</strong> (<code>TicketsWorkOrdersView.tsx</code>).</li>
+          <li>Show <strong>Kanban Board</strong> (New ➔ Assigned ➔ In Progress ➔ Resolved).</li>
+          <li>Click ticket <strong>TK-8921</strong> to open <code>TicketDetailView.tsx</code>.</li>
+          <li>Highlight <strong>IRC:82-2015 Civil SOP</strong>, Bill of Materials, and <strong>Before/After Photo Verification</strong>.</li>
+        </ul>
+      </div>
+      <div class="script-col">
+        <div class="col-label">🎙️ Spoken Voiceover Script</div>
+        <p>"From detection, Nagar Drishti's auto-routing engine assigns tickets directly to the right department—PWD, Delhi Jal Board, or BSES—under strict SLA countdown timers.</p>
+        <p>Field crews don't receive vague complaints; they get complete engineering dossiers aligned with official <strong>Indian Road Congress IRC:82 standards</strong>, including required materials and excavation protocols. To eliminate ghost repairs, contractors must upload geotagged <strong>Before-and-After photo audits</strong>, autonomously re-verified the next time a bus passes that exact location."</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card">
+    <div class="phase-header">
+      <span class="phase-title">Phase 4: Multimodal Gemini AI Copilot (Voice &amp; Bilingual)</span>
+      <span class="phase-time">01:45 – 02:20 (35s)</span>
+    </div>
+    <div class="phase-body">
+      <div class="visual-col">
+        <div class="col-label">🖥️ What to Show on Screen</div>
+        <ul>
+          <li>Click floating bottom <strong>"Ask Nagar AI"</strong> (<code>AiCopilotModal.tsx</code>).</li>
+          <li>Click prompt: <em>"🚨 1-Hour SLA Breaches"</em> or speak into mic.</li>
+          <li>Gemini responds with grounded stats and suggested action pills.</li>
+          <li>Click the <strong>Speaker button</strong> for 2-3s of voice output.</li>
+          <li>Click <em>"View Critical SLA Breaches"</em> to show deep linking.</li>
+        </ul>
+      </div>
+      <div class="script-col">
+        <div class="col-label">🎙️ Spoken Voiceover Script</div>
+        <p>"Powering municipal decision-making is our <strong>Multimodal AI Copilot, backed by Google Gemini</strong>. Grounded in Indian civil engineering manuals and emergency protocols, the copilot responds to voice and text queries in both English and Hindi.</p>
+        <p>Municipal commissioners can ask for instant SLA breach analyses, material estimations, or crew deployments—with actionable deep links that execute workflows in one click."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card">
+    <div class="phase-header">
+      <span class="phase-title">Phase 5: Citizen Transit Portal &amp; Multi-Agency War Room</span>
+      <span class="phase-time">02:20 – 02:55 (35s)</span>
+    </div>
+    <div class="phase-body">
+      <div class="visual-col">
+        <div class="col-label">🖥️ What to Show on Screen</div>
+        <ul>
+          <li>Switch role to <strong>Public Commuter</strong> (<code>PublicBusTrackerView.tsx</code>).</li>
+          <li>Show Route 522 with live stops, arrival countdowns, and occupancy.</li>
+          <li>Open <strong>Cabin Safety SOS</strong> (<code>BusSafetyComplaintsView.tsx</code>).</li>
+          <li>Switch to <strong>Multi-Agency Hub</strong> (<code>MultiAgencyView.tsx</code>) showing live war-room chat between PWD, DJB, and Traffic Police.</li>
+        </ul>
+      </div>
+      <div class="script-col">
+        <div class="col-label">🎙️ Spoken Voiceover Script</div>
+        <p>"Nagar Drishti empowers citizens as well. Commuters get a public transit portal with live bus ETAs and occupancy tracking. Onboard, passengers have a direct <strong>Cabin SOS to report reckless driving, phone use, or women safety hazards</strong> with CCTV audit logs.</p>
+        <p>Behind the scenes, our <strong>Multi-Agency Coordination Hub</strong> brings PWD, Jal Board, Power utilities, and Traffic Police into a single shared operational room, ending departmental finger-pointing for good."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card">
+    <div class="phase-header">
+      <span class="phase-title">Phase 6: Accident Blackspots Analytics &amp; Grand Finale</span>
+      <span class="phase-time">02:55 – 03:25 (30s)</span>
+    </div>
+    <div class="phase-body">
+      <div class="visual-col">
+        <div class="col-label">🖥️ What to Show on Screen</div>
+        <ul>
+          <li>Open <strong>Accident Blackspots</strong> (<code>AccidentBlackspotAnalyticsView.tsx</code>).</li>
+          <li>Show Mukarba Chowk &amp; Kashmere Gate fatality metrics.</li>
+          <li>Click top <strong>"हिन्दी / EN"</strong> toggle (<code>TopHeader.tsx</code>) to showcase full sovereign Hindi localization.</li>
+          <li>Return to the main overview screen with smooth cursor motion as outro plays.</li>
+        </ul>
+      </div>
+      <div class="script-col">
+        <div class="col-label">🎙️ Spoken Voiceover Script</div>
+        <p>"By coupling historical accident blackspots with continuous pavement defect velocity, city authorities shift from reactive patching to proactive, preventative road safety.</p>
+        <p>Fully bilingual, privacy-preserving, and built for zero infrastructure capex—Nagar Drishti transforms everyday public transit into the intelligent heartbeat of a self-healing city.</p>
+        <p><strong>Thank you, and Jai Hind! 🇮🇳</strong>"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Continuous Teleprompter Text -->
+  <div class="teleprompter-box">
+    <div class="teleprompter-title">🎙️ Continuous Teleprompter Text (Single-Take Voice Recording)</div>
+    <div class="teleprompter-content">
+      <p>Every year, hazardous road defects claim thousands of innocent lives across Indian cities. Traditional municipal inspections rely on slow paper surveys or delayed citizen complaint apps that take weeks to resolve.</p>
+      <p>Welcome to <strong>Nagar Drishti</strong>—an autonomous urban intelligence and municipal governance platform. Instead of deploying expensive dedicated survey vehicles, we transform public transit buses that already navigate every city corridor daily into a live, intelligent road scanning network.</p>
+      <p>Mounted on 48 DTC buses, our custom edge AI vision runs optimized <strong>YOLO-v8 models at 30 frames per second with sub-25ms latency</strong>. As buses drive, onboard cameras automatically detect severe potholes, broken streetlights, water pipeline ruptures, and open manholes. Telemetry streams in real time over WebSockets to our live GIS radar. Spatial deduplication ensures that five buses encountering the same defect generate only one verified municipal incident.</p>
+      <p>From detection, Nagar Drishti's auto-routing engine assigns tickets directly to the right department—PWD, Delhi Jal Board, or BSES—under strict SLA countdown timers. Field crews don't receive vague complaints; they get complete engineering dossiers aligned with official <strong>Indian Road Congress IRC:82 standards</strong>, including required materials and excavation protocols. To eliminate ghost repairs, contractors must upload geotagged Before-and-After photo audits, autonomously re-verified the next time a bus passes that exact location.</p>
+      <p>Powering municipal decision-making is our <strong>Multimodal AI Copilot, backed by Google Gemini</strong>. Grounded in Indian civil engineering manuals and emergency protocols, the copilot responds to voice and text queries in both English and Hindi. Municipal commissioners can ask for instant SLA breach analyses, material estimations, or crew deployments—with actionable deep links that execute workflows in one click.</p>
+      <p>Nagar Drishti empowers citizens as well. Commuters get a public transit portal with live bus ETAs and occupancy tracking. Onboard, passengers have a direct Cabin SOS to report reckless driving, phone use, or women safety hazards with CCTV audit logs. Behind the scenes, our Multi-Agency Coordination Hub brings PWD, Jal Board, Power utilities, and Traffic Police into a single shared operational room, ending departmental finger-pointing for good.</p>
+      <p>By coupling historical accident blackspots with continuous pavement defect velocity, city authorities shift from reactive patching to proactive, preventative road safety. Fully bilingual, privacy-preserving, and built for zero infrastructure capex—Nagar Drishti transforms everyday public transit into the intelligent heartbeat of a self-healing city. Thank you, and Jai Hind!</p>
+    </div>
+  </div>
+
+  <!-- Recording Pro Tips -->
+  <div class="tips-box">
+    <div class="tips-title">💡 Video Production &amp; Presentation Checklist</div>
+    <div class="tips-grid">
+      <div><strong>• Screen Capture:</strong> Press F11 in Chrome for borderless recording. Set zoom strictly to 100%.</div>
+      <div><strong>• Cursor Smoothness:</strong> Hover on buttons for 1 second before clicking to let viewers follow.</div>
+      <div><strong>• Audio Balancing:</strong> Keep narration crisp; lower ambient tech background music to -24dB.</div>
+      <div><strong>• Bilingual WOW-Factor:</strong> Trigger the Hindi toggle at Phase 6 to impress evaluators with sovereign design.</div>
+    </div>
+  </div>
+
+</body>
+</html>

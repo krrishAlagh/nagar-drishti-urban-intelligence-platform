@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nagar Drishti - 2 Min Feature Walkthrough Script</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 12mm 14mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #0F172A;
+      background: #FFFFFF;
+      line-height: 1.45;
+      font-size: 10pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .header-banner {
+      background: linear-gradient(135deg, #0A192F 0%, #172A46 100%);
+      color: #FFFFFF;
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 6px solid #0071E3;
+    }
+
+    .title-group h1 {
+      font-size: 17pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #FFFFFF;
+    }
+
+    .title-group h1 span {
+      color: #38BDF8;
+    }
+
+    .title-group p {
+      font-size: 9.5pt;
+      color: #94A3B8;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .meta-badge {
+      background: rgba(0, 113, 227, 0.25);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 6px 14px;
+      border-radius: 8px;
+      text-align: right;
+    }
+
+    .meta-badge .hackathon {
+      font-size: 10pt;
+      font-weight: 800;
+      color: #38BDF8;
+      display: block;
+    }
+
+    .meta-badge .timing {
+      font-size: 8.5pt;
+      font-family: 'JetBrains Mono', monospace;
+      color: #E2E8F0;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .spec-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      padding: 8px 12px;
+    }
+
+    .spec-label {
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #64748B;
+    }
+
+    .spec-value {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0F172A;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .section-title {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #0F172A;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: 4px;
+    }
+
+    .feature-card {
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background: #FFFFFF;
+      overflow: hidden;
+      page-break-inside: avoid;
+    }
+
+    .feature-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 12px;
+      background: #F1F5F9;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .feature-title {
+      font-weight: 700;
+      font-size: 9.5pt;
+      color: #0F172A;
+    }
+
+    .feature-time {
+      font-size: 8pt;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #0071E3;
+      color: #FFFFFF;
+    }
+
+    .feature-body {
+      display: grid;
+      grid-template-columns: 36% 64%;
+    }
+
+    .screen-col {
+      padding: 8px 10px;
+      background: #F8FAFC;
+      border-right: 1px solid #E2E8F0;
+      font-size: 8.5pt;
+      color: #334155;
+    }
+
+    .screen-col .tag {
+      font-size: 7pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #64748B;
+      margin-bottom: 3px;
+    }
+
+    .script-col {
+      padding: 8px 12px;
+      font-size: 9.3pt;
+      line-height: 1.45;
+      color: #1E293B;
+    }
+
+    .script-col .tag {
+      font-size: 7pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #0071E3;
+      margin-bottom: 3px;
+    }
+
+    .script-col p {
+      font-style: italic;
+    }
+
+    .script-col p strong {
+      font-style: normal;
+      color: #0071E3;
+    }
+
+    .teleprompter {
+      background: #0F172A;
+      color: #FFFFFF;
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-top: 12px;
+      page-break-inside: avoid;
+    }
+
+    .teleprompter h3 {
+      color: #38BDF8;
+      font-size: 10pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .teleprompter p {
+      font-size: 9.2pt;
+      line-height: 1.55;
+      color: #E2E8F0;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-banner">
+    <div class="title-group">
+      <h1>NAGAR DRISHTI <span>(नगर दृष्टि)</span></h1>
+      <p>Official Website &amp; Core Features Walkthrough Script</p>
+    </div>
+    <div class="meta-badge">
+      <span class="hackathon">2-MINUTE FEATURE DEMO</span>
+      <span class="timing">⏱️ Exactly 2:00 • 270 Words</span>
+    </div>
+  </div>
+
+  <div class="specs-grid">
+    <div class="spec-card">
+      <div class="spec-label">Duration</div>
+      <div class="spec-value">2:00 Minutes</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-label">Word Count</div>
+      <div class="spec-value">270 Spoken Words</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-label">Narration Rate</div>
+      <div class="spec-value">~135 Words / Minute</div>
+    </div>
+  </div>
+
+  <div class="section-title">🎬 Screen Actions &amp; Spoken Narration (2 Minutes)</div>
+
+  <!-- Section 1 -->
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-title">1. Dashboard Overview &amp; Live Telemetry Feed</span>
+      <span class="feature-time">00:00 – 00:20 (20s)</span>
+    </div>
+    <div class="feature-body">
+      <div class="screen-col">
+        <div class="tag">🖥️ Screen Action</div>
+        Open <strong>DashboardView.tsx</strong>. Hover over the real-time KPI counters (48 Active Buses, Latency 38ms, Ingested Defect Ticker).
+      </div>
+      <div class="script-col">
+        <div class="tag">🎙️ Spoken Script</div>
+        <p>"Welcome to <strong>Nagar Drishti</strong>—an autonomous urban intelligence platform. Our dashboard connects live with <strong>48 public transit buses</strong> running edge-AI cameras. It provides city authorities with instant real-time telemetry, defect ingestion velocity, and live 1-hour SLA breach monitoring."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-title">2. Live GIS Command Radar &amp; Defect Heatmaps</span>
+      <span class="feature-time">00:20 – 00:40 (20s)</span>
+    </div>
+    <div class="feature-body">
+      <div class="screen-col">
+        <div class="tag">🖥️ Screen Action</div>
+        Click <strong>Live Map</strong> (<code>LiveMapView.tsx</code>). Show moving DTC buses, toggle heatmap layer, click a defect marker to reveal bounding box &amp; volume.
+      </div>
+      <div class="script-col">
+        <div class="tag">🎙️ Spoken Script</div>
+        <p>"Our <strong>Live GIS Radar</strong> tracks bus fleets moving in real time along active city corridors. With spatial deduplication and integrated heatmaps, it pinpoints potholes, leaking water mains, and streetlight outages—complete with <strong>crater volume calculations</strong> and 96% AI confidence scores."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-title">3. Smart Work Orders &amp; IRC:82 Engineering Standards</span>
+      <span class="feature-time">00:40 – 01:00 (20s)</span>
+    </div>
+    <div class="feature-body">
+      <div class="screen-col">
+        <div class="tag">🖥️ Screen Action</div>
+        Click <strong>Tickets &amp; Work Orders</strong> (<code>TicketsWorkOrdersView.tsx</code>). Show Kanban board, click ticket <strong>TK-8921</strong> to show IRC:82 SOPs &amp; Before/After photo audit.
+      </div>
+      <div class="script-col">
+        <div class="tag">🎙️ Spoken Script</div>
+        <p>"Under <strong>Work Orders</strong>, tickets auto-route to PWD, Jal Board, or BSES via custom rule engines. Each work order contains official <strong>Indian Road Congress IRC:82 repair SOPs</strong>, estimated materials, and mandatory <strong>Before-and-After photo verification</strong> to guarantee contractor accountability."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-title">4. Multimodal Gemini AI Copilot (Voice &amp; Bilingual)</span>
+      <span class="feature-time">01:00 – 01:20 (20s)</span>
+    </div>
+    <div class="feature-body">
+      <div class="screen-col">
+        <div class="tag">🖥️ Screen Action</div>
+        Click <strong>'Ask Nagar AI'</strong> pill (<code>AiCopilotModal.tsx</code>). Click prompt <em>'🚨 1-Hour SLA Breaches'</em>, play speech synthesis output, click suggested deep link.
+      </div>
+      <div class="script-col">
+        <div class="tag">🎙️ Spoken Script</div>
+        <p>"Our floating <strong>Gemini Multimodal AI Copilot</strong> supports natural voice queries and audio speech output in both English and Hindi. Grounded in municipal engineering standards, it delivers instant SLA breach analysis, material forecasting, and one-click operational dispatch."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-title">5. Public Commuter Tracker, Cabin SOS &amp; Multi-Agency Hub</span>
+      <span class="feature-time">01:20 – 01:40 (20s)</span>
+    </div>
+    <div class="feature-body">
+      <div class="screen-col">
+        <div class="tag">🖥️ Screen Action</div>
+        Switch role to <strong>Public Commuter</strong> (<code>PublicBusTrackerView.tsx</code>). Show Route 522 live ETA/occupancy. Open <strong>Cabin SOS</strong>, then glance at <strong>Multi-Agency Hub</strong>.
+      </div>
+      <div class="script-col">
+        <div class="tag">🎙️ Spoken Script</div>
+        <p>"For citizens, the <strong>Public Bus Tracker</strong> provides live transit ETAs and real-time occupancy. Passengers also get an onboard <strong>Cabin Safety SOS</strong> with CCTV snapshots. Meanwhile, our <strong>Multi-Agency Coordination Hub</strong> brings all utility departments into a live operational war room."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-title">6. Accident Blackspot Analytics &amp; Sovereign Localization</span>
+      <span class="feature-time">01:40 – 02:00 (20s)</span>
+    </div>
+    <div class="feature-body">
+      <div class="screen-col">
+        <div class="tag">🖥️ Screen Action</div>
+        Click <strong>Accident Blackspots</strong> (<code>AccidentBlackspotAnalyticsView.tsx</code>). Click <strong>'हिन्दी / EN'</strong> language button in the top nav to show full Hindi UI.
+      </div>
+      <div class="script-col">
+        <div class="tag">🎙️ Spoken Script</div>
+        <p>"Finally, our <strong>Accident Blackspot Analytics</strong> couples historical hazard corridors with remedial engineering action tracking. With one-click CSV export, bilingual English-Hindi localization, and dark-light glassmorphism, Nagar Drishti delivers a complete next-generation civic platform. Thank you!"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teleprompter Script -->
+  <div class="teleprompter">
+    <h3>🎙️ Continuous Single-Take Script (Read in 2 Minutes)</h3>
+    <p>"Welcome to Nagar Drishti—an autonomous urban intelligence platform. Our dashboard connects live with 48 public transit buses running edge-AI cameras. It provides city authorities with instant real-time telemetry, defect ingestion velocity, and live 1-hour SLA breach monitoring.</p>
+    <p>Our Live GIS Radar tracks bus fleets moving in real time along active city corridors. With spatial deduplication and integrated heatmaps, it pinpoints potholes, leaking water mains, and streetlight outages—complete with crater volume calculations and 96% AI confidence scores.</p>
+    <p>Under Work Orders, tickets auto-route to PWD, Jal Board, or BSES via custom rule engines. Each work order contains official Indian Road Congress IRC:82 repair SOPs, estimated materials, and mandatory Before-and-After photo verification to guarantee contractor accountability.</p>
+    <p>Our floating Gemini Multimodal AI Copilot supports natural voice queries and audio speech output in both English and Hindi. Grounded in municipal engineering standards, it delivers instant SLA breach analysis, material forecasting, and one-click operational dispatch.</p>
+    <p>For citizens, the Public Bus Tracker provides live transit ETAs and real-time occupancy. Passengers also get an onboard Cabin Safety SOS with CCTV snapshots. Meanwhile, our Multi-Agency Coordination Hub brings all utility departments into a live operational war room.</p>
+    <p>Finally, our Accident Blackspot Analytics couples historical hazard corridors with remedial engineering action tracking. With one-click CSV export, bilingual English-Hindi localization, and dark-light glassmorphism, Nagar Drishti delivers a complete next-generation civic platform. Thank you!"</p>
+  </div>
+
+</body>
+</html>

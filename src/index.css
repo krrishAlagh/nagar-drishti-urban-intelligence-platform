@@ -313,10 +313,14 @@ html.font-size-lg { font-size: 18px; }
   background: linear-gradient(to right, #FF9933 33.33%, #CBD5E1 33.33%, #CBD5E1 66.66%, #138808 66.66%);
 }
 
-/* Minimal Scrollbars */
+/* Minimal & Touch-Optimized Scrollbars */
+.custom-scrollbar {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
 .custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;

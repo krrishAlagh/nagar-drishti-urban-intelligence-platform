@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ActiveView, Language, UserRole, DefectItem, AutoRoutingRule, Theme, FontSizeScale, ROLE_ALLOWED_VIEWS } from './types';
 import { INITIAL_DEFECTS, AUTO_ROUTING_RULES, BUS_CABIN_INCIDENTS, ACCIDENT_BLACKSPOTS } from './data/mockData';
 import { TopHeader } from './components/TopHeader';
+import { Sidebar } from './components/Sidebar';
 import { DashboardView } from './components/DashboardView';
 import { ServicesDirectoryView } from './components/ServicesDirectoryView';
 import { TicketsWorkOrdersView } from './components/TicketsWorkOrdersView';
@@ -249,6 +250,7 @@ export default function App() {
         onOpenNewTicket={() => setIsNewTicketModalOpen(true)}
         onOpenAiCopilot={() => setIsAiCopilotOpen(true)}
         onLogout={handleLogout}
+        onOpenMenu={() => setIsMobileSidebarOpen(true)}
         isConnected={isConnected}
         latestEvent={latestEvent}
         userRole={userRole}
@@ -602,6 +604,16 @@ export default function App() {
           setIsHelpModalOpen(false);
           setActiveView(v);
         }}
+      />
+      {/* Mobile Slide-Out Navigation Drawer */}
+      <Sidebar
+        activeView={activeView}
+        setActiveView={(v, filterParam) => handleNavigateWithFilter(v, filterParam)}
+        language={language}
+        onLogout={handleLogout}
+        isOpenOnMobile={isMobileSidebarOpen}
+        onCloseMobile={() => setIsMobileSidebarOpen(false)}
+        userRole={userRole}
       />
     </div>
   );

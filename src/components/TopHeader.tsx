@@ -23,6 +23,7 @@ interface TopHeaderProps {
   onOpenNewTicket?: () => void;
   onOpenAiCopilot?: () => void;
   onLogout?: () => void;
+  onOpenMenu?: () => void;
   isConnected?: boolean;
   latestEvent?: { type: string; message: string; timestamp: string } | null;
   userRole?: UserRole;
@@ -52,6 +53,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
   onOpenNewTicket,
   onOpenAiCopilot,
   onLogout,
+  onOpenMenu,
   isConnected = true,
   latestEvent = null,
   userRole = 'Municipal Admin'
@@ -268,8 +270,8 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
     <header className="sticky top-0 z-40 apple-nav transition-all select-none shadow-sm">
       <div className="h-[2.5px] tricolor-ribbon w-full"></div>
 
-      <div className="px-4 sm:px-8 lg:px-10 py-3 max-w-[1800px] mx-auto w-full">
-        <div className="flex items-center justify-between gap-3 sm:gap-4">
+      <div className="px-3 sm:px-8 lg:px-10 py-2.5 sm:py-3 max-w-[1800px] mx-auto w-full">
+        <div className="flex items-center justify-between gap-2 sm:gap-4">
           <div
             onClick={() => {
               if (userRole === 'Public Commuter') {
@@ -282,15 +284,15 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
                 setActiveView('dashboard');
               }
             }}
-            className="flex items-center gap-3.5 cursor-pointer shrink-0 group py-1"
+            className="flex items-center gap-2 sm:gap-3.5 cursor-pointer shrink-0 group py-1"
           >
             <img
               src={ASSETS.emblem}
               alt="National Emblem"
-              className="h-9 w-auto object-contain brightness-105 group-hover:scale-105 transition-transform"
+              className="h-8 sm:h-9 w-auto object-contain brightness-105 group-hover:scale-105 transition-transform"
             />
-            <div className="flex items-center gap-2.5">
-              <span className="font-extrabold text-[17px] sm:text-[19px] text-[#1d1d1f] dark:text-[#f5f5f7] tracking-tight">
+            <div className="flex items-center gap-1.5 sm:gap-2.5">
+              <span className="font-extrabold text-[15px] sm:text-[19px] text-[#1d1d1f] dark:text-[#f5f5f7] tracking-tight whitespace-nowrap">
                 {language === 'hi' ? 'नगर दृष्टि' : 'Nagar Drishti'}
               </span>
               <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#34C759]/10 text-[#34C759] border border-[#34C759]/20 font-mono shadow-xs">
@@ -300,10 +302,10 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
             </div>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            {/* Authenticated Role Identity Badge (Static - Re-authentication required to switch role) */}
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+            {/* Authenticated Role Identity Badge (Visible on sm+ screens) */}
             <div
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-semibold backdrop-blur-md shadow-2xs select-none ${
+              className={`hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-semibold backdrop-blur-md shadow-2xs select-none ${
                 userRole === 'Public Commuter'
                   ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-700 dark:text-emerald-300'
                   : userRole === 'Municipal Admin'
@@ -336,14 +338,15 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
               </span>
             </div>
 
+            {/* Language Switcher */}
             <button
               type="button"
               onClick={onToggleLanguage}
-              className="flex items-center bg-black/5 dark:bg-white/10 p-1 rounded-full border border-black/5 dark:border-white/10 shadow-2xs cursor-pointer hover:border-[#0071E3] transition-all group"
+              className="flex items-center bg-black/5 dark:bg-white/10 p-0.5 sm:p-1 rounded-full border border-black/5 dark:border-white/10 shadow-2xs cursor-pointer hover:border-[#0071E3] transition-all group"
               title={language === 'en' ? 'Switch to Hindi (हिन्दी)' : 'Switch to English'}
             >
               <span
-                className={`px-3 py-1 text-xs font-bold rounded-full transition-all ${
+                className={`px-2 sm:px-3 py-0.5 sm:py-1 text-[11px] sm:text-xs font-bold rounded-full transition-all ${
                   language === 'en'
                     ? 'bg-white dark:bg-[#1d1d1f] text-[#0071E3] shadow-2xs'
                     : 'text-[#86868b] group-hover:text-[#1d1d1f] dark:group-hover:text-white'
@@ -352,7 +355,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
                 EN
               </span>
               <span
-                className={`px-3 py-1 text-xs font-bold rounded-full transition-all ${
+                className={`px-2 sm:px-3 py-0.5 sm:py-1 text-[11px] sm:text-xs font-bold rounded-full transition-all ${
                   language === 'hi'
                     ? 'bg-[#0071E3] text-white shadow-2xs'
                     : 'text-[#86868b] group-hover:text-[#1d1d1f] dark:group-hover:text-white'
@@ -362,32 +365,35 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
               </span>
             </button>
 
+            {/* Theme Switcher */}
             <button
               type="button"
               onClick={onToggleTheme}
-              className="p-2.5 rounded-full text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-white bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20 transition-all cursor-pointer"
+              className="p-2 sm:p-2.5 rounded-full text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-white bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20 transition-all cursor-pointer"
               title={theme === 'dark' ? 'Switch to Light' : 'Switch to Dark'}
             >
-              <span className="material-symbols-outlined text-[19px]">
+              <span className="material-symbols-outlined text-[18px] sm:text-[19px]">
                 {theme === 'dark' ? 'light_mode' : 'dark_mode'}
               </span>
             </button>
 
+            {/* Notifications Button */}
             <button
               type="button"
               onClick={onNotificationsClick}
-              className="relative p-2.5 rounded-full text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-white bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20 transition-all cursor-pointer"
+              className="relative p-2 sm:p-2.5 rounded-full text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-white bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20 transition-all cursor-pointer"
               title="Notifications"
             >
-              <span className="material-symbols-outlined text-[19px]">notifications</span>
-              <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-[#FF3B30] rounded-full ring-2 ring-white dark:ring-[#161617]"></span>
+              <span className="material-symbols-outlined text-[18px] sm:text-[19px]">notifications</span>
+              <span className="absolute top-1 sm:top-1.5 right-1 sm:right-1.5 w-2 sm:w-2.5 h-2 sm:h-2.5 bg-[#FF3B30] rounded-full ring-2 ring-white dark:ring-[#161617]"></span>
             </button>
 
+            {/* Action CTA Button (Hidden on small mobile screens to prevent overflow; available in bottom bar / drawer) */}
             {userRole === 'Public Commuter' ? (
               <button
                 type="button"
                 onClick={() => setActiveView('safety-complaints')}
-                className="px-3.5 sm:px-4 py-2 text-xs font-bold rounded-full bg-gradient-to-r from-red-600 to-rose-500 text-white shadow-md hover:brightness-110 active:scale-95 transition-all flex items-center gap-1.5 cursor-pointer"
+                className="hidden md:flex px-3.5 sm:px-4 py-2 text-xs font-bold rounded-full bg-gradient-to-r from-red-600 to-rose-500 text-white shadow-md hover:brightness-110 active:scale-95 transition-all items-center gap-1.5 cursor-pointer"
                 title={language === 'hi' ? 'केबिन सुरक्षा SOS' : 'Passenger Cabin SOS'}
               >
                 <span className="material-symbols-outlined text-[16px] animate-pulse">crisis_alert</span>
@@ -397,7 +403,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
               <button
                 type="button"
                 onClick={onOpenNewTicket}
-                className="btn-apple-primary px-4 sm:px-5 py-2.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer whitespace-nowrap shadow-md"
+                className="hidden md:flex btn-apple-primary px-4 sm:px-5 py-2.5 text-xs font-semibold items-center gap-1.5 cursor-pointer whitespace-nowrap shadow-md"
               >
                 <span className="material-symbols-outlined text-[17px]">add</span>
                 <span className="hidden sm:inline">
@@ -406,14 +412,32 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
               </button>
             )}
 
+            {/* Logout Option - Clearly Visible on Mobile & Desktop Navbar */}
             {onLogout && (
               <button
                 type="button"
                 onClick={onLogout}
-                className="p-2 rounded-full text-[#86868b] hover:text-[#FF3B30] hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer flex"
-                title="Sign out"
+                className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-full text-red-500 hover:text-white bg-red-500/10 hover:bg-red-500 border border-red-500/20 transition-all cursor-pointer shadow-2xs shrink-0"
+                title={language === 'hi' ? 'लॉगआउट करें' : 'Sign out'}
+                aria-label="Sign out"
               >
-                <span className="material-symbols-outlined text-[19px]">logout</span>
+                <span className="material-symbols-outlined text-[17px] sm:text-[18px]">logout</span>
+                <span className="text-[11px] sm:text-xs font-bold hidden xs:inline">
+                  {language === 'hi' ? 'लॉगआउट' : 'Logout'}
+                </span>
+              </button>
+            )}
+
+            {/* Mobile Hamburger Menu Button (Top Navbar) */}
+            {onOpenMenu && (
+              <button
+                type="button"
+                onClick={onOpenMenu}
+                className="lg:hidden p-2 rounded-full text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-white bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20 transition-all cursor-pointer flex items-center justify-center shrink-0"
+                title={language === 'hi' ? 'मेन्यू खोलें' : 'Open Menu'}
+                aria-label="Open Navigation Menu"
+              >
+                <span className="material-symbols-outlined text-[20px]">menu</span>
               </button>
             )}
           </div>

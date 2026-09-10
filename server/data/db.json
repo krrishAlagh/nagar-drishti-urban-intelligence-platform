@@ -43,6 +43,1944 @@
   ],
   "defects": [
     {
+      "id": "tk-1789038901288",
+      "ticketNumber": "TK-3869",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "MED",
+      "confidence": 91.3,
+      "locationName": "Laxmi Nagar Metro Pillar 52",
+      "coordinates": {
+        "lat": 28.629507494897133,
+        "lng": 77.28063451844073,
+        "formatted": "28.6300° N, 77.2790° E"
+      },
+      "ward": "Ward D - East",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "department": "MCD Solid Waste Management",
+      "slaRemaining": "06h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PC-2104 detected anomaly with 91.3% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "MCD Solid Waste Management Zonal Squad",
+        "team": "Ward D - East Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038886243",
+      "ticketNumber": "TK-5180",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Potholes",
+      "severity": "CRITICAL",
+      "confidence": 95.2,
+      "locationName": "Sector 14 Rohini Main Rd",
+      "coordinates": {
+        "lat": 28.71232201930027,
+        "lng": 77.11945936169742,
+        "formatted": "28.7120° N, 77.1210° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "01h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 95.2% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038871177",
+      "ticketNumber": "TK-6244",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "MED",
+      "confidence": 91.4,
+      "locationName": "Sector 14 Rohini Main Rd",
+      "coordinates": {
+        "lat": 28.71225147621371,
+        "lng": 77.12095210194113,
+        "formatted": "28.7120° N, 77.1210° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "department": "MCD Solid Waste Management",
+      "slaRemaining": "06h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PB-3310 detected anomaly with 91.4% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "MCD Solid Waste Management Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038856149",
+      "ticketNumber": "TK-4947",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Potholes",
+      "severity": "CRITICAL",
+      "confidence": 95.5,
+      "locationName": "AIIMS Flyover Pillar 14",
+      "coordinates": {
+        "lat": 28.57141407192635,
+        "lng": 77.2105625808777,
+        "formatted": "28.5690° N, 77.2100° E"
+      },
+      "ward": "Ward B - South",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "01h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 95.5% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward B - South Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038841108",
+      "ticketNumber": "TK-1640",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Water Logging",
+      "severity": "HIGH",
+      "confidence": 94.9,
+      "locationName": "Mukarba Chowk Flyover Slip",
+      "coordinates": {
+        "lat": 28.725705251990714,
+        "lng": 77.16358159949478,
+        "formatted": "28.7235° N, 77.1650° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "department": "Delhi Jal Board (DJB)",
+      "slaRemaining": "04h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PC-2104 detected anomaly with 94.9% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "Delhi Jal Board (DJB) Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038826071",
+      "ticketNumber": "TK-6530",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "MED",
+      "confidence": 88.2,
+      "locationName": "Laxmi Nagar Metro Pillar 52",
+      "coordinates": {
+        "lat": 28.630778826512888,
+        "lng": 77.27841979846211,
+        "formatted": "28.6300° N, 77.2790° E"
+      },
+      "ward": "Ward D - East",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "department": "BSES / Electrical Dept",
+      "slaRemaining": "08h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 88.2% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward D - East Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038811038",
+      "ticketNumber": "TK-9332",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Water Logging",
+      "severity": "HIGH",
+      "confidence": 99,
+      "locationName": "Laxmi Nagar Metro Pillar 52",
+      "coordinates": {
+        "lat": 28.631941187031202,
+        "lng": 77.28100551921688,
+        "formatted": "28.6300° N, 77.2790° E"
+      },
+      "ward": "Ward D - East",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "department": "Delhi Jal Board (DJB)",
+      "slaRemaining": "04h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 99% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "Delhi Jal Board (DJB) Zonal Squad",
+        "team": "Ward D - East Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038795995",
+      "ticketNumber": "TK-5100",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "MED",
+      "confidence": 91.2,
+      "locationName": "Sector 14 Rohini Main Rd",
+      "coordinates": {
+        "lat": 28.713209836646623,
+        "lng": 77.12206989294192,
+        "formatted": "28.7120° N, 77.1210° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "department": "MCD Solid Waste Management",
+      "slaRemaining": "06h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 91.2% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "MCD Solid Waste Management Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038780970",
+      "ticketNumber": "TK-2858",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "MED",
+      "confidence": 91.4,
+      "locationName": "Sector 14 Rohini Main Rd",
+      "coordinates": {
+        "lat": 28.7113073040991,
+        "lng": 77.12339239130672,
+        "formatted": "28.7120° N, 77.1210° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "department": "MCD Solid Waste Management",
+      "slaRemaining": "06h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 91.4% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "MCD Solid Waste Management Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038765942",
+      "ticketNumber": "TK-7422",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "MED",
+      "confidence": 94.2,
+      "locationName": "Mukarba Chowk Flyover Slip",
+      "coordinates": {
+        "lat": 28.72490651870762,
+        "lng": 77.16603309022797,
+        "formatted": "28.7235° N, 77.1650° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "department": "BSES / Electrical Dept",
+      "slaRemaining": "08h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PC-2104 detected anomaly with 94.2% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038750892",
+      "ticketNumber": "TK-9305",
+      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "category": "Potholes",
+      "severity": "HIGH",
+      "confidence": 93.5,
+      "locationName": "Mukarba Chowk Flyover Slip",
+      "coordinates": {
+        "lat": 28.722315713874654,
+        "lng": 77.16383772904842,
+        "formatted": "28.7235° N, 77.1650° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "04h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PB-3310 detected anomaly with 93.5% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038735827",
+      "ticketNumber": "TK-7818",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "MED",
+      "confidence": 88.7,
+      "locationName": "Mukarba Chowk Flyover Slip",
+      "coordinates": {
+        "lat": 28.72401718349644,
+        "lng": 77.16288299398516,
+        "formatted": "28.7235° N, 77.1650° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "department": "BSES / Electrical Dept",
+      "slaRemaining": "08h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PB-3310 detected anomaly with 88.7% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038720801",
+      "ticketNumber": "TK-4497",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "MED",
+      "confidence": 99.4,
+      "locationName": "Dhaula Kuan Enclave Junction",
+      "coordinates": {
+        "lat": 28.593372265961012,
+        "lng": 77.15778462685313,
+        "formatted": "28.5920° N, 77.1580° E"
+      },
+      "ward": "Ward C - Central / West",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "department": "MCD Solid Waste Management",
+      "slaRemaining": "06h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PB-3310 detected anomaly with 99.4% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "MCD Solid Waste Management Zonal Squad",
+        "team": "Ward C - Central / West Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038705748",
+      "ticketNumber": "TK-9204",
+      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "category": "Potholes",
+      "severity": "HIGH",
+      "confidence": 91,
+      "locationName": "Laxmi Nagar Metro Pillar 52",
+      "coordinates": {
+        "lat": 28.63214713901657,
+        "lng": 77.27727459105081,
+        "formatted": "28.6300° N, 77.2790° E"
+      },
+      "ward": "Ward D - East",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "04h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PC-2104 detected anomaly with 91% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward D - East Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038690702",
+      "ticketNumber": "TK-3199",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "MED",
+      "confidence": 98.9,
+      "locationName": "AIIMS Flyover Pillar 14",
+      "coordinates": {
+        "lat": 28.571396260914142,
+        "lng": 77.21032789071315,
+        "formatted": "28.5690° N, 77.2100° E"
+      },
+      "ward": "Ward B - South",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "department": "MCD Solid Waste Management",
+      "slaRemaining": "06h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 98.9% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "MCD Solid Waste Management Zonal Squad",
+        "team": "Ward B - South Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038675683",
+      "ticketNumber": "TK-9271",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "MED",
+      "confidence": 98,
+      "locationName": "Sector 14 Rohini Main Rd",
+      "coordinates": {
+        "lat": 28.712611631129494,
+        "lng": 77.12284238592689,
+        "formatted": "28.7120° N, 77.1210° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "department": "MCD Solid Waste Management",
+      "slaRemaining": "06h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 98% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "MCD Solid Waste Management Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038660639",
+      "ticketNumber": "TK-1434",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "MED",
+      "confidence": 97.8,
+      "locationName": "Laxmi Nagar Metro Pillar 52",
+      "coordinates": {
+        "lat": 28.629117614105677,
+        "lng": 77.27902341203327,
+        "formatted": "28.6300° N, 77.2790° E"
+      },
+      "ward": "Ward D - East",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "department": "BSES / Electrical Dept",
+      "slaRemaining": "08h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 97.8% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward D - East Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038645593",
+      "ticketNumber": "TK-5993",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "MED",
+      "confidence": 91.3,
+      "locationName": "Mukarba Chowk Flyover Slip",
+      "coordinates": {
+        "lat": 28.72511333303074,
+        "lng": 77.16422942937378,
+        "formatted": "28.7235° N, 77.1650° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "department": "BSES / Electrical Dept",
+      "slaRemaining": "08h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PC-2104 detected anomaly with 91.3% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038630539",
+      "ticketNumber": "TK-5912",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "MED",
+      "confidence": 88.7,
+      "locationName": "Dhaula Kuan Enclave Junction",
+      "coordinates": {
+        "lat": 28.590021935900328,
+        "lng": 77.15926989681277,
+        "formatted": "28.5920° N, 77.1580° E"
+      },
+      "ward": "Ward C - Central / West",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "department": "BSES / Electrical Dept",
+      "slaRemaining": "08h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 88.7% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward C - Central / West Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038615503",
+      "ticketNumber": "TK-9234",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "MED",
+      "confidence": 90.9,
+      "locationName": "AIIMS Flyover Pillar 14",
+      "coordinates": {
+        "lat": 28.571141146252288,
+        "lng": 77.20786283619589,
+        "formatted": "28.5690° N, 77.2100° E"
+      },
+      "ward": "Ward B - South",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "department": "BSES / Electrical Dept",
+      "slaRemaining": "08h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PC-2104 detected anomaly with 90.9% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward B - South Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038600463",
+      "ticketNumber": "TK-4471",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "MED",
+      "confidence": 91.2,
+      "locationName": "Sector 14 Rohini Main Rd",
+      "coordinates": {
+        "lat": 28.71071801668304,
+        "lng": 77.12009154418301,
+        "formatted": "28.7120° N, 77.1210° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "department": "BSES / Electrical Dept",
+      "slaRemaining": "08h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 91.2% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038585420",
+      "ticketNumber": "TK-1282",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Potholes",
+      "severity": "CRITICAL",
+      "confidence": 90.7,
+      "locationName": "ITO Red Light Corridor",
+      "coordinates": {
+        "lat": 28.62975387159268,
+        "lng": 77.24272396185228,
+        "formatted": "28.6280° N, 77.2410° E"
+      },
+      "ward": "Ward C - Central",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "01h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 90.7% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward C - Central Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038570388",
+      "ticketNumber": "TK-9110",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Potholes",
+      "severity": "CRITICAL",
+      "confidence": 90.7,
+      "locationName": "Laxmi Nagar Metro Pillar 52",
+      "coordinates": {
+        "lat": 28.627942980855217,
+        "lng": 77.28018890899408,
+        "formatted": "28.6300° N, 77.2790° E"
+      },
+      "ward": "Ward D - East",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "01h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PB-3310 detected anomaly with 90.7% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward D - East Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038555362",
+      "ticketNumber": "TK-8620",
+      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "category": "Potholes",
+      "severity": "HIGH",
+      "confidence": 93.5,
+      "locationName": "Ring Road Moolchand Flyover",
+      "coordinates": {
+        "lat": 28.57062639622235,
+        "lng": 77.23332646108703,
+        "formatted": "28.5684° N, 77.2345° E"
+      },
+      "ward": "Ward B - South",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "04h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PC-2104 detected anomaly with 93.5% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward B - South Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038540351",
+      "ticketNumber": "TK-3911",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Water Logging",
+      "severity": "HIGH",
+      "confidence": 97.9,
+      "locationName": "ITO Red Light Corridor",
+      "coordinates": {
+        "lat": 28.62711366875032,
+        "lng": 77.24116508908973,
+        "formatted": "28.6280° N, 77.2410° E"
+      },
+      "ward": "Ward C - Central",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "department": "Delhi Jal Board (DJB)",
+      "slaRemaining": "04h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PC-2104 detected anomaly with 97.9% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "Delhi Jal Board (DJB) Zonal Squad",
+        "team": "Ward C - Central Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038525277",
+      "ticketNumber": "TK-7803",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Potholes",
+      "severity": "CRITICAL",
+      "confidence": 97.3,
+      "locationName": "Mukarba Chowk Flyover Slip",
+      "coordinates": {
+        "lat": 28.722082490644226,
+        "lng": 77.16324834693388,
+        "formatted": "28.7235° N, 77.1650° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "01h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 97.3% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038510245",
+      "ticketNumber": "TK-4789",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "MED",
+      "confidence": 95.8,
+      "locationName": "Laxmi Nagar Metro Pillar 52",
+      "coordinates": {
+        "lat": 28.629558608837797,
+        "lng": 77.27700733870675,
+        "formatted": "28.6300° N, 77.2790° E"
+      },
+      "ward": "Ward D - East",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "department": "MCD Solid Waste Management",
+      "slaRemaining": "06h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 95.8% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "MCD Solid Waste Management Zonal Squad",
+        "team": "Ward D - East Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038495193",
+      "ticketNumber": "TK-6573",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "MED",
+      "confidence": 90.8,
+      "locationName": "Connaught Place Outer Circle",
+      "coordinates": {
+        "lat": 28.630324715216208,
+        "lng": 77.218404113507,
+        "formatted": "28.6315° N, 77.2167° E"
+      },
+      "ward": "Ward C - Central",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "department": "MCD Solid Waste Management",
+      "slaRemaining": "06h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 90.8% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "MCD Solid Waste Management Zonal Squad",
+        "team": "Ward C - Central Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038480159",
+      "ticketNumber": "TK-2992",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Potholes",
+      "severity": "CRITICAL",
+      "confidence": 88.8,
+      "locationName": "Sector 14 Rohini Main Rd",
+      "coordinates": {
+        "lat": 28.712313911142463,
+        "lng": 77.12061280510893,
+        "formatted": "28.7120° N, 77.1210° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "01h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PB-3310 detected anomaly with 88.8% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038465154",
+      "ticketNumber": "TK-3330",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Potholes",
+      "severity": "CRITICAL",
+      "confidence": 95.4,
+      "locationName": "Connaught Place Outer Circle",
+      "coordinates": {
+        "lat": 28.631007710478954,
+        "lng": 77.21647202851516,
+        "formatted": "28.6315° N, 77.2167° E"
+      },
+      "ward": "Ward C - Central",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "01h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 95.4% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward C - Central Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038450083",
+      "ticketNumber": "TK-2367",
+      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "category": "Potholes",
+      "severity": "HIGH",
+      "confidence": 88.3,
+      "locationName": "Mukarba Chowk Flyover Slip",
+      "coordinates": {
+        "lat": 28.725159486514077,
+        "lng": 77.16253075179529,
+        "formatted": "28.7235° N, 77.1650° E"
+      },
+      "ward": "Ward A - North",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "04h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 88.3% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038435040",
+      "ticketNumber": "TK-1838",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Potholes",
+      "severity": "CRITICAL",
+      "confidence": 93,
+      "locationName": "AIIMS Flyover Pillar 14",
+      "coordinates": {
+        "lat": 28.56722899273648,
+        "lng": 77.21219879672422,
+        "formatted": "28.5690° N, 77.2100° E"
+      },
+      "ward": "Ward B - South",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "01h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 93% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward B - South Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038419990",
+      "ticketNumber": "TK-7661",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Water Logging",
+      "severity": "HIGH",
+      "confidence": 99.1,
+      "locationName": "Laxmi Nagar Metro Pillar 52",
+      "coordinates": {
+        "lat": 28.63119385445001,
+        "lng": 77.28024244436565,
+        "formatted": "28.6300° N, 77.2790° E"
+      },
+      "ward": "Ward D - East",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "department": "Delhi Jal Board (DJB)",
+      "slaRemaining": "04h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 99.1% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "Delhi Jal Board (DJB) Zonal Squad",
+        "team": "Ward D - East Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
+      "id": "tk-1789038404950",
+      "ticketNumber": "TK-7184",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Potholes",
+      "severity": "CRITICAL",
+      "confidence": 93.1,
+      "locationName": "ITO Red Light Corridor",
+      "coordinates": {
+        "lat": 28.625669786687656,
+        "lng": 77.24310985141659,
+        "formatted": "28.6280° N, 77.2410° E"
+      },
+      "ward": "Ward C - Central",
+      "timestamp": "Just now",
+      "timeAgo": "Just now",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "department": "PWD Roads & Bridges",
+      "slaRemaining": "01h 00m",
+      "isOverdue": false,
+      "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 93.1% confidence score. Automatic work order dispatched.",
+      "status": "ASSIGNED",
+      "timeline": [
+        {
+          "title": "Reported & Triaged",
+          "subtitle": "Nagar AI Core",
+          "time": "Just now",
+          "completed": true,
+          "active": true
+        },
+        {
+          "title": "Assigned",
+          "subtitle": "Pending Dispatch",
+          "time": "Just now",
+          "completed": true,
+          "active": false
+        },
+        {
+          "title": "In Progress",
+          "subtitle": "Crew on route",
+          "time": "Pending",
+          "completed": false,
+          "active": true
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Field sign-off",
+          "time": "Pending",
+          "completed": false
+        }
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward C - Central Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
+    },
+    {
       "id": "tk-1789038389896",
       "ticketNumber": "TK-3944",
       "title": "Sub-surface Water Main Leakage",
@@ -78019,7 +79957,7 @@
       "slaRemaining": "01h 00m",
       "isOverdue": false,
       "description": "Edge AI Dashcam on DL-1PB-3310 detected anomaly with 90.5% confidence score. Automatic work order dispatched.",
-      "status": "NEW",
+      "status": "ASSIGNED",
       "timeline": [
         {
           "title": "Reported & Triaged",
@@ -78031,14 +79969,16 @@
         {
           "title": "Assigned",
           "subtitle": "Pending Dispatch",
-          "time": "Pending",
-          "completed": false
+          "time": "Just now",
+          "completed": true,
+          "active": false
         },
         {
           "title": "In Progress",
           "subtitle": "Crew on route",
           "time": "Pending",
-          "completed": false
+          "completed": false,
+          "active": true
         },
         {
           "title": "Resolved",
@@ -78046,7 +79986,12 @@
           "time": "Pending",
           "completed": false
         }
-      ]
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
     },
     {
       "id": "tk-1788275735259",
@@ -78069,7 +80014,7 @@
       "slaRemaining": "08h 00m",
       "isOverdue": false,
       "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 98.6% confidence score. Automatic work order dispatched.",
-      "status": "NEW",
+      "status": "ASSIGNED",
       "timeline": [
         {
           "title": "Reported & Triaged",
@@ -78081,14 +80026,16 @@
         {
           "title": "Assigned",
           "subtitle": "Pending Dispatch",
-          "time": "Pending",
-          "completed": false
+          "time": "Just now",
+          "completed": true,
+          "active": false
         },
         {
           "title": "In Progress",
           "subtitle": "Crew on route",
           "time": "Pending",
-          "completed": false
+          "completed": false,
+          "active": true
         },
         {
           "title": "Resolved",
@@ -78096,7 +80043,12 @@
           "time": "Pending",
           "completed": false
         }
-      ]
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward B - South Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
     },
     {
       "id": "tk-1788275717249",
@@ -78119,7 +80071,7 @@
       "slaRemaining": "08h 00m",
       "isOverdue": false,
       "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 96.6% confidence score. Automatic work order dispatched.",
-      "status": "NEW",
+      "status": "ASSIGNED",
       "timeline": [
         {
           "title": "Reported & Triaged",
@@ -78131,14 +80083,16 @@
         {
           "title": "Assigned",
           "subtitle": "Pending Dispatch",
-          "time": "Pending",
-          "completed": false
+          "time": "Just now",
+          "completed": true,
+          "active": false
         },
         {
           "title": "In Progress",
           "subtitle": "Crew on route",
           "time": "Pending",
-          "completed": false
+          "completed": false,
+          "active": true
         },
         {
           "title": "Resolved",
@@ -78146,7 +80100,12 @@
           "time": "Pending",
           "completed": false
         }
-      ]
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward C - Central Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
     },
     {
       "id": "tk-1788275699244",
@@ -78169,7 +80128,7 @@
       "slaRemaining": "01h 00m",
       "isOverdue": false,
       "description": "Edge AI Dashcam on DL-1PC-2104 detected anomaly with 88.7% confidence score. Automatic work order dispatched.",
-      "status": "NEW",
+      "status": "ASSIGNED",
       "timeline": [
         {
           "title": "Reported & Triaged",
@@ -78181,14 +80140,16 @@
         {
           "title": "Assigned",
           "subtitle": "Pending Dispatch",
-          "time": "Pending",
-          "completed": false
+          "time": "Just now",
+          "completed": true,
+          "active": false
         },
         {
           "title": "In Progress",
           "subtitle": "Crew on route",
           "time": "Pending",
-          "completed": false
+          "completed": false,
+          "active": true
         },
         {
           "title": "Resolved",
@@ -78196,7 +80157,12 @@
           "time": "Pending",
           "completed": false
         }
-      ]
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
     },
     {
       "id": "tk-1788275681239",
@@ -78219,7 +80185,7 @@
       "slaRemaining": "01h 00m",
       "isOverdue": false,
       "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 98.6% confidence score. Automatic work order dispatched.",
-      "status": "NEW",
+      "status": "ASSIGNED",
       "timeline": [
         {
           "title": "Reported & Triaged",
@@ -78231,14 +80197,16 @@
         {
           "title": "Assigned",
           "subtitle": "Pending Dispatch",
-          "time": "Pending",
-          "completed": false
+          "time": "Just now",
+          "completed": true,
+          "active": false
         },
         {
           "title": "In Progress",
           "subtitle": "Crew on route",
           "time": "Pending",
-          "completed": false
+          "completed": false,
+          "active": true
         },
         {
           "title": "Resolved",
@@ -78246,7 +80214,12 @@
           "time": "Pending",
           "completed": false
         }
-      ]
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward D - East Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
     },
     {
       "id": "tk-1788275663233",
@@ -78269,7 +80242,7 @@
       "slaRemaining": "06h 00m",
       "isOverdue": false,
       "description": "Edge AI Dashcam on DL-2PA-1180 detected anomaly with 91.5% confidence score. Automatic work order dispatched.",
-      "status": "NEW",
+      "status": "ASSIGNED",
       "timeline": [
         {
           "title": "Reported & Triaged",
@@ -78281,14 +80254,16 @@
         {
           "title": "Assigned",
           "subtitle": "Pending Dispatch",
-          "time": "Pending",
-          "completed": false
+          "time": "Just now",
+          "completed": true,
+          "active": false
         },
         {
           "title": "In Progress",
           "subtitle": "Crew on route",
           "time": "Pending",
-          "completed": false
+          "completed": false,
+          "active": true
         },
         {
           "title": "Resolved",
@@ -78296,7 +80271,12 @@
           "time": "Pending",
           "completed": false
         }
-      ]
+      ],
+      "assignedTo": {
+        "name": "MCD Solid Waste Management Zonal Squad",
+        "team": "Ward B - South Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
     },
     {
       "id": "tk-1788275645230",
@@ -78319,7 +80299,7 @@
       "slaRemaining": "08h 00m",
       "isOverdue": false,
       "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 93.8% confidence score. Automatic work order dispatched.",
-      "status": "NEW",
+      "status": "ASSIGNED",
       "timeline": [
         {
           "title": "Reported & Triaged",
@@ -78331,14 +80311,16 @@
         {
           "title": "Assigned",
           "subtitle": "Pending Dispatch",
-          "time": "Pending",
-          "completed": false
+          "time": "Just now",
+          "completed": true,
+          "active": false
         },
         {
           "title": "In Progress",
           "subtitle": "Crew on route",
           "time": "Pending",
-          "completed": false
+          "completed": false,
+          "active": true
         },
         {
           "title": "Resolved",
@@ -78346,7 +80328,12 @@
           "time": "Pending",
           "completed": false
         }
-      ]
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward D - East Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
     },
     {
       "id": "tk-1788275627222",
@@ -78369,7 +80356,7 @@
       "slaRemaining": "08h 00m",
       "isOverdue": false,
       "description": "Edge AI Dashcam on DL-1PD-0422 detected anomaly with 98.5% confidence score. Automatic work order dispatched.",
-      "status": "NEW",
+      "status": "ASSIGNED",
       "timeline": [
         {
           "title": "Reported & Triaged",
@@ -78381,14 +80368,16 @@
         {
           "title": "Assigned",
           "subtitle": "Pending Dispatch",
-          "time": "Pending",
-          "completed": false
+          "time": "Just now",
+          "completed": true,
+          "active": false
         },
         {
           "title": "In Progress",
           "subtitle": "Crew on route",
           "time": "Pending",
-          "completed": false
+          "completed": false,
+          "active": true
         },
         {
           "title": "Resolved",
@@ -78396,7 +80385,12 @@
           "time": "Pending",
           "completed": false
         }
-      ]
+      ],
+      "assignedTo": {
+        "name": "BSES / Electrical Dept Zonal Squad",
+        "team": "Ward B - South Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
     },
     {
       "id": "tk-1788275609216",
@@ -78419,7 +80413,7 @@
       "slaRemaining": "01h 00m",
       "isOverdue": false,
       "description": "Edge AI Dashcam on DL-1PC-2104 detected anomaly with 98.5% confidence score. Automatic work order dispatched.",
-      "status": "NEW",
+      "status": "ASSIGNED",
       "timeline": [
         {
           "title": "Reported & Triaged",
@@ -78431,14 +80425,16 @@
         {
           "title": "Assigned",
           "subtitle": "Pending Dispatch",
-          "time": "Pending",
-          "completed": false
+          "time": "Just now",
+          "completed": true,
+          "active": false
         },
         {
           "title": "In Progress",
           "subtitle": "Crew on route",
           "time": "Pending",
-          "completed": false
+          "completed": false,
+          "active": true
         },
         {
           "title": "Resolved",
@@ -78446,7 +80442,12 @@
           "time": "Pending",
           "completed": false
         }
-      ]
+      ],
+      "assignedTo": {
+        "name": "PWD Roads & Bridges Zonal Squad",
+        "team": "Ward A - North Rapid Maintenance Unit",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvunsBDQBmM-3nvZVqM_znUXV0iBgUX6nijaIQbAlmLG4hllblBUvG29Zn6zFupatdAeX7pw1wgBufdULqk_R9Ae2gEWdxOMbn5BE379G0ZKPbTXIM_ZrNcwE2AP_cNVNQeJBXblZZMVYVjSQpLFwA3gHo7fZbHSJRCRaoL6_K-TvQrueao5FrfTGI27P-OO4GjhT4Y8bNyYqy5lZnqIVIam7-GKlhR1wTQvfc5PVZWIjJf1c-J3ae"
+      }
     },
     {
       "id": "tk-1788275591210",
@@ -106127,1053 +108128,1053 @@
   ],
   "liveFeeds": [
     {
-      "id": "feed-1789038392920",
-      "title": "Severe Asphalt Ravelling & Pothole",
-      "category": "Roads",
-      "severity": "error",
-      "confidence": 90.4,
-      "location": "Sector 14 Rohini Main Rd",
-      "timestamp": "04:36:32 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "id": "feed-1789038913292",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 94.1,
+      "location": "ITO Red Light Corridor",
+      "timestamp": "04:45:13 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
       "hasImage": true,
       "busNode": "DTC-DL-1PD-0422",
-      "speedKmh": 22,
+      "speedKmh": 42,
       "latencyMs": 25,
-      "fps": 30.3,
-      "bbox": {
-        "x": 37,
-        "y": 42,
-        "w": 42,
-        "h": 28
-      }
-    },
-    {
-      "id": "feed-1789038389895",
-      "title": "Sub-surface Water Main Leakage",
-      "category": "Drainage",
-      "severity": "warning",
-      "confidence": 88.3,
-      "location": "Mukarba Chowk Flyover Slip",
-      "timestamp": "04:36:29 pm",
-      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PD-0422",
-      "speedKmh": 29,
-      "latencyMs": 19,
-      "fps": 29.8,
-      "bbox": {
-        "x": 42,
-        "y": 31,
-        "w": 50,
-        "h": 20
-      }
-    },
-    {
-      "id": "feed-1789038386891",
-      "title": "Sub-surface Water Main Leakage",
-      "category": "Drainage",
-      "severity": "warning",
-      "confidence": 88.8,
-      "location": "Connaught Place Outer Circle",
-      "timestamp": "04:36:26 pm",
-      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 22,
-      "latencyMs": 19,
-      "fps": 29.7,
-      "bbox": {
-        "x": 46,
-        "y": 28,
-        "w": 44,
-        "h": 28
-      }
-    },
-    {
-      "id": "feed-1789038383887",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
-      "severity": "info",
-      "confidence": 89,
-      "location": "Sector 14 Rohini Main Rd",
-      "timestamp": "04:36:23 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 29,
-      "latencyMs": 20,
-      "fps": 30,
-      "bbox": {
-        "x": 29,
-        "y": 35,
-        "w": 31,
-        "h": 21
-      }
-    },
-    {
-      "id": "feed-1789038380857",
-      "title": "Severe Asphalt Ravelling & Pothole",
-      "category": "Roads",
-      "severity": "error",
-      "confidence": 97.5,
-      "location": "Dhaula Kuan Enclave Junction",
-      "timestamp": "04:36:20 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
-      "hasImage": true,
-      "busNode": "DTC-DL-2PA-1180",
-      "speedKmh": 36,
-      "latencyMs": 16,
-      "fps": 30,
-      "bbox": {
-        "x": 37,
-        "y": 46,
-        "w": 32,
-        "h": 39
-      }
-    },
-    {
-      "id": "feed-1789038377862",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
-      "category": "Roads",
-      "severity": "warning",
-      "confidence": 96,
-      "location": "Ring Road Moolchand Flyover",
-      "timestamp": "04:36:17 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 33,
-      "latencyMs": 27,
-      "fps": 30,
-      "bbox": {
-        "x": 28,
-        "y": 27,
-        "w": 46,
-        "h": 21
-      }
-    },
-    {
-      "id": "feed-1789038374854",
-      "title": "Severe Asphalt Ravelling & Pothole",
-      "category": "Roads",
-      "severity": "error",
-      "confidence": 93.8,
-      "location": "Ring Road Moolchand Flyover",
-      "timestamp": "04:36:14 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PD-0422",
-      "speedKmh": 31,
-      "latencyMs": 18,
       "fps": 29.9,
       "bbox": {
-        "x": 25,
-        "y": 27,
-        "w": 50,
-        "h": 23
-      }
-    },
-    {
-      "id": "feed-1789038371850",
-      "title": "Severe Asphalt Ravelling & Pothole",
-      "category": "Roads",
-      "severity": "error",
-      "confidence": 94.9,
-      "location": "Dhaula Kuan Enclave Junction",
-      "timestamp": "04:36:11 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
-      "hasImage": true,
-      "busNode": "DTC-DL-2PA-1180",
-      "speedKmh": 38,
-      "latencyMs": 19,
-      "fps": 30.1,
-      "bbox": {
-        "x": 29,
-        "y": 44,
-        "w": 49,
-        "h": 27
-      }
-    },
-    {
-      "id": "feed-1789038368839",
-      "title": "Sub-surface Water Main Leakage",
-      "category": "Drainage",
-      "severity": "warning",
-      "confidence": 90.6,
-      "location": "Connaught Place Outer Circle",
-      "timestamp": "04:36:08 pm",
-      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PD-0422",
-      "speedKmh": 27,
-      "latencyMs": 25,
-      "fps": 29.7,
-      "bbox": {
-        "x": 27,
-        "y": 46,
-        "w": 33,
-        "h": 28
-      }
-    },
-    {
-      "id": "feed-1789038365838",
-      "title": "Overflowing Municipal Waste Container",
-      "category": "Sanitation",
-      "severity": "info",
-      "confidence": 88.1,
-      "location": "Ring Road Moolchand Flyover",
-      "timestamp": "04:36:05 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 40,
-      "latencyMs": 26,
-      "fps": 29.8,
-      "bbox": {
-        "x": 48,
-        "y": 32,
-        "w": 36,
+        "x": 20,
+        "y": 36,
+        "w": 46,
         "h": 30
       }
     },
     {
-      "id": "feed-1789038362838",
+      "id": "feed-1789038910274",
       "title": "Severe Asphalt Ravelling & Pothole",
       "category": "Roads",
       "severity": "error",
-      "confidence": 89.1,
-      "location": "Dhaula Kuan Enclave Junction",
-      "timestamp": "04:36:02 pm",
+      "confidence": 92.2,
+      "location": "Ring Road Moolchand Flyover",
+      "timestamp": "04:45:10 pm",
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
       "hasImage": true,
       "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 31,
-      "latencyMs": 24,
-      "fps": 29.8,
+      "speedKmh": 33,
+      "latencyMs": 23,
+      "fps": 30.2,
       "bbox": {
-        "x": 32,
-        "y": 32,
-        "w": 34,
-        "h": 32
-      }
-    },
-    {
-      "id": "feed-1789038359900",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
-      "category": "Roads",
-      "severity": "warning",
-      "confidence": 88.4,
-      "location": "Laxmi Nagar Metro Pillar 52",
-      "timestamp": "04:35:59 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 43,
-      "latencyMs": 20,
-      "fps": 30.3,
-      "bbox": {
-        "x": 28,
-        "y": 34,
-        "w": 32,
-        "h": 20
-      }
-    },
-    {
-      "id": "feed-1789038356830",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
-      "category": "Roads",
-      "severity": "warning",
-      "confidence": 94.7,
-      "location": "Sector 14 Rohini Main Rd",
-      "timestamp": "04:35:56 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 29,
-      "latencyMs": 17,
-      "fps": 30,
-      "bbox": {
-        "x": 29,
-        "y": 52,
-        "w": 53,
+        "x": 30,
+        "y": 46,
+        "w": 49,
         "h": 36
       }
     },
     {
-      "id": "feed-1789038353822",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "id": "feed-1789038907302",
+      "title": "Severe Asphalt Ravelling & Pothole",
       "category": "Roads",
-      "severity": "warning",
-      "confidence": 95.7,
-      "location": "Ring Road Moolchand Flyover",
-      "timestamp": "04:35:53 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 36,
-      "latencyMs": 26,
-      "fps": 29.9,
-      "bbox": {
-        "x": 33,
-        "y": 28,
-        "w": 32,
-        "h": 32
-      }
-    },
-    {
-      "id": "feed-1789038350784",
-      "title": "Overflowing Municipal Waste Container",
-      "category": "Sanitation",
-      "severity": "info",
-      "confidence": 96.7,
-      "location": "ITO Red Light Corridor",
-      "timestamp": "04:35:50 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PD-0422",
-      "speedKmh": 47,
-      "latencyMs": 27,
-      "fps": 29.6,
-      "bbox": {
-        "x": 49,
-        "y": 35,
-        "w": 35,
-        "h": 35
-      }
-    },
-    {
-      "id": "feed-1789038347798",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
-      "severity": "info",
-      "confidence": 90.4,
-      "location": "Connaught Place Outer Circle",
-      "timestamp": "04:35:47 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "severity": "error",
+      "confidence": 93.8,
+      "location": "Dhaula Kuan Enclave Junction",
+      "timestamp": "04:45:07 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
       "hasImage": true,
       "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 28,
-      "latencyMs": 21,
-      "fps": 30.1,
-      "bbox": {
-        "x": 36,
-        "y": 51,
-        "w": 53,
-        "h": 27
-      }
-    },
-    {
-      "id": "feed-1789038344789",
-      "title": "Overflowing Municipal Waste Container",
-      "category": "Sanitation",
-      "severity": "info",
-      "confidence": 90.8,
-      "location": "Laxmi Nagar Metro Pillar 52",
-      "timestamp": "04:35:44 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 40,
-      "latencyMs": 22,
-      "fps": 30.3,
-      "bbox": {
-        "x": 30,
-        "y": 44,
-        "w": 31,
-        "h": 31
-      }
-    },
-    {
-      "id": "feed-1789038341781",
-      "title": "Sub-surface Water Main Leakage",
-      "category": "Drainage",
-      "severity": "warning",
-      "confidence": 98,
-      "location": "AIIMS Flyover Pillar 14",
-      "timestamp": "04:35:41 pm",
-      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
-      "hasImage": true,
-      "busNode": "DTC-DL-2PA-1180",
       "speedKmh": 25,
-      "latencyMs": 27,
-      "fps": 30.3,
+      "latencyMs": 29,
+      "fps": 29.7,
       "bbox": {
-        "x": 40,
-        "y": 31,
-        "w": 50,
+        "x": 44,
+        "y": 39,
+        "w": 53,
         "h": 39
       }
     },
     {
-      "id": "feed-1789038338767",
+      "id": "feed-1789038904300",
       "title": "Severe Asphalt Ravelling & Pothole",
       "category": "Roads",
       "severity": "error",
-      "confidence": 90.1,
+      "confidence": 98.8,
       "location": "Laxmi Nagar Metro Pillar 52",
-      "timestamp": "04:35:38 pm",
+      "timestamp": "04:45:04 pm",
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
       "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 32,
-      "latencyMs": 20,
-      "fps": 29.9,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 39,
+      "latencyMs": 17,
+      "fps": 29.7,
       "bbox": {
-        "x": 20,
-        "y": 53,
-        "w": 31,
-        "h": 26
+        "x": 33,
+        "y": 28,
+        "w": 41,
+        "h": 36
       }
     },
     {
-      "id": "feed-1789038335743",
-      "title": "Sub-surface Water Main Leakage",
-      "category": "Drainage",
-      "severity": "warning",
-      "confidence": 98.8,
-      "location": "Ring Road Moolchand Flyover",
-      "timestamp": "04:35:35 pm",
-      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 44,
-      "latencyMs": 29,
-      "fps": 29.8,
-      "bbox": {
-        "x": 25,
-        "y": 32,
-        "w": 49,
-        "h": 27
-      }
-    },
-    {
-      "id": "feed-1789038332733",
+      "id": "feed-1789038901287",
       "title": "Overflowing Municipal Waste Container",
       "category": "Sanitation",
       "severity": "info",
-      "confidence": 95.1,
-      "location": "AIIMS Flyover Pillar 14",
-      "timestamp": "04:35:32 pm",
+      "confidence": 91.3,
+      "location": "Laxmi Nagar Metro Pillar 52",
+      "timestamp": "04:45:01 pm",
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
       "hasImage": true,
       "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 41,
-      "latencyMs": 23,
-      "fps": 29.9,
+      "speedKmh": 34,
+      "latencyMs": 29,
+      "fps": 30.2,
       "bbox": {
-        "x": 36,
-        "y": 28,
-        "w": 34,
-        "h": 33
-      }
-    },
-    {
-      "id": "feed-1789038329742",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
-      "severity": "info",
-      "confidence": 94.3,
-      "location": "Mukarba Chowk Flyover Slip",
-      "timestamp": "04:35:29 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 30,
-      "latencyMs": 17,
-      "fps": 29.9,
-      "bbox": {
-        "x": 36,
-        "y": 28,
+        "x": 33,
+        "y": 25,
         "w": 50,
         "h": 34
       }
     },
     {
-      "id": "feed-1789038326720",
-      "title": "Overflowing Municipal Waste Container",
-      "category": "Sanitation",
-      "severity": "info",
-      "confidence": 97.6,
-      "location": "Sector 14 Rohini Main Rd",
-      "timestamp": "04:35:26 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "id": "feed-1789038898255",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Roads",
+      "severity": "error",
+      "confidence": 88.7,
+      "location": "Dhaula Kuan Enclave Junction",
+      "timestamp": "04:44:58 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
       "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 26,
-      "latencyMs": 17,
-      "fps": 29.8,
+      "busNode": "DTC-DL-1PD-0422",
+      "speedKmh": 27,
+      "latencyMs": 20,
+      "fps": 30.3,
       "bbox": {
-        "x": 47,
-        "y": 53,
-        "w": 46,
+        "x": 36,
+        "y": 30,
+        "w": 37,
         "h": 34
       }
     },
     {
-      "id": "feed-1789038323728",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
-      "category": "Roads",
-      "severity": "warning",
-      "confidence": 96,
-      "location": "AIIMS Flyover Pillar 14",
-      "timestamp": "04:35:23 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 32,
-      "latencyMs": 24,
-      "fps": 29.7,
-      "bbox": {
-        "x": 22,
-        "y": 45,
-        "w": 38,
-        "h": 31
-      }
-    },
-    {
-      "id": "feed-1789038320709",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
-      "severity": "info",
-      "confidence": 92.4,
-      "location": "AIIMS Flyover Pillar 14",
-      "timestamp": "04:35:20 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PD-0422",
-      "speedKmh": 42,
-      "latencyMs": 19,
-      "fps": 30,
-      "bbox": {
-        "x": 36,
-        "y": 25,
-        "w": 31,
-        "h": 24
-      }
-    },
-    {
-      "id": "feed-1789038317707",
+      "id": "feed-1789038895246",
       "title": "Sub-surface Water Main Leakage",
       "category": "Drainage",
       "severity": "warning",
-      "confidence": 88.8,
-      "location": "Sector 14 Rohini Main Rd",
-      "timestamp": "04:35:17 pm",
-      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
-      "hasImage": true,
-      "busNode": "DTC-DL-2PA-1180",
-      "speedKmh": 23,
-      "latencyMs": 16,
-      "fps": 29.9,
-      "bbox": {
-        "x": 48,
-        "y": 40,
-        "w": 35,
-        "h": 32
-      }
-    },
-    {
-      "id": "feed-1789038314707",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
-      "severity": "info",
-      "confidence": 90.8,
-      "location": "Laxmi Nagar Metro Pillar 52",
-      "timestamp": "04:35:14 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 29,
-      "latencyMs": 27,
-      "fps": 30.1,
-      "bbox": {
-        "x": 44,
-        "y": 31,
-        "w": 40,
-        "h": 37
-      }
-    },
-    {
-      "id": "feed-1789038311687",
-      "title": "Severe Asphalt Ravelling & Pothole",
-      "category": "Roads",
-      "severity": "error",
-      "confidence": 95.6,
-      "location": "ITO Red Light Corridor",
-      "timestamp": "04:35:11 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 45,
-      "latencyMs": 22,
-      "fps": 29.9,
-      "bbox": {
-        "x": 21,
-        "y": 46,
-        "w": 45,
-        "h": 21
-      }
-    },
-    {
-      "id": "feed-1789038308675",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
-      "severity": "info",
-      "confidence": 97.6,
-      "location": "Mukarba Chowk Flyover Slip",
-      "timestamp": "04:35:08 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 37,
-      "latencyMs": 23,
-      "fps": 30.2,
-      "bbox": {
-        "x": 25,
-        "y": 32,
-        "w": 53,
-        "h": 22
-      }
-    },
-    {
-      "id": "feed-1789038305676",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
-      "category": "Roads",
-      "severity": "warning",
-      "confidence": 99.2,
-      "location": "ITO Red Light Corridor",
-      "timestamp": "04:35:05 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
-      "hasImage": true,
-      "busNode": "DTC-DL-2PA-1180",
-      "speedKmh": 32,
-      "latencyMs": 16,
-      "fps": 30,
-      "bbox": {
-        "x": 47,
-        "y": 28,
-        "w": 48,
-        "h": 36
-      }
-    },
-    {
-      "id": "feed-1789038302699",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
-      "category": "Roads",
-      "severity": "warning",
-      "confidence": 91.7,
-      "location": "Mukarba Chowk Flyover Slip",
-      "timestamp": "04:35:02 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 38,
-      "latencyMs": 23,
-      "fps": 30.2,
-      "bbox": {
-        "x": 40,
-        "y": 39,
-        "w": 40,
-        "h": 22
-      }
-    },
-    {
-      "id": "feed-1789038299689",
-      "title": "Sub-surface Water Main Leakage",
-      "category": "Drainage",
-      "severity": "warning",
-      "confidence": 90.4,
-      "location": "Connaught Place Outer Circle",
-      "timestamp": "04:34:59 pm",
-      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 22,
-      "latencyMs": 23,
-      "fps": 29.9,
-      "bbox": {
-        "x": 46,
-        "y": 54,
-        "w": 52,
-        "h": 37
-      }
-    },
-    {
-      "id": "feed-1789038296665",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
-      "category": "Roads",
-      "severity": "warning",
-      "confidence": 94.9,
-      "location": "ITO Red Light Corridor",
-      "timestamp": "04:34:56 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 26,
-      "latencyMs": 22,
-      "fps": 30.3,
-      "bbox": {
-        "x": 31,
-        "y": 38,
-        "w": 46,
-        "h": 26
-      }
-    },
-    {
-      "id": "feed-1789038293663",
-      "title": "Severe Asphalt Ravelling & Pothole",
-      "category": "Roads",
-      "severity": "error",
-      "confidence": 98.9,
+      "confidence": 90.9,
       "location": "Ring Road Moolchand Flyover",
-      "timestamp": "04:34:53 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "timestamp": "04:44:55 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
       "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 46,
-      "latencyMs": 17,
-      "fps": 30,
-      "bbox": {
-        "x": 34,
-        "y": 43,
-        "w": 37,
-        "h": 32
-      }
-    },
-    {
-      "id": "feed-1789038290646",
-      "title": "Severe Asphalt Ravelling & Pothole",
-      "category": "Roads",
-      "severity": "error",
-      "confidence": 96.5,
-      "location": "Laxmi Nagar Metro Pillar 52",
-      "timestamp": "04:34:50 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 34,
-      "latencyMs": 26,
+      "busNode": "DTC-DL-1PC-2104",
+      "speedKmh": 27,
+      "latencyMs": 25,
       "fps": 30.2,
       "bbox": {
-        "x": 23,
-        "y": 47,
+        "x": 28,
+        "y": 32,
         "w": 39,
         "h": 24
       }
     },
     {
-      "id": "feed-1789038287622",
+      "id": "feed-1789038892237",
       "title": "Cracked Curbstone & Pedestrian Hazard",
       "category": "Roads",
       "severity": "warning",
-      "confidence": 99.4,
-      "location": "AIIMS Flyover Pillar 14",
-      "timestamp": "04:34:47 pm",
+      "confidence": 99,
+      "location": "Connaught Place Outer Circle",
+      "timestamp": "04:44:52 pm",
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
       "hasImage": true,
-      "busNode": "DTC-DL-1PD-0422",
-      "speedKmh": 42,
-      "latencyMs": 24,
+      "busNode": "DTC-DL-1PB-3310",
+      "speedKmh": 44,
+      "latencyMs": 17,
       "fps": 29.6,
       "bbox": {
-        "x": 43,
-        "y": 52,
+        "x": 35,
+        "y": 44,
         "w": 44,
+        "h": 31
+      }
+    },
+    {
+      "id": "feed-1789038889236",
+      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "category": "Roads",
+      "severity": "warning",
+      "confidence": 96.9,
+      "location": "Ring Road Moolchand Flyover",
+      "timestamp": "04:44:49 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PB-3310",
+      "speedKmh": 26,
+      "latencyMs": 22,
+      "fps": 30.1,
+      "bbox": {
+        "x": 35,
+        "y": 35,
+        "w": 36,
         "h": 33
       }
     },
     {
-      "id": "feed-1789038284635",
-      "title": "Sub-surface Water Main Leakage",
-      "category": "Drainage",
-      "severity": "warning",
-      "confidence": 95.3,
-      "location": "ITO Red Light Corridor",
-      "timestamp": "04:34:44 pm",
-      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "id": "feed-1789038886242",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Roads",
+      "severity": "error",
+      "confidence": 95.2,
+      "location": "Sector 14 Rohini Main Rd",
+      "timestamp": "04:44:46 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
       "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 41,
-      "latencyMs": 28,
-      "fps": 29.6,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 27,
+      "latencyMs": 22,
+      "fps": 29.7,
       "bbox": {
-        "x": 49,
-        "y": 54,
-        "w": 44,
+        "x": 35,
+        "y": 52,
+        "w": 51,
+        "h": 27
+      }
+    },
+    {
+      "id": "feed-1789038883227",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Roads",
+      "severity": "error",
+      "confidence": 99,
+      "location": "Ring Road Moolchand Flyover",
+      "timestamp": "04:44:43 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 23,
+      "latencyMs": 16,
+      "fps": 30.1,
+      "bbox": {
+        "x": 30,
+        "y": 35,
+        "w": 32,
         "h": 35
       }
     },
     {
-      "id": "feed-1789038281617",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
-      "severity": "info",
-      "confidence": 97.8,
-      "location": "AIIMS Flyover Pillar 14",
-      "timestamp": "04:34:41 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "id": "feed-1789038880197",
+      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "category": "Roads",
+      "severity": "warning",
+      "confidence": 96.1,
+      "location": "Ring Road Moolchand Flyover",
+      "timestamp": "04:44:40 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
       "hasImage": true,
-      "busNode": "DTC-DL-2PA-1180",
-      "speedKmh": 30,
-      "latencyMs": 22,
-      "fps": 29.7,
+      "busNode": "DTC-DL-1PC-2104",
+      "speedKmh": 34,
+      "latencyMs": 21,
+      "fps": 30.3,
       "bbox": {
-        "x": 45,
-        "y": 49,
-        "w": 50,
-        "h": 21
+        "x": 27,
+        "y": 54,
+        "w": 46,
+        "h": 30
       }
     },
     {
-      "id": "feed-1789038278615",
+      "id": "feed-1789038877193",
       "title": "Severe Asphalt Ravelling & Pothole",
       "category": "Roads",
       "severity": "error",
-      "confidence": 93.1,
-      "location": "Sector 14 Rohini Main Rd",
-      "timestamp": "04:34:38 pm",
+      "confidence": 98.8,
+      "location": "ITO Red Light Corridor",
+      "timestamp": "04:44:37 pm",
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
       "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 39,
-      "latencyMs": 27,
-      "fps": 29.8,
+      "busNode": "DTC-DL-1PD-0422",
+      "speedKmh": 22,
+      "latencyMs": 16,
+      "fps": 30.1,
       "bbox": {
-        "x": 30,
-        "y": 51,
-        "w": 48,
-        "h": 26
+        "x": 47,
+        "y": 46,
+        "w": 47,
+        "h": 27
       }
     },
     {
-      "id": "feed-1789038275617",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
-      "severity": "info",
-      "confidence": 93.3,
+      "id": "feed-1789038874194",
+      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "category": "Roads",
+      "severity": "warning",
+      "confidence": 96,
       "location": "Dhaula Kuan Enclave Junction",
-      "timestamp": "04:34:35 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "timestamp": "04:44:34 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
       "hasImage": true,
-      "busNode": "DTC-DL-2PA-1180",
-      "speedKmh": 46,
-      "latencyMs": 26,
+      "busNode": "DTC-DL-1PD-0422",
+      "speedKmh": 47,
+      "latencyMs": 21,
       "fps": 30.2,
       "bbox": {
-        "x": 45,
-        "y": 38,
-        "w": 31,
+        "x": 44,
+        "y": 28,
+        "w": 46,
         "h": 20
       }
     },
     {
-      "id": "feed-1789038272606",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
+      "id": "feed-1789038871176",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
       "severity": "info",
-      "confidence": 93.2,
+      "confidence": 91.4,
       "location": "Sector 14 Rohini Main Rd",
-      "timestamp": "04:34:32 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "timestamp": "04:44:31 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
       "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 22,
-      "latencyMs": 23,
-      "fps": 30.3,
+      "busNode": "DTC-DL-1PB-3310",
+      "speedKmh": 23,
+      "latencyMs": 28,
+      "fps": 30.1,
       "bbox": {
-        "x": 31,
-        "y": 27,
+        "x": 35,
+        "y": 39,
+        "w": 42,
+        "h": 20
+      }
+    },
+    {
+      "id": "feed-1789038868194",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "info",
+      "confidence": 98.8,
+      "location": "Sector 14 Rohini Main Rd",
+      "timestamp": "04:44:28 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 29,
+      "latencyMs": 20,
+      "fps": 29.8,
+      "bbox": {
+        "x": 40,
+        "y": 31,
         "w": 48,
         "h": 32
       }
     },
     {
-      "id": "feed-1789038269596",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "id": "feed-1789038865172",
+      "title": "Severe Asphalt Ravelling & Pothole",
       "category": "Roads",
-      "severity": "warning",
-      "confidence": 96,
-      "location": "Ring Road Moolchand Flyover",
-      "timestamp": "04:34:29 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PB-3310",
-      "speedKmh": 24,
-      "latencyMs": 23,
-      "fps": 29.8,
-      "bbox": {
-        "x": 29,
-        "y": 33,
-        "w": 49,
-        "h": 34
-      }
-    },
-    {
-      "id": "feed-1789038266585",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
-      "category": "Roads",
-      "severity": "warning",
-      "confidence": 91.3,
-      "location": "AIIMS Flyover Pillar 14",
-      "timestamp": "04:34:26 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PC-2104",
-      "speedKmh": 35,
-      "latencyMs": 16,
-      "fps": 30.1,
-      "bbox": {
-        "x": 21,
-        "y": 51,
-        "w": 37,
-        "h": 36
-      }
-    },
-    {
-      "id": "feed-1789038263576",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
-      "severity": "info",
-      "confidence": 89.5,
-      "location": "ITO Red Light Corridor",
-      "timestamp": "04:34:23 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
-      "hasImage": true,
-      "busNode": "DTC-DL-2PA-1180",
-      "speedKmh": 30,
-      "latencyMs": 25,
-      "fps": 30.2,
-      "bbox": {
-        "x": 29,
-        "y": 41,
-        "w": 31,
-        "h": 39
-      }
-    },
-    {
-      "id": "feed-1789038260571",
-      "title": "Cracked Curbstone & Pedestrian Hazard",
-      "category": "Roads",
-      "severity": "warning",
-      "confidence": 97.4,
-      "location": "Connaught Place Outer Circle",
-      "timestamp": "04:34:20 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
+      "severity": "error",
+      "confidence": 88.1,
+      "location": "Mukarba Chowk Flyover Slip",
+      "timestamp": "04:44:25 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
       "hasImage": true,
       "busNode": "DTC-DL-1PC-2104",
       "speedKmh": 46,
-      "latencyMs": 19,
+      "latencyMs": 23,
       "fps": 29.7,
       "bbox": {
-        "x": 47,
-        "y": 25,
-        "w": 37,
+        "x": 23,
+        "y": 38,
+        "w": 34,
+        "h": 20
+      }
+    },
+    {
+      "id": "feed-1789038862163",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Roads",
+      "severity": "error",
+      "confidence": 88.3,
+      "location": "Dhaula Kuan Enclave Junction",
+      "timestamp": "04:44:22 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 26,
+      "latencyMs": 17,
+      "fps": 29.7,
+      "bbox": {
+        "x": 29,
+        "y": 34,
+        "w": 36,
+        "h": 20
+      }
+    },
+    {
+      "id": "feed-1789038859155",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Roads",
+      "severity": "error",
+      "confidence": 98.6,
+      "location": "Laxmi Nagar Metro Pillar 52",
+      "timestamp": "04:44:19 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 22,
+      "latencyMs": 19,
+      "fps": 29.8,
+      "bbox": {
+        "x": 31,
+        "y": 53,
+        "w": 51,
         "h": 21
       }
     },
     {
-      "id": "feed-1789038257577",
+      "id": "feed-1789038856148",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Roads",
+      "severity": "error",
+      "confidence": 95.5,
+      "location": "AIIMS Flyover Pillar 14",
+      "timestamp": "04:44:16 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 40,
+      "latencyMs": 17,
+      "fps": 30.1,
+      "bbox": {
+        "x": 41,
+        "y": 41,
+        "w": 44,
+        "h": 21
+      }
+    },
+    {
+      "id": "feed-1789038853137",
       "title": "Overflowing Municipal Waste Container",
       "category": "Sanitation",
       "severity": "info",
-      "confidence": 89.3,
-      "location": "Laxmi Nagar Metro Pillar 52",
-      "timestamp": "04:34:17 pm",
+      "confidence": 95,
+      "location": "Connaught Place Outer Circle",
+      "timestamp": "04:44:13 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PD-0422",
+      "speedKmh": 22,
+      "latencyMs": 21,
+      "fps": 30.1,
+      "bbox": {
+        "x": 24,
+        "y": 37,
+        "w": 43,
+        "h": 21
+      }
+    },
+    {
+      "id": "feed-1789038850139",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Roads",
+      "severity": "error",
+      "confidence": 91.6,
+      "location": "AIIMS Flyover Pillar 14",
+      "timestamp": "04:44:10 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 37,
+      "latencyMs": 23,
+      "fps": 30,
+      "bbox": {
+        "x": 44,
+        "y": 36,
+        "w": 50,
+        "h": 31
+      }
+    },
+    {
+      "id": "feed-1789038847125",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 96.1,
+      "location": "ITO Red Light Corridor",
+      "timestamp": "04:44:07 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PD-0422",
+      "speedKmh": 43,
+      "latencyMs": 23,
+      "fps": 29.8,
+      "bbox": {
+        "x": 37,
+        "y": 36,
+        "w": 45,
+        "h": 33
+      }
+    },
+    {
+      "id": "feed-1789038844119",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Roads",
+      "severity": "error",
+      "confidence": 90,
+      "location": "Sector 14 Rohini Main Rd",
+      "timestamp": "04:44:04 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PC-2104",
+      "speedKmh": 33,
+      "latencyMs": 27,
+      "fps": 29.7,
+      "bbox": {
+        "x": 21,
+        "y": 54,
+        "w": 31,
+        "h": 37
+      }
+    },
+    {
+      "id": "feed-1789038841107",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 94.9,
+      "location": "Mukarba Chowk Flyover Slip",
+      "timestamp": "04:44:01 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PC-2104",
+      "speedKmh": 33,
+      "latencyMs": 21,
+      "fps": 29.8,
+      "bbox": {
+        "x": 28,
+        "y": 27,
+        "w": 51,
+        "h": 20
+      }
+    },
+    {
+      "id": "feed-1789038838118",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "info",
+      "confidence": 95.7,
+      "location": "AIIMS Flyover Pillar 14",
+      "timestamp": "04:43:58 pm",
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
       "hasImage": true,
       "busNode": "DTC-DL-1PB-3310",
       "speedKmh": 32,
       "latencyMs": 28,
-      "fps": 29.9,
+      "fps": 30,
       "bbox": {
-        "x": 43,
-        "y": 30,
-        "w": 49,
-        "h": 30
+        "x": 45,
+        "y": 36,
+        "w": 41,
+        "h": 21
       }
     },
     {
-      "id": "feed-1789038254595",
+      "id": "feed-1789038835114",
       "title": "Cracked Curbstone & Pedestrian Hazard",
       "category": "Roads",
       "severity": "warning",
-      "confidence": 96.4,
-      "location": "AIIMS Flyover Pillar 14",
-      "timestamp": "04:34:14 pm",
+      "confidence": 88,
+      "location": "Connaught Place Outer Circle",
+      "timestamp": "04:43:55 pm",
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
       "hasImage": true,
-      "busNode": "DTC-DL-2PA-1180",
-      "speedKmh": 25,
-      "latencyMs": 19,
-      "fps": 29.8,
+      "busNode": "DTC-DL-1PB-3310",
+      "speedKmh": 42,
+      "latencyMs": 17,
+      "fps": 30.2,
       "bbox": {
-        "x": 41,
-        "y": 26,
-        "w": 47,
+        "x": 31,
+        "y": 39,
+        "w": 41,
         "h": 20
       }
     },
     {
-      "id": "feed-1789038251552",
-      "title": "Severe Asphalt Ravelling & Pothole",
+      "id": "feed-1789038832078",
+      "title": "Cracked Curbstone & Pedestrian Hazard",
       "category": "Roads",
-      "severity": "error",
-      "confidence": 98.6,
-      "location": "Connaught Place Outer Circle",
-      "timestamp": "04:34:11 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "severity": "warning",
+      "confidence": 98.1,
+      "location": "Dhaula Kuan Enclave Junction",
+      "timestamp": "04:43:52 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
       "hasImage": true,
-      "busNode": "DTC-DL-1PD-0422",
-      "speedKmh": 36,
-      "latencyMs": 26,
-      "fps": 29.8,
-      "bbox": {
-        "x": 35,
-        "y": 27,
-        "w": 45,
-        "h": 22
-      }
-    },
-    {
-      "id": "feed-1789038248560",
-      "title": "Damaged Sodium Lamp Luminaire",
-      "category": "Streetlights",
-      "severity": "info",
-      "confidence": 90.9,
-      "location": "Ring Road Moolchand Flyover",
-      "timestamp": "04:34:08 pm",
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
-      "hasImage": true,
-      "busNode": "DTC-DL-1PD-0422",
-      "speedKmh": 23,
+      "busNode": "DTC-DL-1PC-2104",
+      "speedKmh": 37,
       "latencyMs": 22,
-      "fps": 29.7,
+      "fps": 30.1,
       "bbox": {
-        "x": 39,
-        "y": 42,
-        "w": 45,
-        "h": 20
+        "x": 38,
+        "y": 41,
+        "w": 36,
+        "h": 26
       }
     },
     {
-      "id": "feed-1789038245537",
+      "id": "feed-1789038829073",
       "title": "Overflowing Municipal Waste Container",
       "category": "Sanitation",
       "severity": "info",
-      "confidence": 90.6,
+      "confidence": 96.2,
+      "location": "Laxmi Nagar Metro Pillar 52",
+      "timestamp": "04:43:49 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 47,
+      "latencyMs": 17,
+      "fps": 30.2,
+      "bbox": {
+        "x": 24,
+        "y": 25,
+        "w": 54,
+        "h": 25
+      }
+    },
+    {
+      "id": "feed-1789038826071",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "info",
+      "confidence": 88.2,
+      "location": "Laxmi Nagar Metro Pillar 52",
+      "timestamp": "04:43:46 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PD-0422",
+      "speedKmh": 43,
+      "latencyMs": 24,
+      "fps": 29.7,
+      "bbox": {
+        "x": 45,
+        "y": 54,
+        "w": 43,
+        "h": 23
+      }
+    },
+    {
+      "id": "feed-1789038823068",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 95.4,
+      "location": "Dhaula Kuan Enclave Junction",
+      "timestamp": "04:43:43 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PB-3310",
+      "speedKmh": 35,
+      "latencyMs": 24,
+      "fps": 30,
+      "bbox": {
+        "x": 48,
+        "y": 39,
+        "w": 34,
+        "h": 27
+      }
+    },
+    {
+      "id": "feed-1789038820054",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 92.6,
+      "location": "Dhaula Kuan Enclave Junction",
+      "timestamp": "04:43:40 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PC-2104",
+      "speedKmh": 23,
+      "latencyMs": 29,
+      "fps": 30.3,
+      "bbox": {
+        "x": 22,
+        "y": 34,
+        "w": 41,
+        "h": 23
+      }
+    },
+    {
+      "id": "feed-1789038817073",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "info",
+      "confidence": 94.8,
+      "location": "Mukarba Chowk Flyover Slip",
+      "timestamp": "04:43:37 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PB-3310",
+      "speedKmh": 28,
+      "latencyMs": 26,
+      "fps": 30,
+      "bbox": {
+        "x": 45,
+        "y": 50,
+        "w": 50,
+        "h": 23
+      }
+    },
+    {
+      "id": "feed-1789038814047",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 88.2,
       "location": "AIIMS Flyover Pillar 14",
-      "timestamp": "04:34:05 pm",
+      "timestamp": "04:43:34 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PD-0422",
+      "speedKmh": 28,
+      "latencyMs": 26,
+      "fps": 30.2,
+      "bbox": {
+        "x": 27,
+        "y": 30,
+        "w": 51,
+        "h": 27
+      }
+    },
+    {
+      "id": "feed-1789038811038",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 99,
+      "location": "Laxmi Nagar Metro Pillar 52",
+      "timestamp": "04:43:31 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 45,
+      "latencyMs": 28,
+      "fps": 29.7,
+      "bbox": {
+        "x": 20,
+        "y": 31,
+        "w": 35,
+        "h": 28
+      }
+    },
+    {
+      "id": "feed-1789038808025",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "info",
+      "confidence": 89.2,
+      "location": "ITO Red Light Corridor",
+      "timestamp": "04:43:28 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PC-2104",
+      "speedKmh": 26,
+      "latencyMs": 26,
+      "fps": 30.1,
+      "bbox": {
+        "x": 26,
+        "y": 48,
+        "w": 54,
+        "h": 28
+      }
+    },
+    {
+      "id": "feed-1789038805027",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 96.2,
+      "location": "Sector 14 Rohini Main Rd",
+      "timestamp": "04:43:25 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 30,
+      "latencyMs": 26,
+      "fps": 29.9,
+      "bbox": {
+        "x": 39,
+        "y": 52,
+        "w": 38,
+        "h": 34
+      }
+    },
+    {
+      "id": "feed-1789038802011",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 89.7,
+      "location": "AIIMS Flyover Pillar 14",
+      "timestamp": "04:43:22 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PD-0422",
+      "speedKmh": 41,
+      "latencyMs": 27,
+      "fps": 30.1,
+      "bbox": {
+        "x": 41,
+        "y": 48,
+        "w": 52,
+        "h": 38
+      }
+    },
+    {
+      "id": "feed-1789038799016",
+      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "category": "Roads",
+      "severity": "warning",
+      "confidence": 98.8,
+      "location": "Ring Road Moolchand Flyover",
+      "timestamp": "04:43:19 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PD-0422",
+      "speedKmh": 29,
+      "latencyMs": 17,
+      "fps": 29.7,
+      "bbox": {
+        "x": 31,
+        "y": 31,
+        "w": 54,
+        "h": 38
+      }
+    },
+    {
+      "id": "feed-1789038795995",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "info",
+      "confidence": 91.2,
+      "location": "Sector 14 Rohini Main Rd",
+      "timestamp": "04:43:15 pm",
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
       "hasImage": true,
       "busNode": "DTC-DL-1PD-0422",
-      "speedKmh": 42,
-      "latencyMs": 22,
-      "fps": 29.8,
+      "speedKmh": 27,
+      "latencyMs": 26,
+      "fps": 30.1,
+      "bbox": {
+        "x": 35,
+        "y": 45,
+        "w": 41,
+        "h": 37
+      }
+    },
+    {
+      "id": "feed-1789038792982",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "info",
+      "confidence": 90.9,
+      "location": "Connaught Place Outer Circle",
+      "timestamp": "04:43:12 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PB-3310",
+      "speedKmh": 34,
+      "latencyMs": 26,
+      "fps": 30,
       "bbox": {
         "x": 27,
-        "y": 51,
-        "w": 48,
-        "h": 37
+        "y": 49,
+        "w": 52,
+        "h": 34
+      }
+    },
+    {
+      "id": "feed-1789038789985",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "info",
+      "confidence": 92.6,
+      "location": "Laxmi Nagar Metro Pillar 52",
+      "timestamp": "04:43:09 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 27,
+      "latencyMs": 22,
+      "fps": 29.9,
+      "bbox": {
+        "x": 34,
+        "y": 47,
+        "w": 33,
+        "h": 26
+      }
+    },
+    {
+      "id": "feed-1789038786973",
+      "title": "Cracked Curbstone & Pedestrian Hazard",
+      "category": "Roads",
+      "severity": "warning",
+      "confidence": 91.3,
+      "location": "Connaught Place Outer Circle",
+      "timestamp": "04:43:06 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSkECC60siDEFrSt0Cbk_n8omaxLtppnBWmFvAuxvjgQzHo23KiX6aAISr06pYIcBVa0jqWwwitHgLjXk1cgmXJx51i4vDZiUNE7yU0y7F8FsyJW2xKY1XKx8o4o-F1Mw3W8ebwSNnsd9sbLqKHy0rf5wHajmyaMLuafZpTGNxWl0ef-61HyU9t4tgpU2piWgjrGUpcMvj5dQbOZ12mIH1lfFlDyPB7RKgUcctqEmk9Ou182RIra3F",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PB-3310",
+      "speedKmh": 35,
+      "latencyMs": 28,
+      "fps": 30.1,
+      "bbox": {
+        "x": 31,
+        "y": 36,
+        "w": 42,
+        "h": 20
+      }
+    },
+    {
+      "id": "feed-1789038783967",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 92.6,
+      "location": "Dhaula Kuan Enclave Junction",
+      "timestamp": "04:43:03 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PC-2104",
+      "speedKmh": 31,
+      "latencyMs": 21,
+      "fps": 30,
+      "bbox": {
+        "x": 29,
+        "y": 39,
+        "w": 50,
+        "h": 25
+      }
+    },
+    {
+      "id": "feed-1789038780970",
+      "title": "Overflowing Municipal Waste Container",
+      "category": "Sanitation",
+      "severity": "info",
+      "confidence": 91.4,
+      "location": "Sector 14 Rohini Main Rd",
+      "timestamp": "04:43:00 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY86PZIRygMTfJEYciq2blkinkXHgWzmH3u0sKctWEmYXH-2G2T0smqbEawqKJx_FuEPoUI4MmafZkTX0HHIUCSupMgSCNvezj-3eY5yDcs0FxzabKw1AlggcqYLp5LvrLsm1eDDKaoevX4UlsfutLpTgHVln-FbIkD14kgmv0Eo_c_mJwWnHNkSBndYfIZRTjSRCp2pRpg9E4_Bx5Y24KtAOFhYr2ShsGq1zGmRDA5krruBOV9IVx",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PD-0422",
+      "speedKmh": 30,
+      "latencyMs": 17,
+      "fps": 29.8,
+      "bbox": {
+        "x": 21,
+        "y": 37,
+        "w": 30,
+        "h": 29
+      }
+    },
+    {
+      "id": "feed-1789038777965",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 89.4,
+      "location": "Ring Road Moolchand Flyover",
+      "timestamp": "04:42:57 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PB-3310",
+      "speedKmh": 22,
+      "latencyMs": 23,
+      "fps": 29.7,
+      "bbox": {
+        "x": 37,
+        "y": 26,
+        "w": 35,
+        "h": 38
+      }
+    },
+    {
+      "id": "feed-1789038774946",
+      "title": "Sub-surface Water Main Leakage",
+      "category": "Drainage",
+      "severity": "warning",
+      "confidence": 90.4,
+      "location": "AIIMS Flyover Pillar 14",
+      "timestamp": "04:42:54 pm",
+      "imageUrl": "/assets/defects/pipe_burst_dashcam.jpg",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PC-2104",
+      "speedKmh": 23,
+      "latencyMs": 27,
+      "fps": 30,
+      "bbox": {
+        "x": 32,
+        "y": 45,
+        "w": 50,
+        "h": 32
+      }
+    },
+    {
+      "id": "feed-1789038771942",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "info",
+      "confidence": 91.2,
+      "location": "Mukarba Chowk Flyover Slip",
+      "timestamp": "04:42:51 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "hasImage": true,
+      "busNode": "DTC-DL-2PA-1180",
+      "speedKmh": 29,
+      "latencyMs": 29,
+      "fps": 29.7,
+      "bbox": {
+        "x": 29,
+        "y": 53,
+        "w": 41,
+        "h": 29
+      }
+    },
+    {
+      "id": "feed-1789038768932",
+      "title": "Severe Asphalt Ravelling & Pothole",
+      "category": "Roads",
+      "severity": "error",
+      "confidence": 98.4,
+      "location": "Sector 14 Rohini Main Rd",
+      "timestamp": "04:42:48 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAdQhYmLopZBtxQzgbUWQ3ijr_9lQC58Gt39POV7aGEKPFRSKKE4p_-pI_0SFxNshK6vXLEYAQH0TK_1Kdjq7AQ0E7e6a5lTMR_Z2WcqUP91LMeax7MzHW6o24XiSF90W-TFm00lxozkmjLTaHMzjUWYQrFN7EVIv0dO6sNMI6M3iRXFJ08mWa7alz9Cnjsnc2886FTEO_0UmLw9yuc35hei0QdWznaLwwcMiRQ2uIm6K4-HfibzPnw",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PB-3310",
+      "speedKmh": 43,
+      "latencyMs": 21,
+      "fps": 30.2,
+      "bbox": {
+        "x": 47,
+        "y": 47,
+        "w": 44,
+        "h": 24
+      }
+    },
+    {
+      "id": "feed-1789038765941",
+      "title": "Damaged Sodium Lamp Luminaire",
+      "category": "Streetlights",
+      "severity": "info",
+      "confidence": 94.2,
+      "location": "Mukarba Chowk Flyover Slip",
+      "timestamp": "04:42:45 pm",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y3bhh3Iv8SSqyeSuRwVR7RcUqk4hF6aNa6KLauKw2vnn7la2zf1eKuVayQiAsXa386o2G5WDYw11x0owF6NCIAbW-17Akwf3R6F7K-sYDOuKU0qyWKtWFbmcvNtmDLUdA-kAnGyZomah1FR86sYAaaoD8la-orv_4wQdszoN3jvHdnd4Infr5rEw6Q7wydHpU9qzTwpcXQaJI03tmfGPf0ahOF0M7GDsI2knsO53a3eFqPSZoo6I",
+      "hasImage": true,
+      "busNode": "DTC-DL-1PC-2104",
+      "speedKmh": 34,
+      "latencyMs": 22,
+      "fps": 30.1,
+      "bbox": {
+        "x": 25,
+        "y": 25,
+        "w": 35,
+        "h": 33
       }
     }
   ],
@@ -107183,12 +109184,12 @@
       "route": "402-A",
       "cameraStatus": "Online",
       "gpsSignal": "full",
-      "lastSyncTime": "4:36:32 pm",
-      "kmScanned": 2283.9,
+      "lastSyncTime": "4:45:13 pm",
+      "kmScanned": 2318.3,
       "depot": "Central Depot 1",
       "coordinates": {
-        "x": 85,
-        "y": 82
+        "x": 80,
+        "y": 70
       }
     },
     {
@@ -107196,12 +109197,12 @@
       "route": "112-B",
       "cameraStatus": "Warning",
       "gpsSignal": "medium",
-      "lastSyncTime": "4:36:32 pm",
-      "kmScanned": 2212.4,
+      "lastSyncTime": "4:45:13 pm",
+      "kmScanned": 2246.5,
       "depot": "Depot A (South)",
       "coordinates": {
-        "x": 88,
-        "y": 85
+        "x": 80,
+        "y": 75
       },
       "activeAlert": "Storage 85% full"
     },
@@ -107210,12 +109211,12 @@
       "route": "08-B",
       "cameraStatus": "Offline",
       "gpsSignal": "lost",
-      "lastSyncTime": "4:36:32 pm",
-      "kmScanned": 2167,
+      "lastSyncTime": "4:45:13 pm",
+      "kmScanned": 2202.8,
       "depot": "West Hub",
       "coordinates": {
-        "x": 87,
-        "y": 69
+        "x": 84,
+        "y": 85
       },
       "activeAlert": "Camera malfunction detected"
     },
@@ -107224,12 +109225,12 @@
       "route": "520-C",
       "cameraStatus": "Online",
       "gpsSignal": "full",
-      "lastSyncTime": "4:36:32 pm",
-      "kmScanned": 2247.5,
+      "lastSyncTime": "4:45:13 pm",
+      "kmScanned": 2283.2,
       "depot": "East Depot",
       "coordinates": {
-        "x": 85,
-        "y": 82
+        "x": 80,
+        "y": 85
       }
     }
   ],
@@ -107849,8 +109850,8 @@
     }
   ],
   "stats": {
-    "totalIngestedDetections": 17889,
+    "totalIngestedDetections": 18096,
     "totalResolvedDefects": 2682,
-    "lastTelemetrySync": "2026-09-10T11:06:32.920Z"
+    "lastTelemetrySync": "2026-09-10T11:15:13.292Z"
   }
 }

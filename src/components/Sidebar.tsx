@@ -164,8 +164,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
       {/* Apple-Style Sidebar Dock */}
       <aside
-        className={`bg-[#161617]/95 dark:bg-[#161617]/95 backdrop-blur-2xl w-[250px] h-screen fixed left-0 top-0 border-r border-white/10 flex flex-col z-50 select-none transition-transform duration-300 ease-in-out ${
-          isOpenOnMobile ? 'translate-x-0 shadow-2xl' : '-translate-x-full lg:translate-x-0'
+        className={`bg-[#161617]/95 dark:bg-[#161617]/95 backdrop-blur-2xl w-[280px] max-w-[85vw] h-screen fixed left-0 top-0 border-r border-white/10 flex flex-col z-50 select-none transition-transform duration-300 ease-in-out lg:hidden ${
+          isOpenOnMobile ? 'translate-x-0 shadow-2xl pointer-events-auto' : '-translate-x-full pointer-events-none'
         }`}
       >
         {/* Brand Header */}
@@ -195,7 +195,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <button
             type="button"
             onClick={onCloseMobile}
-            className="lg:hidden p-1.5 rounded-full text-[#86868b] hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+            className="p-1.5 rounded-full text-[#86868b] hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
             title="Close navigation"
           >
             <span className="material-symbols-outlined text-[18px]">close</span>
@@ -219,11 +219,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
           <button
             type="button"
-            onClick={onLogout}
-            title="Sign out"
-            className="text-[#86868b] hover:text-white p-1.5 rounded-full hover:bg-white/10 transition-colors shrink-0 cursor-pointer"
+            onClick={() => {
+              onLogout();
+              if (onCloseMobile) onCloseMobile();
+            }}
+            title={language === 'hi' ? 'लॉगआउट करें' : 'Sign out'}
+            className="text-red-400 hover:text-red-300 p-1.5 rounded-full hover:bg-red-500/10 transition-colors shrink-0 cursor-pointer flex items-center"
           >
-            <span className="material-symbols-outlined text-[16px]">logout</span>
+            <span className="material-symbols-outlined text-[18px]">logout</span>
           </button>
         </div>
 
@@ -280,6 +283,21 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
           ))}
         </nav>
+
+        {/* Explicit Sign Out / Logout Option in Sidebar Drawer */}
+        <div className="px-3 pt-2 pb-1 border-t border-white/10 shrink-0">
+          <button
+            type="button"
+            onClick={() => {
+              onLogout();
+              if (onCloseMobile) onCloseMobile();
+            }}
+            className="w-full py-2.5 px-3 rounded-xl bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 hover:text-red-300 transition-colors flex items-center justify-center gap-2 text-xs font-semibold cursor-pointer"
+          >
+            <span className="material-symbols-outlined text-[18px]">logout</span>
+            <span>{language === 'hi' ? 'लॉगआउट (साइन आउट)' : 'Sign Out / Logout'}</span>
+          </button>
+        </div>
 
         {/* Ambient Footer Info */}
         <div className="p-3 border-t border-white/10 bg-black/30 flex flex-col gap-2 shrink-0">
